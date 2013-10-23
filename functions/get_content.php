@@ -2,6 +2,9 @@
 <h2>get_content</h2>
 <p> Gets content from the database
 </p>
+<h3>Synopsis</h3>
+<pre class="prettyprint"><code class="language-php">get_content($params);
+</code></pre>
 <p>
 The <code>get_content()</code> function is used in Microweber to get the pages and posts from the database and return them as array. <br />
 Using it you can filter the content by criteria and access all data releated to it.

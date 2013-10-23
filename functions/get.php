@@ -1,9 +1,10 @@
 
-<h2>get()</h2>
- 
+<h2>get</h2>
 <p>Allows you to get data from ANY table in the database, and caches the result.</p>
- 
-<h3>Usage</h3> 
+<h3>Synopsis</h3>
+<pre class="prettyprint"><code class="language-php">get($params);
+</code></pre>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 $content = get('from=content');
 
@@ -16,9 +17,8 @@ foreach ($content as $item) {
  
 } 
 </code></pre>
- <h3>Parameters</h3> 
- <p>You can pass parameters as string or as array. They can be field names in the database table defined with the <code>from</code> parameter.</p>
-
+<h3>Parameters</h3>
+<p>You can pass parameters as string or as array. They can be field names in the database table defined with the <code>from</code> parameter.</p>
 <table class="table table-striped table-hover">
 	<thead>
 		<tr>
@@ -70,10 +70,6 @@ foreach ($content as $item) {
 		</tr>
 	</tbody>
 </table>
-
-
-
-
 <h3 id="limit-and-paging">Get everything</h3>
 <pre class="prettyprint"><code class="language-php"> //get 5 users
 $users = get('from=users&amp;limit=5');
@@ -87,9 +83,5 @@ $categories = get('from=categories&amp;limit=5');
 //get 5 comments
 $comments = get('from=comments&amp;limit=5');
 </code></pre>
- 
-
-
- 
-<h4>See also</h4> 
+<h4>See also</h4>
 <?php print page_content('functions/nav.db'); ?>

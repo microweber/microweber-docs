@@ -55,23 +55,37 @@ $content = page_content();
 			<ul class="sidebar-nav">
 				<li class="sidebar-brand"><a href="<?php print site_url(); ?>">Documentation</a></li>
 				<li><a class="nav-title <?php if(url_path() == 'functions/nav.content') print "active" ; ?>" href="<?php print site_url(); ?>functions/nav.content">Content</a> <?php print page_content('functions/nav.content'); ?> </li>
-				<li><a href="<?php print site_url(); ?>test">Custom fields</a>
+				<li style="display:none"><a href="<?php print site_url(); ?>test">Custom fields</a>
 					<ul>
 						<li><a class="<?php if(url_path() == 'functions/get_custom_fields') print "active" ; ?>" href="<?php print site_url(); ?>functions/get_custom_fields">get_custom_fields</a></li>
 						<li><a class="<?php if(url_path() == 'functions/save_custom_field') print "active" ; ?>" href="<?php print site_url(); ?>functions/save_custom_field">save_custom_field</a></li>
 					</ul>
 				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				<li><a class="nav-title <?php if(url_path() == 'functions/nav.content') print "active" ; ?>" href="<?php print site_url(); ?>functions/nav.db">Database</a> <?php print page_content('functions/nav.db'); ?> </li>
 				<li><a href="<?php print site_url(); ?>test">Shop</a>
 					<ul>
 						<li><a class="<?php if(url_path() == 'functions/get_cart') print "active" ; ?>" href="<?php print site_url(); ?>functions/get_cart">get_cart</a></li>
+											
+
+					
+					
 					</ul>
 				</li>
-				<li><a href="test">Modules</a>
-					<ul>
-						<li><a class="<?php if(url_path() == 'modules/pictures') print "active" ; ?>" href="<?php print site_url(); ?>modules/pictures">pictures</a></li>
-					</ul>
-				</li>
+				
+ 				
+				
+				<li><a class="nav-title <?php if(url_path() == 'functions/nav.options') print "active" ; ?>" href="<?php print site_url(); ?>functions/nav.options">Options</a> <?php print page_content('functions/nav.options'); ?> </li>
 			</ul>
 		</div>
 		

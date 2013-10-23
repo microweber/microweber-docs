@@ -1,6 +1,17 @@
 
-<h2>save()</h2>
+<h2>save</h2>
 <p>Allows you to save data to ANY table in the database.</p>
+
+<h3>Synopsis</h3>
+<pre class="prettyprint"><code class="language-php">save($table, $data);
+</code></pre>
+ 
+
+
+
+
+
+
 <h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 $data = array(); 
