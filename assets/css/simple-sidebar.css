@@ -53,7 +53,12 @@
 .page-content .subnav li a.active {
  	color:#CCCCCC;
 }
- 
+.docs-help-needed, .docs-help-needed a{
+	 color: #CCCCCC;
+	 padding:10px;
+	 text-align:right;
+	 font-size:10px;
+}
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
 	text-decoration: none;
 }

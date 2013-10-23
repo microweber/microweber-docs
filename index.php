@@ -2,7 +2,7 @@
 require('one.php'); 
 $content = page_content();
  
-
+$this_file_link='https://github.com/microweber/microweber-docs/tree/master/'.url_path().'.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,30 +61,12 @@ $content = page_content();
 						<li><a class="<?php if(url_path() == 'functions/save_custom_field') print "active" ; ?>" href="<?php print site_url(); ?>functions/save_custom_field">save_custom_field</a></li>
 					</ul>
 				</li>
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
 				<li><a class="nav-title <?php if(url_path() == 'functions/nav.content') print "active" ; ?>" href="<?php print site_url(); ?>functions/nav.db">Database</a> <?php print page_content('functions/nav.db'); ?> </li>
 				<li><a href="<?php print site_url(); ?>test">Shop</a>
 					<ul>
 						<li><a class="<?php if(url_path() == 'functions/get_cart') print "active" ; ?>" href="<?php print site_url(); ?>functions/get_cart">get_cart</a></li>
-											
-
-					
-					
 					</ul>
 				</li>
-				
- 				
-				
 				<li><a class="nav-title <?php if(url_path() == 'functions/nav.options') print "active" ; ?>" href="<?php print site_url(); ?>functions/nav.options">Options</a> <?php print page_content('functions/nav.options'); ?> </li>
 			</ul>
 		</div>
@@ -92,6 +74,7 @@ $content = page_content();
 		<!-- Page content -->
 		<div id="page-content-wrapper">
 			<div class="page-content inset" id="page-content-body"> <?php print $content; ?> </div>
+			<div class="docs-help-needed"><a class="text-muted" href="<?php print $this_file_link?>">edit this file</a> </div>
 		</div>
 	</div>
 </body>
