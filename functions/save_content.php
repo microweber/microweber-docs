@@ -4,7 +4,6 @@
 <h2>Synopsis</h2>
 <pre><code>save_content(array $data_to_save)
 </code></pre>
- 
 <h2>Usage</h2>
 <h3>Save new content item</h3>
 <pre class="prettyprint"><code class="language-php">
@@ -187,6 +186,5 @@ print ($new_id); // prints the id of the saved content (ex.8) </code></pre>
 		</tr>
 	</tbody>
 </table>
-
 <h4>Ajax/REST</h4>
 <blockquote> <small>This function is also available via the REST api at http://yoursite.com/api/save_content . If you save content via AJAX/REST, then first you must login. The user that saves the content via ajax must be admin, or the content must be saved in a category that allows it. </small> </blockquote>
