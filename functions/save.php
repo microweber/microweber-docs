@@ -45,4 +45,4 @@ $saved = save($table='content',$data);
 	</tbody>
 </table>
 <h4>See also</h4>
-<?php print page_content('functions/nav.db'); ?>
+<?php print page_content('functions/_nav/db'); ?>

@@ -17,4 +17,4 @@ print $content['position'];
 print $content['title']; </code></pre>
 
 <h4>See also</h4>
-<?php print page_content('functions/nav.content'); ?>
+<?php print page_content('functions/_nav/content'); ?>

@@ -14,4 +14,4 @@ save_option($option)
 </code></pre>
 
 <h4>See also</h4>
-<?php print page_content('functions/nav.options'); ?>
+<?php print page_content('functions/_nav/options'); ?>

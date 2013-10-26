@@ -84,4 +84,4 @@ $categories = get('from=categories&amp;limit=5');
 $comments = get('from=comments&amp;limit=5');
 </code></pre>
 <h4>See also</h4>
-<?php print page_content('functions/nav.db'); ?>
+<?php print page_content('functions/_nav/db'); ?>

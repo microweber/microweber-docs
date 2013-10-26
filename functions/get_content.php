@@ -223,4 +223,4 @@ $search_for_posts = get_content('content_type=page&amp;keyword=About us');
  
  
 <h4>See also</h4> 
-<?php print page_content('functions/nav.content'); ?>
+<?php print page_content('functions/_nav/content'); ?>
