@@ -12,18 +12,15 @@ var_dump($site_users);
 
 if(is_array($site_users) and !empty($site_users)){
 	foreach($site_users as $user){
-	print  $category['id'];	
-	print  $category['username'];	
-	print  $category['email'];	
-	
-	print  $category['first_name'];	
-	print  $category['last_name'];	
- 
-	print  $category['thumbnail'];	
-
-	print  $category['is_active'];	
-	print  $category['is_admin'];	
-
+	print  $user['id'];	
+	print  $user['username'];	
+	print  $user['email'];	
+	print  $user['first_name'];	
+	print  $user['last_name'];	
+	print  $user['thumbnail'];	
+	print  $user['is_active'];	
+	print  $user['is_admin'];	
+	// and more... print_r($user);
 	}
 }
  

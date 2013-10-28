@@ -56,6 +56,11 @@ $this_file_link='https://github.com/microweber/microweber-docs/tree/master/'.url
 				<li class="sidebar-brand"><a href="<?php print site_url(); ?>">Documentation</a></li>
 				
 				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/content') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/content">Content</a> <?php print page_content('functions/_nav/content'); ?> </li>
+				
+				
+				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/content') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/categories">Categories</a> <?php print page_content('functions/_nav/categories'); ?> </li>
+				
+				
 				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/template') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/template">URL</a> <?php print page_content('functions/_nav/url'); ?> </li>
 				
 				
