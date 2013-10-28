@@ -54,6 +54,8 @@ $this_file_link='https://github.com/microweber/microweber-docs/tree/master/'.url
 		<div id="sidebar-wrapper">
 			<ul class="sidebar-nav">
 				<li class="sidebar-brand"><a href="<?php print site_url(); ?>">Documentation</a></li>
+					<li><a class="nav-title <?php if(url_path() == 'functions/_nav/template') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/template">URL</a> <?php print page_content('functions/_nav/url'); ?> </li>
+				
 				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/content') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/content">Content</a> <?php print page_content('functions/_nav/content'); ?> </li>
 				<li style="display:none"><a href="<?php print site_url(); ?>test">Custom fields</a>
 					<ul>
@@ -61,13 +63,21 @@ $this_file_link='https://github.com/microweber/microweber-docs/tree/master/'.url
 						<li><a class="<?php if(url_path() == 'functions/save_custom_field') print "active" ; ?>" href="<?php print site_url(); ?>functions/save_custom_field">save_custom_field</a></li>
 					</ul>
 				</li>
-				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/content') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/db">Database</a> <?php print page_content('functions/_nav/db'); ?> </li>
+				
 				<li><a href="<?php print site_url(); ?>test">Shop</a>
 					<ul>
 						<li><a class="<?php if(url_path() == 'functions/get_cart') print "active" ; ?>" href="<?php print site_url(); ?>functions/get_cart">get_cart</a></li>
 					</ul>
 				</li>
 				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/options') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/options">Options</a> <?php print page_content('functions/_nav/options'); ?> </li>
+				
+				
+				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/template') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/template">Template</a> <?php print page_content('functions/_nav/template'); ?> </li>
+				
+			
+				
+				
+				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/content') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/db">Database</a> <?php print page_content('functions/_nav/db'); ?> </li>
 			</ul>
 		</div>
 		

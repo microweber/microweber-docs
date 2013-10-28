@@ -29,44 +29,49 @@ foreach ($content as $item) {
 	</thead>
 	<tbody>
 		<tr>
-			<td>from</td>
+			<td><code>from</code></td>
 			<td>your database table</td>
 			<td>get('from=content')</td>
 		</tr>
 		<tr>
-			<td>single</td>
+			<td><code>single</code></td>
 			<td>if set to true will return only the 1st row as array</td>
 			<td>get('from=content&amp;id=5&amp;single=true')</td>
 		</tr>
 		<tr>
-			<td>orderby</td>
+			<td><code>orderby</code></td>
 			<td>you can order by any field name</td>
 			<td>get('from=content&amp;orderby=id desc')</td>
 		</tr>
 		<tr>
-			<td>count</td>
+			<td><code>count</code></td>
 			<td>if set to true it will return the results count</td>
 			<td>get('from=content&amp;count=true')</td>
 		</tr>
 		<tr>
-			<td>limit</td>
+			<td><code>limit</code></td>
 			<td>set limit of the returned dataset</td>
 			<td>get('from=content&amp;limit=10')</td>
 		</tr>
 		<tr>
-			<td>curent_page</td>
+			<td><code>page</code></td>
 			<td>set offset of the returned dataset</td>
-			<td>get('from=content&amp;limit=10&amp;curent_page=2')</td>
+			<td>get('from=content&amp;limit=10&amp;page=2')</td>
 		</tr>
 		<tr>
-			<td>$fieldname</td>
+			<td><code>$fieldname</code></td>
 			<td>you can filter data by passing your fields as params</td>
 			<td>get('from=content&amp;my_field=value')</td>
 		</tr>
 		<tr>
-			<td>keyword</td>
+			<td><code>keyword</code></td>
 			<td>if set it will search for keyword</td>
 			<td>get('from=content&amp;limit=10&amp;keyword=my title')</td>
+		</tr>
+		<tr>
+			<td><code>nocache</code></td>
+			<td>if set to true will skip cahing the db result</td>
+			<td>get('from=content&amp;nocache=true')</td>
 		</tr>
 	</tbody>
 </table>
