@@ -51,8 +51,8 @@ $cart_items = get_cart();
  
 
 
-
-
+<h4>See also</h4>
+<?php print page_content('functions/_nav/shop'); ?>
 
 
 
