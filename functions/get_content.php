@@ -1,6 +1,6 @@
 
 <h2>get_content</h2>
-<p> Gets content from the database
+<p> Get any kind of content from your site
 </p>
 <h3>Synopsis</h3>
 <pre class="prettyprint"><code class="language-php">get_content($params);
@@ -39,20 +39,32 @@ foreach ($content as $item) {
  
  
 <h3>Parameters</h3> 
-<pre class="prettyprint"><code class="language-php"> 
-&lt;?php 
+<pre class="prettyprint"><code class="language-php">&lt;?php 
+    //basic
+     $params = array(
+      'limit' =&gt; 10, // get 10 posts
+      'order_by' =&gt; 'created_on desc',
+      'content_type' =&gt; 'post', //or page
+      'subtype' =&gt; 'post', //or product, you can use this field to store your custom content
+      'is_active' =&gt; 'y');
+   
+     $recent_posts = get_content($params);
+
+
+ 
+    //all params
      $params = array( 
      'limit' =&gt; 10, // get 10 posts
      'page' =&gt; 0, 
      'category' =&gt; 0, 
      'order_by' =&gt; 'created_on desc', 
-     'include' =&gt; '1,10,11' 
+     'include' =&gt; '1,10,11' ,
      'exclude' =&gt; '23', 
      'parent' =&gt; 7,  
      'content_type' =&gt; 'post', //or page
      'subtype' =&gt; 'post', //or product, you can use this field to store your custom content
      'is_active' =&gt; 'y'); 
-     $recent_posts = get_content($params);<br />
+     $posts = get_content($params);<br />
  ?&gt;
 </code></pre>
  

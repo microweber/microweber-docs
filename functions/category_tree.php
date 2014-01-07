@@ -23,7 +23,8 @@ $params['add_ids'] = array(10,11); //if you send array of ids it will add them t
 $params['orderby'] = array('position','asc'); //you can order by ant field ; 
 $params['list_tag'] = &quot;ul&quot;; 
 $params['list_item_tag'] = &quot;li&quot;;
-
+$params['ul_class'] = 'main-category';
+$params['li_class'] = 'sub-category';
 category_tree($params);
 // prints ULs with LIs
 </code></pre>
@@ -54,6 +55,20 @@ category_tree($params);
 			<td>$params['link'] = '&lt;a href=&quot;{link}&quot;  {active_code}&gt;{title}&lt;/a&gt;'; // sets the list_item content </td>
 		</tr>
 		
+		<tr>
+			<td>ul_class</td>
+			<td>sets a class for the UL</td>
+			<td>$params['ul_class'] = 'nav' </td>
+		</tr>
+		
+		<tr>
+			<td>li_class</td>
+			<td>sets a class for the LI</td>
+			<td>$params['li_class'] = 'sub-nav' </td>
+		</tr>
+		
+		
+	 
 		<tr>
 			<td>list_tag</td>
 			<td>you can set custom tag insted of UL</td>

@@ -4,6 +4,6 @@
 		<li><a class="<?php if(url_path() == 'functions/content_categories') print "active" ; ?>" href="<?php print site_url(); ?>functions/content_categories">content_categories</a></li>
 
 	<li><a class="<?php if(url_path() == 'functions/save_content') print "active" ; ?>" href="<?php print site_url(); ?>functions/save_content">save_content</a></li>
-		<li><a class="<?php if(url_path() == 'functions/pages_tree') print "active" ; ?>" href="<?php print site_url(); ?>functions/pages_tree">@todo: pages_tree</a></li>
+		<li><a class="<?php if(url_path() == 'functions/delete_content') print "active" ; ?>" href="<?php print site_url(); ?>functions/delete_content">delete_content</a></li>
 	
  </ul>

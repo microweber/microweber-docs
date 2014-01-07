@@ -15,7 +15,7 @@
 	<li>Add reatures to your website with Modules</li>
 </ul>
  
- <h3>For reqular users</h3>
+ <h3>For developers</h3>
  
 <ul>
  	<li>Modular architecture</li>

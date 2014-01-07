@@ -1,11 +1,15 @@
 
 <h2>save_content</h2>
 <p>save_content — Saves content in the database</p>
-<h2>Synopsis</h2>
+<h3>Synopsis</h3>
 <pre><code>save_content(array $data_to_save)
 </code></pre>
-<h2>Usage</h2>
-<h3>Save new content item</h3>
+<h3>Description</h3>
+<p>This function inserts and updates posts and pages in the database. It takes an string or array as argument and returns the content id of the saved item. It does not provide any user validation and permissions validation.</p>
+ 
+
+<h3>Usage</h3>
+<h4>Save new content item</h4>
 <pre class="prettyprint"><code class="language-php">
 $data_to_save = array(); 
 $data_to_save['id'] = 0; 
@@ -16,14 +20,14 @@ $new_id = save_content($data_to_save);
 
 print($new_id); // prints the id of the new content 
  </code></pre>
-<h3>Update content</h3>
+<h4>Update content</h4>
 <pre class="prettyprint"><code class="language-php">
 $data_to_save = array(); 
 $data_to_save['id'] = 8; //if you set id the content will be updated 
 $data_to_save['title'] = 'My new title';  
 $new_id = save_content($data_to_save); 
 print ($new_id); // prints the id of the saved content (ex.8) </code></pre>
-<h3>Params and Database fields</h3>
+<h4>Params and Database fields</h4>
 <p>You use those fields to store and structure your content</p>
 <table class="table table-striped table-hover">
 	<thead>
@@ -46,12 +50,12 @@ print ($new_id); // prints the id of the saved content (ex.8) </code></pre>
 		</tr>
 		<tr>
 			<td>parent</td>
-			<td>get content with parent</td>
+			<td>the id of the parent page</td>
 			<td>any id or 0</td>
 		</tr>
 		<tr>
 			<td>created_by</td>
-			<td>get by author id</td>
+			<td>the author id</td>
 			<td>any user id</td>
 		</tr>
 		<tr>
@@ -171,7 +175,7 @@ print ($new_id); // prints the id of the saved content (ex.8) </code></pre>
 		</tr>
 		<tr>
 			<td>session_id</td>
-			<td><em>the session id of the last user</em></td>
+			<td><em>the session id of the  user who edited the content</em></td>
 			<td></td>
 		</tr>
 		<tr>
@@ -186,5 +190,4 @@ print ($new_id); // prints the id of the saved content (ex.8) </code></pre>
 		</tr>
 	</tbody>
 </table>
-<h4>Ajax/REST</h4>
-<blockquote> <small>This function is also available via the REST api at http://yoursite.com/api/save_content . If you save content via AJAX/REST, then first you must login. The user that saves the content via ajax must be admin, or the content must be saved in a category that allows it. </small> </blockquote>
+ 
