@@ -1,7 +1,7 @@
 
 <h2>template_dir</h2>
 <p>template_dir — returns the full directory of the current template</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">template_dir();
 </code></pre>
 <h2>Example</h2>

@@ -1,7 +1,7 @@
 
 <h2>content_link</h2>
 <p>content_link — returns url to a given content</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">content_link($id);
 </code></pre>
  

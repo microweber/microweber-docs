@@ -1,7 +1,7 @@
 ##url_segment
 url_segment — returns url segment
 
-##Synopsis
+##Summary
 	url_segment([int $seg_num])
 
 ##Description

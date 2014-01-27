@@ -1,52 +1,137 @@
+
+#logot{
+  display: inline-block;
+  padding: 13px 0 10px 35px;
+  background: url(logo.png) no-repeat;
+  font-size: 16px;
+  line-height: normal;
+  color: white;
+  text-shadow: none !important;
+
+}
+
+
+#logotholder{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width:250px;
+  background: #4793C5;
+  padding:8px 0;
+  z-index: 1001;
+}
+#fader{
+  display: none;
+  z-index: 9;
+  pointer-events:none;
+  content: "";
+  height: 15px;
+  width:250px;
+  position: absolute;
+  top: 57px;
+  background: url(logobg.png) repeat-x center bottom;
+}
+
+
+#sidebar-wrapper-holder{
+  width:250px;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #4793C5;
+}
+#sidebar-wrapper-holder:hover, body.touchdevice #sidebar-wrapper-holder{
+  overflow-y: auto;
+}
+
+.nav-title {
+  font-weight: bold;
+
+
+}
+
+.subnav{
+   padding-bottom: 3px;
+}
+body{
+  background: #F9F9F9;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+#page-content-wrapper{
+
+   font-size: 16px;
+
+
+}
+
+
 #wrapper {
-	padding-left: 250px;
-	transition: all 0.4s ease 0s;
+	display: table;
+    width: 100%;
+    max-width: 1200px;
 }
+.vspace{
+  height: 12px;
+  overflow: hidden;
+  display: block;
+  clear: both;
+}
+
 #sidebar-wrapper {
-	margin-left: -250px;
-	left: 250px;
+    display: table-cell;
 	width: 250px;
-	background: #E9E6E6;
-	position: fixed;
-	height: 100%;
-	overflow-y: auto;
-	z-index: 1000;
+	background: #4793C5;
+
+
+
+
 	transition: all 0.4s ease 0s;
+  box-shadow: -1px -2px 6px #32739F inset;
 }
+#sidebar-wrapper:hover {
+
+    box-shadow:none;
+}
+
 #page-content-wrapper {
-	width: 100%;
-	max-width:960px;
+  display: table-cell;
 }
 .sidebar-nav {
-	position: absolute;
-	top: 0;
 	width: 250px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+
 }
 .sidebar-nav li {
 	line-height: 35px;
 	text-indent: 20px;
+    list-style: none
 }
 .sidebar-nav li a {
-	color: #333333;
+	color: #fff;
 	display: block;
 	text-decoration: none;
 }
 .sidebar-nav li a:hover, .sidebar-nav li a.active {
-	color: #333333;
-	background: white;
+	color: #32739F;
+	background: #F9F9F9;
 	text-decoration: none;
 	text-decoration: none;
 	outline: none;
-	color: #212121;
 	transition: box-shadow 0.09s linear;
 	-moz-transition: box-shadow 0.09s linear;
 	-webkit-transition: box-shadow 0.09s linear;
 	-o-transition: box-shadow 0.09s linear;
 	text-shadow: 1px 1px 0px white;
 }
+.sidebar-nav li a.active{
+  font-weight: bold;
+}
+
 .page-content .subnav {
 	 
 }
@@ -63,12 +148,10 @@
 	text-decoration: none;
 }
 .sidebar-nav > .sidebar-brand {
-	height: 65px;
-	line-height: 60px;
-	font-size: 18px;
+    padding: 4px 0
 }
 .sidebar-nav > .sidebar-brand a {
-	color: #999999;
+	color: #fff;
 }
 .sidebar-nav > .sidebar-brand a:hover {
 	color: #fff;
@@ -92,10 +175,10 @@
 }
  @media (max-width:767px) {
 #wrapper {
-	padding-left: 0;
+  /*	padding-left: 0;*/
 }
 #sidebar-wrapper {
-	left: 0;
+  /*	left: 0; */
 }
 #wrapper.active {
 	position: relative;

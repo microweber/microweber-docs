@@ -1,7 +1,7 @@
 ##get_content
 get_content — returns array of content items
 
-##Synopsis
+##Summary
 	get_content(string|array $params)
 	
 

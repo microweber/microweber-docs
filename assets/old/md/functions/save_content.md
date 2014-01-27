@@ -2,7 +2,7 @@
 save_content — saves content
 
 
-##Synopsis
+##Summary
 	save_content(array $data_to_save)
 	
 

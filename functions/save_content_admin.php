@@ -1,7 +1,7 @@
 
 <h2>save_content_admin</h2>
 <p>save_content_admin — Saves content in the DB with user validation</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre><code>save_content_admin(array $data_to_save)
 </code></pre>
 <h3>Description</h3>

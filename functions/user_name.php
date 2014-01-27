@@ -1,7 +1,7 @@
 
 <h2>user_name</h2>
 <p> Returns the full name of the user </p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">user_name($user_id = false, $mode = 'full');
 </code></pre>
 <p>By setting $mode you can get the user full name, first and last name and the username</p>

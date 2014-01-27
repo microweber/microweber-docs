@@ -1,6 +1,6 @@
 <h2>url_param</h2>
 <p>url_param — get a parameter from the URL</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">url_param($param_name, $skip_ajax = false);
 </code></pre>
 

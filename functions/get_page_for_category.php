@@ -1,7 +1,7 @@
 
 <h2>get_page_for_category</h2>
 <p class="description">get_page_for_category — returns the parent page as array for a given category id</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_page_for_category($id);
 </code></pre>
 <h2>Example</h2>

@@ -1,7 +1,7 @@
 
 <h2>get_user_by_id</h2>
 <p class="description">get_user_by_id — returns the iser info as array for a given user id</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_user_by_id($id);
 </code></pre>
 <h3>Usage</h3>

@@ -2,7 +2,7 @@
 <h2>save</h2>
 <p itemprop="description">Allows you to save data to ANY table in the database.</p>
 
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">save($table, $data);
 </code></pre>
 <p>This is one of the core Microweber function and most of the other <em>save</em> functions are really wrappers to this one.It allows you to save data anywhere in any db table.</p>

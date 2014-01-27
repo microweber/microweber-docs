@@ -1,7 +1,7 @@
 
 <h2>get_category_by_id</h2>
 <p class="description">get_category_by_id — returns category data as array or false</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_category_by_id($id);
 </code></pre>
 <h2>Example</h2>

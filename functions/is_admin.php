@@ -1,7 +1,7 @@
 
 <h2>is_admin</h2>
 <p> Returns the true if the logged in user is admin</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">is_admin();
 </code></pre>
 <h3>Usage</h3>

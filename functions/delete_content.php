@@ -1,7 +1,7 @@
 
 <h2>delete_content</h2>
 <p>delete_content — Deletes a content</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre><code>delete_content(array $params)
 </code></pre>
 <h3>Description</h3>

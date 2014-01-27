@@ -1,7 +1,7 @@
 ##get_content_by_id
 get_content_by_id — returns array of content item or false
 
-##Synopsis
+##Summary
 	get_content_by_id(int $id)
 	
 ##Return value

@@ -1,7 +1,7 @@
 ##url_path
 url_path — returns the relative url path as string
 
-##Synopsis
+##Summary
 	url_path($skip_ajax=false)
 
 ##Description

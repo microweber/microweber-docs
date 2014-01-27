@@ -1,7 +1,7 @@
 
 <h2>template_url</h2>
 <p>template_url — returns the URL of the current template</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">template_url();
 </code></pre>
 <h2>Example</h2>

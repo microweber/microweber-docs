@@ -1,7 +1,7 @@
 
 <h2>get</h2>
 <p>Allows you to get data from ANY table in the database, and caches the result.</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get($params);
 </code></pre>
 <h3>Usage</h3>

@@ -1,7 +1,7 @@
 
 <h2>content_link</h2>
 <p>category_link — returns url to a given category</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">category_link($id);
 </code></pre>
 <h2>Example</h2>

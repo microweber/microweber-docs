@@ -1,7 +1,7 @@
 
 <h2>get_users</h2>
 <p> Returns array of users</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_users($params=false);
 </code></pre>
  

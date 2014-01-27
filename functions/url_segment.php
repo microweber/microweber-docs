@@ -1,7 +1,7 @@
 
 <h2>url_segment</h2>
 <p>url_segment — returns a segment of the URL</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">url_segment($seg_num,$page_url = false);
 </code></pre>
 <h2>Example</h2>

@@ -1,7 +1,7 @@
 ##url_param
 url_param — returns a parameter from the url or false if nothing is found
 
-##Synopsis
+##Summary
 	url_param( string $param, $skip_ajax = false)
 
 ##Description

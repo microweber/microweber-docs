@@ -1,7 +1,7 @@
 
 <h2>content_categories</h2>
 <p>content_categories — returns array category yes for given content id or false</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">content_categories($content_id);
 </code></pre>
  

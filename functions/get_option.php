@@ -1,6 +1,6 @@
 <h2>get_option</h2>
 <p>get_option — return site config option value</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_option($key, $option_group = 'website');
 </code></pre>
 <h2>Example</h2>

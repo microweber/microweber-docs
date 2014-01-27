@@ -1,4 +1,4 @@
-<?php 
+<?php
 require('one.php'); 
 $content = page_content();
  
@@ -29,7 +29,7 @@ $this_file_link='https://github.com/microweber/microweber-docs/tree/master/'.url
 
     $(document).ready(function(){
         
-		
+
 		
 		prettyPrint();
 		
@@ -39,7 +39,12 @@ $this_file_link='https://github.com/microweber/microweber-docs/tree/master/'.url
 
 
 
-
+     $(window).bind("load resize", function(){
+       $(document.getElementById('sidebar-wrapper-holder')).css({
+         "height":$(window).height() - $("#logotholder").outerHeight(),
+         "top":$("#logotholder").outerHeight()
+       });
+     })
 
 
 
@@ -48,20 +53,40 @@ $this_file_link='https://github.com/microweber/microweber-docs/tree/master/'.url
     </head>
 
     <body>
-	<div id="wrapper"> 
-		
+    <script>
+    if('ontouchstart' in document.documentElement){
+      document.body.className+=' touchdevice'
+    }
+    </script>
+	<div id="wrapper">
+
 		<!-- Sidebar -->
+
+
 		<div id="sidebar-wrapper">
+
+        <span id="fader"></span>
+		<div id="sidebar-wrapper-holder">
+
+
+
 			<ul class="sidebar-nav">
-				<li class="sidebar-brand"><a href="<?php print site_url(); ?>">API Documentation</a></li>
-				
+				<li class="sidebar-brand">
+
+                  <div id="logotholder"><a href="<?php print site_url(); ?>" id="logot">API Documentation</a></div>
+
+
+                </li>
+
+
+
 				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/content') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/content">Content</a> <?php print page_content('functions/_nav/content'); ?> </li>
 				
 				
-				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/content') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/categories">Categories</a> <?php print page_content('functions/_nav/categories'); ?> </li>
-				
-				
-				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/url') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/template">URL</a> <?php print page_content('functions/_nav/url'); ?> </li>
+				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/categories') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/categories">Categories</a> <?php print page_content('functions/_nav/categories'); ?> </li>
+
+
+				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/url') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/url">URL</a> <?php print page_content('functions/_nav/url'); ?> </li>
 				
 				
 				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/template') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/template">Template</a> <?php print page_content('functions/_nav/template'); ?> </li>
@@ -82,16 +107,17 @@ $this_file_link='https://github.com/microweber/microweber-docs/tree/master/'.url
 				
 				
 				<li><a class="nav-title <?php if(url_path() == 'functions/_nav/db') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/db">Database</a> <?php print page_content('functions/_nav/db'); ?> </li>
-				
+
 				
 					<li><a class="nav-title <?php if(url_path() == 'functions/_nav/session') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/session">Sessions</a> <?php print page_content('functions/_nav/session'); ?> </li>
 			</ul>
 		</div>
-		
+		</div>
+
 		<!-- Page content -->
 		<div id="page-content-wrapper">
 			<div class="page-content inset" id="page-content-body"> <?php print $content; ?> </div>
-			<div class="docs-help-needed"><a class="text-muted" href="<?php print $this_file_link?>">edit this file</a> </div>
+			<?php /*<div class="docs-help-needed"><a class="text-muted" href="<?php print $this_file_link?>">edit this file</a> </div>*/ ?>
 		</div>
 	</div>
 </body>

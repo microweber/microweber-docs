@@ -1,7 +1,7 @@
 
 <h2>session_get</h2>
 <p>session_get — get a session variable</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">session_get($key);
 </code></pre>
 <h2>Example</h2>

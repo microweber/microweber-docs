@@ -1,7 +1,7 @@
 ##site_url
 site_url — returns the full site url
 
-##Synopsis
+##Summary
 	site_url( null | string $path)
 
 ##Description 

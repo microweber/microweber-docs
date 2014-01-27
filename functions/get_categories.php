@@ -1,7 +1,7 @@
 
 <h2>get_categories</h2>
 <p class="description">get_categories — returns array of categories or false</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_categories($params);
 </code></pre>
 <h2>Example</h2>

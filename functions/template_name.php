@@ -1,7 +1,7 @@
 
 <h2>template_name</h2>
 <p>template_name — returns the dirname of the curent template</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">template_name();
 </code></pre>
 <h2>Example</h2>

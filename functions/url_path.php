@@ -1,6 +1,6 @@
 <h2>url_path</h2>
 <p>url_path — returns the relative URL path</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">url_path($skip_ajax = false);
 </code></pre>
 <h2>Example</h2>

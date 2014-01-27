@@ -1,6 +1,6 @@
 <h2>save_option</h2>
 <p>save_option — saves option in the database</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">save_option($data);
 </code></pre>
  

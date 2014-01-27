@@ -1,7 +1,7 @@
 
 <h2>user_id</h2>
 <p> Returns the id of the current logged in user or false</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">user_id();
 </code></pre>
 <h3>Usage</h3>

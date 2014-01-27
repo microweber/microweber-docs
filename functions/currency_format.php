@@ -1,7 +1,7 @@
 
 <h2>currency_format</h2>
 <p>currency_format — formats a currency according to the site settings</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">currency_format($amount, $currency=false);
 </code></pre>
 <h2>Example</h2>

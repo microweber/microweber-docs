@@ -1,7 +1,7 @@
 
 <h2>save_content</h2>
 <p>save_content — Saves content in the database</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre><code>save_content(array $data_to_save)
 </code></pre>
 <h3>Description</h3>

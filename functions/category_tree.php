@@ -1,7 +1,7 @@
 
 <h2>category_tree</h2>
 <p class="description">category_tree — prints nested tree of categories and sub-categories</p>
-<h3>Synopsis</h3>
+<h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">category_tree($params);
 </code></pre>
 <h3>Default usage</h3>
