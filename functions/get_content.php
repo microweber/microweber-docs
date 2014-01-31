@@ -57,7 +57,7 @@ Returns array if results are found of false</p>
  
 	 
 	
-<table class="table table-striped table-hover">
+<table class="table table-striped table-hover params-table">
 	<thead>
 		<tr>
 			<th>parameter</th>

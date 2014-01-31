@@ -9,13 +9,25 @@
 
 One file site generator.
 
+Used to serve the static files for the Microweber documentation
+
+www.microweber.com
+
 */
 
 
-function page_content($filename = false)
+function page_content($filename = false, $selector = false)
 {
-    static $cache = array();
-    $key = crc32($filename);
+    
+	
+	if($selector != false){
+		require_once("phpquery.php");
+	}
+	
+	
+	
+	static $cache = array();
+    $key = crc32($filename.strval($selector));
     if (isset($cache[$key])) {
         return $cache[$key];
     }
@@ -37,12 +49,15 @@ function page_content($filename = false)
         ob_start();
         include ($item);
         $content = ob_get_clean();
+		if($selector != false){
+		$doc = phpQuery::newDocument($content); 
+   		$content =pq($selector);
+		}
         $cache[$key] = $content;
         return $content;
     } else {
         return false;
     }
-
 }
 
 
@@ -265,3 +280,5 @@ function normalize_path($path, $slash_it = true)
     }
     return $path;
 }
+
+

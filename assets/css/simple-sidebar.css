@@ -1,3 +1,18 @@
+.border-bot {
+  margin-top:35px;
+border-bottom: 1px solid #D8D8D8;
+ padding-bottom:15px;
+ color:#3B3B3B;
+ font-size:21px;
+}
+
+ 
+ 
+
+ 
+
+
+
 
 #logot{
   display: inline-block;
