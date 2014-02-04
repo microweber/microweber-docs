@@ -4,7 +4,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_categories($params);
 </code></pre>
-<h2>Example</h2>
+<h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
 //get main categories for the content
 $categories = get_categories('rel=content&parent_id=0&orderby=position asc');

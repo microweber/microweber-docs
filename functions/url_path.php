@@ -3,7 +3,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">url_path($skip_ajax = false);
 </code></pre>
-<h2>Example</h2>
+<h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
 // if you are on URL http://localhost/blog/post-title
  

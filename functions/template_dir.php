@@ -4,7 +4,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">template_dir();
 </code></pre>
-<h2>Example</h2>
+<h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
 //get the template directory
 $template_dir = template_dir();

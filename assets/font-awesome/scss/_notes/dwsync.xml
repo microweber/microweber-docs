@@ -18,4 +18,13 @@
 <file name="_mixins.scss" server="serv.microweber.com/public_html/new/" local="130177741760000000" remote="130354785490000000" />
 <file name="_path.scss" server="serv.microweber.com/public_html/new/" local="130177741760000000" remote="130354785490000000" />
 <file name="_variables.scss" server="serv.microweber.com/public_html/new/" local="130177741760000000" remote="130354785500000000" />
+<file name="font-awesome-ie7.scss" server="host.microweber.com//usr/share/microweber/" local="130177741760000000" remote="130359016460000000" />
+<file name="font-awesome.scss" server="host.microweber.com//usr/share/microweber/" local="130177741760000000" remote="130359016470000000" />
+<file name="_bootstrap.scss" server="host.microweber.com//usr/share/microweber/" local="130177741760000000" remote="130359016470000000" />
+<file name="_core.scss" server="host.microweber.com//usr/share/microweber/" local="130177741760000000" remote="130359016480000000" />
+<file name="_extras.scss" server="host.microweber.com//usr/share/microweber/" local="130177741760000000" remote="130359016490000000" />
+<file name="_icons.scss" server="host.microweber.com//usr/share/microweber/" local="130177741760000000" remote="130359016490000000" />
+<file name="_mixins.scss" server="host.microweber.com//usr/share/microweber/" local="130177741760000000" remote="130359016500000000" />
+<file name="_path.scss" server="host.microweber.com//usr/share/microweber/" local="130177741760000000" remote="130359016500000000" />
+<file name="_variables.scss" server="host.microweber.com//usr/share/microweber/" local="130177741760000000" remote="130359016510000000" />
 </dwsync>

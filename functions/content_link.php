@@ -5,7 +5,7 @@
 <pre class="prettyprint"><code class="language-php">content_link($id);
 </code></pre>
  
-<h2>Example</h2>
+<h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
 //get a content link 
 $content_link = content_link($id=3); 

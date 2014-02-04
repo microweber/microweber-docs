@@ -3,7 +3,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_option($key, $option_group = 'website');
 </code></pre>
-<h2>Example</h2>
+<h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
 //get an option
 $items_per_page = get_option('items_per_page', 'website'); 

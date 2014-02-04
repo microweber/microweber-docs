@@ -4,7 +4,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">currency_format($amount, $currency=false);
 </code></pre>
-<h2>Example</h2>
+<h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
 $currency_format = currency_format(100);
 var_dump($currency_format);

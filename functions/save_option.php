@@ -4,7 +4,7 @@
 <pre class="prettyprint"><code class="language-php">save_option($data);
 </code></pre>
  
-<h2>Example</h2>
+<h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
 $option = array();
 $option['option_value'] = 'my value';

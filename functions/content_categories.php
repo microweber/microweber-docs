@@ -5,7 +5,7 @@
 <pre class="prettyprint"><code class="language-php">content_categories($content_id);
 </code></pre>
  
-<h2>Example</h2>
+<h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">//get categories for post or product
 $categories = content_categories(3); 
 

@@ -30,7 +30,7 @@ border-bottom: 1px solid #D8D8D8;
   position: fixed;
   left: 0;
   top: 0;
-  width:250px;
+  width:300px;
   background: #4793C5;
   padding:8px 0;
   z-index: 1001;
@@ -41,7 +41,7 @@ border-bottom: 1px solid #D8D8D8;
   pointer-events:none;
   content: "";
   height: 15px;
-  width:250px;
+  width:300px;
   position: absolute;
   top: 57px;
   background: url(logobg.png) repeat-x center bottom;
@@ -49,7 +49,7 @@ border-bottom: 1px solid #D8D8D8;
 
 
 #sidebar-wrapper-holder{
-  width:250px;
+  width:300px;
   height: 100%;
   overflow: hidden;
   position: fixed;
@@ -97,7 +97,7 @@ body{
 
 #sidebar-wrapper {
     display: table-cell;
-	width: 250px;
+	width: 300px;
 	background: #4793C5;
 
 
@@ -115,7 +115,7 @@ body{
   display: table-cell;
 }
 .sidebar-nav {
-	width: 250px;
+	 
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -124,8 +124,16 @@ body{
 .sidebar-nav li {
 	line-height: 35px;
 	text-indent: 20px;
-    list-style: none
+    list-style: none;
 }
+.sidebar-brand {
+    padding: 4px 0;
+	line-height: 35px;
+	text-indent: 20px;
+    list-style: none;
+}
+
+
 .sidebar-nav li a {
 	color: #fff;
 	display: block;
@@ -197,11 +205,11 @@ body{
 }
 #wrapper.active {
 	position: relative;
-	left: 250px;
+	left: 300px;
 }
 #wrapper.active #sidebar-wrapper {
-	left: 250px;
-	width: 250px;
+	left: 300px;
+	width: 300px;
 	transition: all 0.4s ease 0s;
 }
 #menu-toggle {
