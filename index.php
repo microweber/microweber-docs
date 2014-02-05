@@ -1,8 +1,8 @@
 <?php
 require('one.php'); 
 $content = page_content();
- 
-$this_file_link='https://github.com/microweber/microweber-docs/tree/master/'.url_path().'.php';
+$repo_dir = "https://github.com/microweber/microweber-docs/tree/master/";
+$this_file_link= $repo_dir.url_path().'.php';
 
 if(is_ajax()){
  print $content;
@@ -56,8 +56,7 @@ if(is_ajax()){
 
 	function make_pretty_code(){
 		  //Prism.highlightAll();
-		  
-		  $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+		   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
 
 	}
 

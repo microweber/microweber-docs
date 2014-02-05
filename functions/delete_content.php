@@ -22,3 +22,5 @@ $delete = delete_content($to_undelete);
 $to_delete = array('id' => $item['id'], 'forever' => true);
 $delete = delete_content($to_delete);
  </code></pre>
+<h4>See also</h4>
+<?php print page_content('functions/_nav/content'); ?>

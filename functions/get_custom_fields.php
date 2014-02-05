@@ -56,7 +56,8 @@ $fields = get_custom_fields("field_type=shipping&is_active=n&content_id=".$cont_
  
 
 
-
+<h4>See also</h4>
+<?php print page_content('functions/_nav/custom_fields'); ?>
 
 
 

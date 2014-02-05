@@ -54,7 +54,7 @@ Returns array if results are found of false</p>
 <h3>Parameters</h3> 
 
  
- <?php print page_content('params/content'); ?>
+<?php print page_content('params/content'); ?>
 	 
 
  
