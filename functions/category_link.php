@@ -6,7 +6,7 @@
 </code></pre>
 <h3>Return Values</h3>
 <p> <code>String</code> with the category link or <code>false</code> if the category is found.</p>
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 //get a category link 
 $category_link = category_link(23); 

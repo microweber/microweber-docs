@@ -9,7 +9,7 @@
  <p>
 <code>Array</code> with the content categories or <code>false</code> if the content is not found</p>
 
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">//get categories for post or product
 $categories = content_categories(3); 
 

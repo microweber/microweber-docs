@@ -4,14 +4,23 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">save_category($params);
 </code></pre>
-<h3>Example</h3>
+
+<h3>Return Values</h3> 
+ <p>
+<code>Integer</code> with the saved category id or <code>false</code> if the category is not saved</p>
+
+
+
+
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 $params = array(
 'title' => 'Test Category 1',
 'parent_page' => $parent_page
 );
 //saving
-$category = save_category($params);
+$category_id = save_category($params);
+print $category_id;
 </code></pre>
 <h3>Parameters</h3>
 <p>You can pass parameters as string or as array.</p>

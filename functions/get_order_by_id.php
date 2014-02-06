@@ -3,7 +3,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_order_by_id($id);
 </code></pre>
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">//get an order  
 $order_id = 3;
 $order = get_order_by_id($order_id);

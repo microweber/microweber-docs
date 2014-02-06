@@ -5,7 +5,7 @@
 </code></pre>
 
  
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php"> 
 $site_url = site_url();
 var_dump($url_param);

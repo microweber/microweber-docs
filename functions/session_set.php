@@ -4,7 +4,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">session_set($key, $val);
 </code></pre>
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">// set a session variable 
  
 session_set('my_var', 'some_value');

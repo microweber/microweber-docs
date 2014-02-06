@@ -4,7 +4,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">save_user($params);
 </code></pre>
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 $data = array();
 $data['username'] = 'some-user-67';

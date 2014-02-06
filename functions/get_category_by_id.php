@@ -13,7 +13,7 @@
 
 
 
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 //get a category  
 $category_data = get_category_by_id(23);

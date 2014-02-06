@@ -30,7 +30,7 @@
 	</tbody>
 </table>
  
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">//get a content item by id
 $id = 3;
 $content = get_content_by_id($id); 

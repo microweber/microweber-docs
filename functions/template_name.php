@@ -4,7 +4,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">template_name();
 </code></pre>
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 //get the current template directory name
 $template_name = template_name();

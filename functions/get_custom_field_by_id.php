@@ -4,7 +4,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_custom_field_by_id($id);
 </code></pre>
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 //get a category  
 $custom_field = get_custom_field_by_id(2);

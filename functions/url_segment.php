@@ -4,7 +4,7 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">url_segment($seg_num,$page_url = false);
 </code></pre>
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 // By default this function will get segments from the current URL
 // if you are on URL http://localhost/blog/post-title

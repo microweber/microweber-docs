@@ -11,7 +11,7 @@
 <code>String</code> with the content URL or <code>false</code> if the content is not found</p>
 
  
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 //get a content link 
 $content_link = content_link($id=3); 

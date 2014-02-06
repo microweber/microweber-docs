@@ -5,7 +5,7 @@
 </code></pre>
 
  
-<h3>Example</h3>
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">// If you are on URL http://localhost/my-page/state:California
 // or on URL http://localhost/my-page/?state=California
 

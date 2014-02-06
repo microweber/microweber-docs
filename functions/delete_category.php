@@ -4,7 +4,15 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">delete_category($category_id);
 </code></pre>
-<h3>Example</h3>
+
+<h3>Return Values</h3> 
+ <p>
+<code>Integer</code> with the deleted category id or <code>false</code> if the category is not deleted</p>
+
+
+
+
+<h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">
 $category_id = 5;
  
