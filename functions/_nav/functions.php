@@ -7,7 +7,7 @@
   <li><a class="nav-title <?php if(url_path() == 'functions/_nav/shop') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/shop">Shop</a> <?php print page_content('functions/_nav/shop'); ?> </li>
   <li><a class="nav-title <?php if(url_path() == 'functions/_nav/users') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/users">Users</a> <?php print page_content('functions/_nav/users'); ?> </li>
   <li><a class="nav-title <?php if(url_path() == 'functions/_nav/db') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/db">Database</a> <?php print page_content('functions/_nav/db'); ?> </li>
-  <li><a class="nav-title <?php if(url_path() == 'functions/_nav/session') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/session">Sessions</a> <?php print page_content('functions/_nav/session'); ?> </li>
+  <li><a class="nav-title <?php if(url_path() == 'functions/_nav/session') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/session">Sessions</a> <?php print page_content('functions/_nav/session'); ?> </li> 
   <li><a class="nav-title <?php if(url_path() == 'functions/_nav/custom_fields') print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/custom_fields">Custom fields</a> <?php print page_content('functions/_nav/custom_fields'); ?> </li>
 </ul>
  

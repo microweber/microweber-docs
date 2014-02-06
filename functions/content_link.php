@@ -4,6 +4,12 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">content_link($id);
 </code></pre>
+
+
+<h3>Return Values</h3> 
+ <p>
+<code>String</code> with the content URL or <code>false</code> if the content is not found</p>
+
  
 <h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
@@ -11,7 +17,7 @@
 $content_link = content_link($id=3); 
 print $content_link;
 
-//prints http://www.yoursite.com/blog/my-post
+//prints http://example.com/blog/my-post
 </code></pre>
 
 <h4>See also</h4>

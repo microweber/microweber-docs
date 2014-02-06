@@ -9,7 +9,7 @@
   
 <h3>Return Values</h3> 
  <p>
-Array wirh the post data or "false" if the content is not found</p>
+<code>Array</code> with the post data or <code>false</code> if the content is not found</p>
 
 
 <h3>Parameters</h3>
@@ -19,22 +19,21 @@ Array wirh the post data or "false" if the content is not found</p>
 		<tr>
 			<th>parameter</th>
 			<th>description</th>
-			<th>value</th>
-		</tr>
+ 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>id</td>
-			<td>the id of the content</td>
-			<td>valid content id</td>
-		</tr>
+			<td>the id of the content you want to get</td>
+ 		</tr>
 		 
 	</tbody>
 </table>
  
 <h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">//get a content item by id
-$content = get_content_by_id(3); 
+$id = 3;
+$content = get_content_by_id($id); 
 
 if($content != false){
 	print $content['title'];  

@@ -8,10 +8,6 @@
 <p>
 The <code>get_content()</code> function is used in Microweber to get the pages and posts from the database and return them as array. <br />
 Using it you can filter the content by criteria and access all data releated to it.
-
-
-
-
 </p>
 <p>
 It takes a array or sting as parameter and returns the database records for the content.
@@ -21,7 +17,10 @@ By default <code>get_content()</code> works with predefined content types such a
 
 
 </p>
-
+  
+<h3>Return Values</h3> 
+ <p>
+<code>Array</code> with the post data or <code>false</code> if the no results are found</p>
 <h3>Usage</h3> 
 <pre class="prettyprint"><code class="language-php">
 $content = get_content();

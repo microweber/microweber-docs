@@ -4,6 +4,8 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">category_link($id);
 </code></pre>
+<h3>Return Values</h3>
+<p> <code>String</code> with the category link or <code>false</code> if the category is found.</p>
 <h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
 //get a category link 

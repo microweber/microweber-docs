@@ -4,6 +4,15 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_category_by_id($id);
 </code></pre>
+<h3>Return Values</h3> 
+ <p>
+<code>Array</code> with the category data or <code>false</code> if the category is found.</p>
+
+
+
+
+
+
 <h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
 //get a category  

@@ -4,6 +4,15 @@
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">get_categories($params);
 </code></pre>
+
+<h3>Return Values</h3> 
+ <p>
+<code>Array</code> with categories or <code>false</code> if the categories are not found.</p>
+
+
+
+
+
 <h3>Example</h3>
 <pre class="prettyprint"><code class="language-php">
 //get main categories for the content
