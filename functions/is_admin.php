@@ -8,7 +8,7 @@
 <pre class="prettyprint">
 <code class="language-php">$is_admin = is_admin();
 if($is_admin == true){
-print "Hello admin user!";
+	print "Hello admin user!";
 }
 </code></pre>
 <h4>See also</h4>

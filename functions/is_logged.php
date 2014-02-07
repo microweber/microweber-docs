@@ -8,7 +8,7 @@
 <pre class="prettyprint">
 <code class="language-php">$is_logged = is_logged();
 if($is_logged == false){
-print "You must login!";
+	print "You must login!";
 }
 </code></pre>
 <h4>See also</h4>
