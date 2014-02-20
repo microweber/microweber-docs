@@ -1,6 +1,6 @@
 
 <h2>content_categories</h2>
-<p>content_categories — returns array category yes for given content id or false</p>
+<p>content_categories — returns array categories for given content id</p>
 <h3>Summary</h3>
 <pre class="prettyprint"><code class="language-php">content_categories($content_id);
 </code></pre>
@@ -11,7 +11,7 @@
 
 <h3>Usage</h3>
 <pre class="prettyprint"><code class="language-php">//get categories for post or product
-$categories = content_categories(3); 
+$categories = content_categories($content_id = 3); 
 
 // make links for the result
 if(!empty($categories)){

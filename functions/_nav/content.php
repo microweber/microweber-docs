@@ -5,5 +5,7 @@
 
 	<li><a class="<?php if(url_path() == 'functions/save_content') print "active" ; ?>" href="<?php print site_url(); ?>functions/save_content">save_content</a></li>
 		<li><a class="<?php if(url_path() == 'functions/delete_content') print "active" ; ?>" href="<?php print site_url(); ?>functions/delete_content">delete_content</a></li> 
-	
+			<li><a class="<?php if(url_path() == 'functions/next_content') print "active" ; ?>" href="<?php print site_url(); ?>functions/next_content">next_content</a></li> 
+		<li><a class="<?php if(url_path() == 'functions/prev_content') print "active" ; ?>" href="<?php print site_url(); ?>functions/prev_content">prev_content</a></li> 
+
  </ul>
