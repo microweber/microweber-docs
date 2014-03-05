@@ -73,7 +73,6 @@ $(document).ready(function(){
   $("#searchfield").bind("keyup", function(e){
     var k = e.keyCode;
 
-
     if(k!==37 && k!==38 && k!==39 && k!==40){
       clearTimeout(sTime);
       var _this=this;
@@ -90,6 +89,30 @@ $(document).ready(function(){
           });
         }
       }, 600);
+    }
+    else{
+      e.preventDefault();
+      if($("#search_autocomplete li a").length>0){
+        var active = $("#search_autocomplete li a.hover");
+        if(k===38){
+            if(active.length !== 0){
+               var next = active.parent().next("li").length>0?active.parent().next("li").find("a"):$("#search_autocomplete a:last");
+               active.removeClass("hover")
+               next.addClass("hover")
+            }
+            else{
+                $("#search_autocomplete a:last").addClass("hover")
+            }
+        }
+        else if(k===40){
+
+        }
+
+        else if(k===13 && $("#search_autocomplete li a.hover").length>0){
+           window.location.href = $("#search_autocomplete li a.hover").attr("href");
+        }
+      }
+
     }
 
   }).blur(function(){

@@ -176,6 +176,7 @@ body,a{
   overflow-x: hidden;
   overflow-y: auto;
   display: none;
+  min-width: 100%;
 }
 
 #search_autocomplete li, #search_autocomplete ul{
@@ -186,6 +187,22 @@ body,a{
 #search_autocomplete li a{
   display: block;
   padding: 12px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+#search_autocomplete li:last-child a{
+  border-bottom: none
+}
+
+#search_autocomplete li a .label{
+background: none repeat scroll 0 0 #EFECEC;
+  color: #666666;
+  font-size: 10px;
+  line-height: 9px;
+  padding: 1px 4px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
 }
 
 #search_autocomplete li a.hover,

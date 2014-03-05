@@ -1,0 +1,1 @@
+<?php print page_content('modules/_nav/default'); ?>

@@ -12,6 +12,25 @@ if ($searchString == false) {
 }
 
 $search_dirs = array('functions', 'classes', 'modules', 'js-api', 'developer-guide', 'css-guide');
+
+
+if(isset( $_SERVER['HTTP_REFERER'])){
+	$tmp = $_SERVER['HTTP_REFERER'];
+	$search_dirs_sorted = array();
+	$search_dirs_sorted2 = array();
+	foreach ($search_dirs as $search_dir) {
+		 if (stripos($tmp, $search_dir) !== false) {
+           $search_dirs_sorted[] = $search_dir;
+         } else {
+			$search_dirs_sorted2[] = $search_dir;
+		 }
+	}
+	  $search_dirs = array_merge($search_dirs_sorted, $search_dirs_sorted2);
+}
+
+
+
+
 $search = array();
 $search['q'] = $searchString;
 
@@ -23,9 +42,14 @@ foreach ($search_dirs as $search_dir) {
         $res = array_merge($res, $allFiles);
     }
 }
+
+if (isset($_REQUEST['json'])) {
+    header('Content-Type: application/json');
+ 	print json_encode($res);
+	exit();
+}
  
-//header('Content-Type: application/json');
-//print json_encode($res);
+
 
  
 function everythingFrom($baseDir, $extList, $searchStr)
@@ -118,8 +142,7 @@ function everythingFrom($baseDir, $extList, $searchStr)
  
 ?>
 <?php if(isset($res) and is_array($res) and !empty($res)): ?>
-
-<ul>
+<ul class="search-results-list">
   <?php foreach($res as $item): ?>
   <?php if($item['title'] != false): ?>
   <li><a href="<?php print $item['url'] ?>" title="<?php print $item['description'] ?>"><?php print $item['title'] ?> <small class="label label-default"><?php print $item['label'] ?></small></a></li>
