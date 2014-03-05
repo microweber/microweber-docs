@@ -1,6 +1,21 @@
 <?php
 require('one.php'); 
 $content = page_content();
+
+
+$title = page_content(false,'h1','clean');
+ 
+if($title == false){
+$title = page_content(false,'h2','clean');
+}
+if($title == false){
+$title = "Microweber docs";	
+}
+$title = strip_tags($title);
+//$description = page_content(false,'p:first');
+$description = page_content(false,'*','clean');
+$description = substr($description , 0, 550);  
+ 
 $repo_dir = "https://github.com/microweber/microweber-docs/tree/master/";
 $this_file_link= $repo_dir.url_path().'.php';
 
@@ -12,127 +27,86 @@ if(is_ajax()){
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>Microweber docs</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><?php print $title; ?></title>
+<meta name="description" content="<?php print $description; ?>">
+<meta name="author" content="Microweber">
 
-	<!-- Bootstrap core CSS -->
-	<link href="<?php print site_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
+<script src="<?php print site_url(); ?>assets/js/jquery.js"></script>
+<link href="<?php print site_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php print site_url(); ?>assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<script src="<?php print site_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
+<link href="<?php print site_url(); ?>assets/js/highlight/styles/github.css" rel="stylesheet">
+<link href="<?php print site_url(); ?>assets/docs.css" rel="stylesheet">
+<script src="<?php print site_url(); ?>assets/js/highlight/highlight.pack.js"></script>
+<script>
+    SEARCH_URL = "<?php print site_url(); ?>s.php";
+</script>
+<script src="<?php print site_url(); ?>assets/docs.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
 
-	<!-- Add custom CSS here -->
-	<link href="<?php print site_url(); ?>assets/css/simple-sidebar.css" rel="stylesheet">
-	<link href="<?php print site_url(); ?>assets/css/main.css" rel="stylesheet">
-	<link href="<?php print site_url(); ?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<script src="<?php print site_url(); ?>assets/js/jquery.js"></script>
-	<script src="<?php print site_url(); ?>assets/js/bootstrap.js"></script>
-	<link href="<?php print site_url(); ?>assets/js/highlight/styles/github.css" rel="stylesheet">
-	<script src="<?php print site_url(); ?>assets/js/highlight/highlight.pack.js"></script>
-	<script>
-     $(window).bind("load resize", function(){
-       $(document.getElementById('sidebar-wrapper-holder')).css({
-         "height":$(window).height() - $("#logotholder").outerHeight(),
-         "top":$("#logotholder").outerHeight()
-       });
-     })
-	if('ontouchstart' in document.documentElement){
-      document.body.className+=' touchdevice'
-    }
-    </script>
-	<script>
-
-
-
-
-
-    $(document).ready(function(){
-	    make_pretty_code();
-
-        var ac = $("#main_dropdown a.active").html();
-        var dataref = $("#main_dropdown a.active span").attr("data-ref");
-        $("#main_dropdown_value").html(ac);
-
-      <?php
-
-      /*
-       $('#main_dropdown').on('hide.bs.dropdown', function () {
-         console.log(this);
-        });
-      */
-
-      ?>
-
-
-      $("#sidebar-wrapper-holder .sidebar-nav .nav-title").click(function(){
-        $(this).next().toggle();
-         return false;
-      });
-
-     $("#sidebar-wrapper-holder .sidebar-nav .active").parents(".subnav").prev(".nav-title").addClass("active");
-
-    });
-	$(window).on('hashchange', function () {
-
-	}); 
-
-	function make_pretty_code(){
-		  //Prism.highlightAll();
-		   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
-
-	}
-
-	 
-
-
-
-
-
-
-
-
-	
-	</script>
-	</head>
-	<body>
-    <div id="wrapper">
-      <div id="sidebar-wrapper"> <span id="fader"></span>
-        <div id="sidebar-wrapper-holder">
-          <div class="sidebar-brand">
-            <div id="logotholder"><a href="<?php print site_url(); ?>" id="logot">API Documentation </a></div>
-          </div>
-          <div class="dropdown sidebar-dropdown <?php if(strstr(url_path(), 'functions/')) print "functions-active" ; ?> <?php if(strstr(url_path(), 'classes/')) print "classes-active" ; ?>" id="main_dropdown"> <a data-toggle="dropdown" href="#"><b class="caret pull-right"></b><span id="main_dropdown_value">Functions reference</span></a>
-            <ul class=" dropdown-menu" role="menu">
-              <li><a class="nav-title dd_functions_ref <?php if(strstr(url_path(), 'functions/')) print "active" ; ?>" href="<?php print site_url(); ?>functions/_nav/index"><span data-ref="functions">Functions Reference</span></a> </li>
-              <li><a class="nav-title dd_class_ref <?php if(strstr(url_path(), 'classes/')) print "active" ; ?>" href="<?php print site_url(); ?>classes/_nav/classes" data-ref="class">Class Reference </a></li>
-              <li><a class="nav-title dd_class_ref <?php if(strstr(url_path(), 'modules/')) print "active" ; ?>" href="<?php print site_url(); ?>modules/_nav/modules" data-ref="class">Modules Reference </a></li>
-              <li><a class="nav-title" href="<?php print 'http://microweber.com/for-developers'; ?>">Developers guide</a></li>
-            </ul>
-          </div>
-          <?php if(strstr(url_path(), 'functions/') or url_path() == ''): ?>
-          <ul class="sidebar-nav">
-            <li> <?php print page_content('functions/_nav/functions'); ?> </li>
-          </ul>
-          <?php endif; ?>
-          <?php if(strstr(url_path(), 'classes/')): ?>
-          <ul class="sidebar-nav">
-            <li> <?php print page_content('classes/_nav/classes'); ?> </li>
-          </ul>
-          <?php endif; ?>
-          <?php if(strstr(url_path(), 'modules/')): ?>
-          <ul class="sidebar-nav">
-            <li> <?php print page_content('modules/_nav/modules'); ?> </li>
-          </ul>
-          <?php endif; ?>
-        </div>
-      </div>
-      
-      <!-- Page content -->
-      <div id="page-content-wrapper">
-        <div class="page-content inset" id="page-content-body"><?php print $content; ?></div>
-        <?php /*<div class="docs-help-needed"><a class="text-muted" href="<?php print $this_file_link?>">edit this file</a> </div>*/ ?>
-      </div>
+ <header class="navbar navbar-static-top bs-docs-nav">
+  <div class="container">
+    <div class="navbar-header">
+      <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<?php print site_url(); ?>">Microweber Docs</a>
     </div>
+    <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+
+    <div id="search" class="pull-right">
+        <input type="text" autocomplete="off" class="form-control" placeholder="Search" id="searchfield" />
+        <span class="glyphicon glyphicon-search"></span>
+        <div id="search_autocomplete"></div>
+
+
+    </div>
+
+      <ul class="nav navbar-nav">
+        <?php print page_content('header_nav'); ?>
+      </ul>
+
+    </nav>
+  </div>
+</header>
+  </div>
+
+  <div id="content" class="well">
+    <div class="container">
+       <div class="row">
+          <div class=" col-md-3 " id="sidecell">
+            <div id="sidenav">
+                <div id="sidenavcontent">
+                  <div id="section-title"><h3>Functions</h3></div>
+                  <div id="sidenav-menu">
+                      <?php print page_content('sidebar'); ?>
+                  </div>
+                  <div id="select_holder">
+                  <div class="row" >
+                    <div class="col-xs-2">
+                        <label style="padding-top: 5px;">Sections</label>
+                    </div>
+                    <div class="col-xs-10">
+                        <div id="select_container"></div></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class=" col-md-9"><div id="main-content"><?php print $content; ?></div></div>
+       </div>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>

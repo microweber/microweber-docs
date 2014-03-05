@@ -16,18 +16,17 @@ www.microweber.com
 */
 
 
-function page_content($filename = false, $selector = false)
+function page_content($filename = false, $selector = false, $filter = false)
 {
-    
-	
-	if($selector != false){
-		require_once("phpquery.php");
-	}
-	
-	
-	
-	static $cache = array();
-    $key = crc32($filename.strval($selector));
+
+
+    if ($selector != false) {
+        require_once("phpquery.php");
+    }
+
+
+    static $cache = array();
+    $key = crc32($filename . strval($selector));
     if (isset($cache[$key])) {
         return $cache[$key];
     }
@@ -49,12 +48,27 @@ function page_content($filename = false, $selector = false)
         ob_start();
         include ($item);
         $content = ob_get_clean();
-		if($selector != false){
-		$doc = phpQuery::newDocument($content); 
-   		$content =pq($selector);
-		}
-        $cache[$key] = $content;
-        return $content;
+        if ($selector != false) {
+            $doc = phpQuery::newDocument($content);
+            $content = pq($selector);
+        }
+        $cont = (string)$content;
+        if ($filter == 'clean') {
+            $cont = strip_tags($cont);
+            $cont = str_replace('-', ' ', $cont);
+            $cont = str_replace("—", ' ', $cont);
+
+            $cont = str_replace("\n", ' ', $cont);
+
+            $cont = str_replace("  ", ' ', $cont);
+            $cont = str_replace(" ();", ' ', $cont);
+
+
+            $cont = trim($cont);
+        }
+
+        $cache[$key] = $cont;
+        return $cont;
     } else {
         return false;
     }
