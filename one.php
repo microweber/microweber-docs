@@ -1,4 +1,10 @@
 <?php
+if(!defined('ONE')){
+	define('ONE',true);
+}
+
+
+
 /*
   ___  _   _ _____
  / _ \| \ | | ____|

@@ -1,0 +1,59 @@
+.nav-label-color {
+	display:block;
+	width:100%;
+	height:2px;
+	opacity:0.8;
+	 
+}
+
+
+
+.label-functions {
+	background-color: #5CB85C;
+}
+.label-functions[href]:hover, .label-functions[href]:focus {
+	background-color: #449D44;
+}
+.label-developer-guide {
+	background-color: #4B6978;
+}
+.label-developer-guide[href]:hover, .label-developer-guide[href]:focus {
+	background-color: #4B6978;
+}
+.label-classes {
+	background-color: #5a68a5;
+}
+.label-classes[href]:hover, .label-classes[href]:focus {
+	background-color: #5a68a5;
+}
+.label-js-api {
+	background-color: #e5a329;
+}
+.label-js-api[href]:hover, .label-js-api[href]:focus {
+	background-color: #e5a329;
+}
+.label-css-guide {
+	background-color: #36aee2;
+}
+.label-css-guide[href]:hover, .label-css-guide[href]:focus {
+	background-color: #36aee2;
+}
+.label-modules {
+	background-color: #df512d;
+}
+.label-modules[href]:hover, .label-modules[href]:focus {
+	background-color: #df512d;
+}
+
+
+
+
+
+#mytestdiv1 {
+   position:   absolute;
+   width:      100px;
+   height:     100px;
+   left:       expression(document.body.offsetWidth  - 110 + "px");
+   top:        expression(document.body.offsetHeight - 110 + "px");
+   background: red;
+}

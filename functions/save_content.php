@@ -16,7 +16,7 @@
 
 <h3>Usage</h3>
 <h4>Save new content item</h4>
-<pre class="prettyprint"><code class="language-php">
+<pre class="prettyprint"><code class="language-php runner">
 $data_to_save = array(); 
 $data_to_save['id'] = 0; 
 $data_to_save['title'] = 'My title'; 
@@ -27,7 +27,7 @@ $new_id = save_content($data_to_save);
 print($new_id); // prints the id of the new content 
  </code></pre>
 <h4>Update content</h4>
-<pre class="prettyprint"><code class="language-php">
+<pre class="prettyprint"><code class="language-php runner">
 $data_to_save = array(); 
 $data_to_save['id'] = 8; //if you set id the content will be updated 
 $data_to_save['title'] = 'My new title';  

@@ -145,10 +145,44 @@ function everythingFrom($baseDir, $extList, $searchStr)
 <ul class="search-results-list">
   <?php foreach($res as $item): ?>
   <?php if($item['title'] != false): ?>
-  <li><a href="<?php print $item['url'] ?>" title="<?php print $item['description'] ?>"><?php print $item['title'] ?> <small class="label label-default"><?php print $item['label'] ?></small></a></li>
+  <li><a href="<?php print $item['url'] ?>" title="<?php print $item['description'] ?>"><?php print $item['title'] ?> 
+  
+  
+
+<?php 
+
+$label_class = 'label-default';
+if($item['label'] == 'functions'){
+$label_class = 'label-success';
+} elseif($item['label'] == 'classes'){
+$label_class = 'label-info';
+} elseif($item['label'] == 'developer-guide'){
+$label_class = 'label-primary';
+}  elseif($item['label'] == 'css-guide'){
+$label_class = 'label-warning';
+}  elseif($item['label'] == 'js-api'){
+$label_class = 'label-danger';
+}
+$label_class = 'label-'.$item['label'];
+
+
+?>
+  <!--  <span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>-->
+
+
+  <small class="label label-default <?php print $label_class; ?>"><?php print $item['label'] ?></small>
+  
+  
+  
+  </a></li>
   <?php endif; ?>
   <?php endforeach; ?>
 </ul>
 <?php else: ?>
-Nothing found for: <em><?php print $searchString ?></em>
+<span class="search-results-list-empty">Nothing found for: <em><?php print $searchString ?></em></span>
 <?php endif; ?>

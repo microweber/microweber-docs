@@ -22,24 +22,10 @@ By default <code>get_content()</code> works with predefined content types such a
  <p>
 <code>Array</code> with the post data or <code>false</code> if the no results are found</p>
 <h3>Usage</h3> 
-<pre class="prettyprint"><code class="language-php">
+<pre class="prettyprint"><code class="language-php runner">&lt;?php
 $content = get_content();
 
-foreach ($content as $item) {
-    print $item['id'];
-    print $item['parent'];
-    print $item['position'];
-    print $item['title'];
-    print $item['url'];
-    print $item['description'];
-    print $item['content'];
-    print $item['content_type'];
-    print $item['subtype'];
-    print $item['created_on'];
-    print $item['updated_on'];
-    print $item['created_by'];
-    print $item['edited_by'];
-} 
+foreach ($content as $item) {<br />    print &quot;Title: &quot; . $item['title'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;The id is &quot; . $item['id'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;Link: &quot; . $item['url'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;Description: &quot; . $item['description'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;Date created: &quot; . $item['created_on'].&quot;&lt;/br&gt;&quot;;<br />    // print_r($item).&quot;&lt;/br&gt;&quot;;<br />} 
 </code></pre>
  
  
@@ -59,13 +45,14 @@ Returns array if results are found of false</p>
  
 <h4>Params as array or string</h4>
 <p>You can pass parameters as string or as array. Those parameters are with the same names as the fields in the content database table</p>
-<pre class="prettyprint"><code class="language-php">
-// parameters as string
-$content = get_content("is_active=y")
-
-//parameters as array 
-$params =  array("is_active"=>"y");
+<h5>Parameters as string</h5>
+<pre class="prettyprint"><code class="language-php runner">$content = get_content("is_active=y");
+print_r($content);
+ </code></pre>
+<h5>Parameters as array</h5>
+<pre class="prettyprint"><code class="language-php runner">$params =  array("is_active"=>"y");
 $content = get_content($params);
+print_r($content);
  </code></pre>
 
 <h2>Examples</h2>
@@ -78,7 +65,7 @@ $content = get_content($params);
 
 <h3>Basic example</h3>
 
-<pre class="prettyprint"><code class="language-php">
+<pre class="prettyprint"><code class="language-php runner">
 //basic
 $params = array(
 'limit' =&gt; 10, // get 10 posts
@@ -89,6 +76,7 @@ $params = array(
 
 $recent_posts = get_content($params);
 
+print &quot;&lt;ul&gt;&quot;;<br />foreach ($recent_posts as $item) {<br />    print &quot;&lt;li&gt;&lt;a href=&quot;.$item['url'].&quot;&gt;&quot; . $item['title'].&quot;&lt;/a&gt;&lt;/li&gt;&quot;;<br />}<br />print &quot;&lt;/ul&gt;&quot;;
 </code></pre>
 
 
@@ -107,22 +95,22 @@ $recent_posts = get_content($params);
 
 <h3 id="get-posts-or-products">Get posts or products</h3>
 <pre class="prettyprint"><code class="language-php">//get posts
-$posts = get_content('content_type=post');
+$posts = get_content('content_type=post&amp;limit=3');
 
 //get products
 $products = get_content('content_type=post&amp;subtype=product');
 
 </code></pre>
 <h3>Get by parent or category</h3>
-<pre class="prettyprint"><code class="language-php">//get only main pages
+<pre class="prettyprint"><code class="language-php runner">//get only main pages
 $pages = get_content('content_type=page&amp;parent=0');
 
-//get posts from a parent page 
-$last_edited_posts = get_content('content_type=post&amp;parent=3');
-
+//get posts with a parent page 
+$posts = get_content('content_type=post&amp;parent=2');
+print_r($posts);
 
 //get posts from category 
-$last_edited_posts = get_content('content_type=post&amp;category=1');
+$posts_from_category = get_content('content_type=post&amp;category=1');
 </code></pre>
 <h3 id="limit-and-paging">Limit and paging</h3>
 <pre class="prettyprint"><code class="language-php"> //get 5 posts

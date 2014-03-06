@@ -40,11 +40,15 @@ if(is_ajax()){
 <script src="<?php print site_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
 <link href="<?php print site_url(); ?>assets/js/highlight/styles/github.css" rel="stylesheet">
 <link href="<?php print site_url(); ?>assets/docs.css" rel="stylesheet">
+<link href="<?php print site_url(); ?>assets/labels.css" rel="stylesheet">
+
 <script src="<?php print site_url(); ?>assets/js/highlight/highlight.pack.js"></script>
 <script>
     SEARCH_URL = "<?php print site_url(); ?>s.php";
 </script>
 <script src="<?php print site_url(); ?>assets/docs.js"></script>
+<script src="<?php print site_url(); ?>assets/runner.js"></script>
+
 </head>
 <body>
 <div id="wrapper">
@@ -59,12 +63,12 @@ if(is_ajax()){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php print site_url(); ?>">Microweber Docs</a>
+      <a class="navbar-brand" href="<?php print site_url(); ?>" id="logo">Microweber Docs</a>
     </div>
     <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
 
     <div id="search" class="pull-right">
-        <input type="text" autocomplete="off" class="form-control" placeholder="Search" id="searchfield" />
+        <input tabindex="1" type="text" autocomplete="off" class="form-control" placeholder="Search" id="searchfield" />
         <span class="glyphicon glyphicon-search"></span>
         <div id="search_autocomplete"></div>
 
@@ -86,7 +90,19 @@ if(is_ajax()){
           <div class=" col-md-3 " id="sidecell">
             <div id="sidenav">
                 <div id="sidenavcontent">
-                  <div id="section-title"><h3>Functions</h3></div>
+                <?php $seg = url_segment(0); ?>
+                
+                 <div class="nav-label-color <?php print "label-".$seg; ?>"></div>
+                 
+                 <?php $seg_title =  ucwords(str_replace('-', ' ',$seg));
+				 if($seg_title == ''){
+					$seg_title = "Index"; 
+				 }
+				 
+				  ?>
+                 
+                  <div id="section-title"><h3><?php print $seg_title; ?></h3></div>
+                 
                   <div id="sidenav-menu">
                       <?php print page_content('sidebar'); ?>
                   </div>

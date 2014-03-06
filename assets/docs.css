@@ -27,9 +27,49 @@ body,a{
   margin-bottom: 0;
 }
 
+#header ul.nav.navbar-nav{
+  float: right;
+}
+
+#logo{
+  display: block;
+  text-indent: -9999px;
+  background: url(logo.png) no-repeat;
+  width: 138px;
+  height: 34px;
+  margin: 7px 20px 0 0;
+}
+
 #main-content{
   background: white;
   padding: 20px;
+
+}
+
+#main-content > h2:first-child{
+  padding:70px 70px 70px 220px;
+  margin-bottom: 35px;
+  margin-top: 0;
+  background: #4793C5 url(docstitle.png) no-repeat 50px 70%;
+  color: white;
+  font-size: 37px;
+  font-family:Consolas, sans-serif;
+}
+
+@media (max-width:991px){
+  #main-content > h2:first-child{
+    padding:20px;
+    background: #4793C5 ;
+     font-size: 30px;
+  }
+
+  #sidenavcontent .nav-label-color{
+    display: none;
+  }
+
+  #header ul.nav.navbar-nav{
+    float: none;
+  }
 
 }
 
@@ -135,12 +175,11 @@ body,a{
   padding: 17px;
   margin: 0;
   border-bottom: 1px solid #E8E8E8;
-  font-size:
 }
 
 #search{
   position: relative;
-  margin: 8px 0 0 0;
+  margin: 8px 0 0 20px;
 }
 
 #search input{
@@ -161,8 +200,21 @@ body,a{
   top: 10px;
   right: 10px;
   color: #bbb;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   pointer-events:none;
 }
+#search.searching .glyphicon:before{
+  display:none;
+}
+#search.searching .glyphicon{
+  background-image: url(searchspin.GIF);
+}
+
 #search input.xfocus + .glyphicon{
   color: #333;
 }
@@ -195,8 +247,6 @@ body,a{
 }
 
 #search_autocomplete li a .label{
-background: none repeat scroll 0 0 #EFECEC;
-  color: #666666;
   font-size: 10px;
   line-height: 9px;
   padding: 1px 4px;
@@ -205,10 +255,25 @@ background: none repeat scroll 0 0 #EFECEC;
   top: 3px;
 }
 
+#search_autocomplete li a.hover .label,
+#search_autocomplete li a:hover .label{
+  background:white;
+  color: #333;
+}
+
 #search_autocomplete li a.hover,
 #search_autocomplete li a:hover{
   color: white;
   background: #4793C5;
+}
+
+.search-results-list-empty{
+  display: block;
+  padding: 12px;
+  color: #777;
+}
+.search-results-list-empty em{
+  color: #333;
 }
 
 @media (max-width:991px){
@@ -216,4 +281,11 @@ background: none repeat scroll 0 0 #EFECEC;
     display: none;
   }
 
+}
+
+
+.runner_output {
+ max-height:300px;
+ overflow:scroll;	
+	
 }

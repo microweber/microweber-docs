@@ -12,7 +12,7 @@
 
  
 <h3>Usage</h3>
-<pre class="prettyprint"><code class="language-php">
+<pre class="prettyprint"><code class="language-php runner">
 //get a content link 
 $content_link = content_link($id=3); 
 print $content_link;

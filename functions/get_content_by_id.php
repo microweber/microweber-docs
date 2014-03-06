@@ -31,7 +31,7 @@
 </table>
  
 <h3>Usage</h3>
-<pre class="prettyprint"><code class="language-php">//get a content item by id
+<pre class="prettyprint"><code class="language-php runner">//get a content item by id
 $id = 3;
 $content = get_content_by_id($id); 
 
@@ -40,7 +40,6 @@ if($content != false){
 	print $content['id'];
 	print $content['parent'];
 	print $content['position'];
-	print $content['title']; 
 	// and more... print_r($content);
 }
 </code></pre>
