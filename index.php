@@ -41,8 +41,14 @@ if(is_ajax()){
 <link href="<?php print site_url(); ?>assets/js/highlight/styles/github.css" rel="stylesheet">
 <link href="<?php print site_url(); ?>assets/docs.css" rel="stylesheet">
 <link href="<?php print site_url(); ?>assets/labels.css" rel="stylesheet">
-
 <script src="<?php print site_url(); ?>assets/js/highlight/highlight.pack.js"></script>
+
+
+  <!--      <link href="<?php print site_url(); ?>assets/ace-editor/api/resources/csses/ace_api.css" rel="stylesheet" type="text/css" />
+
+  <script src="<?php print site_url(); ?>assets/ace-editor/build/src-min/ace.js"></script>
+        <script src="<?php print site_url(); ?>assets/ace-editor/build/src-min/ext-static_highlight.js"></script>
+-->
 <script>
     SEARCH_URL = "<?php print site_url(); ?>s.php";
 </script>

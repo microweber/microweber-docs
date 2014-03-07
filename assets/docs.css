@@ -43,7 +43,17 @@ body,a{
 #main-content{
   background: white;
   padding: 20px;
+  font-size:15px;
 
+}
+
+#main-content a{
+ color:#4793c5; 
+}
+
+#content .main p {
+   
+	 
 }
 
 #main-content > h2:first-child{
@@ -167,10 +177,13 @@ body,a{
 }
 
 #main-content .subnav li{
-    font-size: 21px;
+    font-size: 16px;
     line-height: 2;
 }
 
+#main-content .subnav li a.active{
+   color:#CCCCCC; 
+}
 #section-title h3{
   padding: 17px;
   margin: 0;
@@ -288,4 +301,15 @@ body,a{
  max-height:300px;
  overflow:scroll;	
 	
+}
+
+.code_runner_iframe {
+ max-height:450px;
+ overflow:scroll-x;
+ width:100%;	
+	border:none;
+
+}
+.code_runner_iframe_form{
+display:none;	
 }

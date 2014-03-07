@@ -5,25 +5,33 @@ $(document).ready(function(){
 
   $('pre code').each(function(i, e) {
 	 
-	  hljs.highlightBlock(e)
-	  
+	    hljs.highlightBlock(e)
+	  //make_ace_code_editor(e);
 	  });
 	  
 	  
 	  
-/*	  
+	  
 	   $('pre code.runner').each(function(i, e) {
- $(this).click(function(){
+ $(this).click(function(){ 
 		 var a = $(this).attr('contenteditable');
-		 if(a  != true){	
+		
+		 if(a != true && a != 'true'){	
+		 var code = $(this).text();
+		 $(this).text(code);
+			 
 		  	$(this).attr('spellcheck',false);	
-	$(this).attr('contenteditable',true);	
+	        $(this).attr('contenteditable',true);	
+			$(this).addClass('no-highlight');	
+			
+			
+			//hljs.highlightBlock(this)
 		 }
-		    hljs.highlightBlock(this)
+		    
 		  
 		  });
 
- });*/
+ });
  
  
  
@@ -174,3 +182,17 @@ $(document).ready(function(){
 
 });
 
+
+
+
+
+
+function make_ace_code_editor(el){
+	
+ 
+    var editor = ace.edit(el);
+   
+     editor.setTheme("ace/theme/twilight");
+ 	
+	
+}

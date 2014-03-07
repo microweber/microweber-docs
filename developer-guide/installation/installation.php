@@ -9,8 +9,9 @@
     <li>lib-xml must be enabled, with DOM support</li>
     <li>GD php extension must be loaded</li>
   </ul>
-  <p id="row_1384095288817">Unzip and upload the files in your server folder and <strong>open your browser on the address <a href="http://your-website.com/index.php">http://your-website.com/index.php</a></strong> file</p>
-  <p id="row_1384095288818">If there is no config.php file in your folder Microweber will make new one for you when you install it</p>
+  <p id="row_1384095288817">Unzip and upload the files in your server folder and <strong>open your browser and go to your web address ex. http://example.com/</strong></p>
+  <p id="row_1384095288818">You should see the following screen that allows you to setup your server</p>
+  <p>If there is no config.php file in your folder Microweber will make new one for you when you install it</p>
   <p id="row_1384095288819"><a href="https://github-camo.global.ssl.fastly.net/7868bd10fb3fee32d2ca0ab286baf898000e96c5/687474703a2f2f6e65772e6d6963726f77656265722e636f6d2f63646e2f646f63732f4d575f53455455505f312e6a7067" target="_blank"><img src="https://github-camo.global.ssl.fastly.net/7868bd10fb3fee32d2ca0ab286baf898000e96c5/687474703a2f2f6e65772e6d6963726f77656265722e636f6d2f63646e2f646f63732f4d575f53455455505f312e6a7067" alt="setup"></a></p>
   <h2 id="row_1384095288820"> <a name="htaccess-setup" href="http://microweber.com/installation#htaccess-setup"></a>.htaccess setup</h2>
   <p id="row_1384095288821">Microweber will create or modify your .htaccess file in the folder you are installing it.</p>
@@ -32,7 +33,7 @@
   <p id="row_1384095288837">Use real email for this. When you forgot your password you will need it!</p>
   <h2 id="row_1384095288838"> <a name="admin-password" href="http://microweber.com/installation#admin-password"></a>Admin Password</h2>
   <p id="row_1384095288839">Please set strong and secure  password. How strong is your password is equal to how much time will  take someone break it and get your website. Click the Install Button and Make Web with Microweber. </p>
-  <p id="row_1384095288840">After installation you can login in the admin panel from <strong>http://you_site_url/admin</strong></p>
+  <p id="row_1384095288840">After installation you can login in the admin panel from <strong>http://example.com/admin</strong></p>
   <h3 id="row_1384095511613">How to video</h3>
   <p id="row_1384095288842">The guys from <a href="http://opensourcechannel.co.uk/"><u>opensourcechannel.co.uk</u></a> made a video how to setup a database and install Microweber on your own server  </p>
   <div data-mw-title="Video" data-type="video" id="row_1384095288844" data-parent-module="pages" data-parent-module-id="api_docs_nav127">

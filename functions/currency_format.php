@@ -5,7 +5,7 @@
 <pre class="prettyprint"><code class="language-php">currency_format($amount, $currency=false);
 </code></pre>
 <h3>Usage</h3>
-<pre class="prettyprint"><code class="language-php">
+<pre class="prettyprint"><code class="language-php runner">
 $currency_format = currency_format(100);
 var_dump($currency_format);
 //string "$ 100.00"

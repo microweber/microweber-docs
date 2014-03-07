@@ -1,22 +1,24 @@
 
-<h2>Intorduction to Modules</h2>
-<p> The modules in Microweber are the building blocks of your website. </p><p>They are used to extend your site's functionality beyond simple text writing.<br>
-  With them you can show dynamic information from the database and write custom logic and functions.</p>
-<p> The modules can work independently of the content and the "design" of your site and can even have their own "skins" </p>
-<p> In the most cases the modules are the "blocks" that you drag and drop around your website.</p>
-<h3>Module folder structure</h3>
-<p>Each module have its own folder located at userfiles/modules/<module name></p>
-<code class="codettyprint"><code class="language-php">- userfiles
-    - modules
-      - my_module
-        config.php
-        index.php
-        admin.php
-        functions.php
-        my_module.png
-</code></code>
+<h2>Requirements</h2>
+<p>The following configurations are supported by the Microweber CMS. </p>
+<h3>Server-side Requirements</h3>
+<ul>
+  <li>Apache web server or IIS</li>
+  <li>PHP 5.3 or above</li>
+  <li>MySQL 5 or above</li>
+  <li>mod_rewrite must be enabled</li>
+  <li>lib-xml must be enabled, with DOM support</li>
+  <li> GD php extension must be loaded</li>
+</ul>
+<p>In most cases your default server setup should be able to run Microweber</p>
+<h3>Supported browsers</h3>
+<ul>
+  <li>Google Chrome</li>
+  <li>Mozilla Firefox</li>
+  <li>Webkit based browsers</li>
+  <li>Internet Explorer 9+</li>
+</ul>
+<p>&nbsp;</p>
 
 
 
-
- 
