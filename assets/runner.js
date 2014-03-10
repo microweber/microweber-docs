@@ -58,7 +58,7 @@ function runcode(el){
 			
 			
 		} else {
-				$.post( "http://console.microweber.com/php-console", { code: code,js: 1,process: proc })
+				$.post( "http://console.microweber.com/php-console", { code: code,js: 1 })
 				  .done(function( data ) {
 				   // alert( "Data Loaded: " + data );
 				   runner_output.show();
