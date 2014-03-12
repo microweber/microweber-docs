@@ -18,7 +18,7 @@ $post = array(<br />&quot;title&quot;=&gt;&quot;My post from category&quot;,<br 
 $categories = content_categories($content_id); 
 
 // make links for the result
-if(!empty($categories)){<br />    print &quot;&lt;ul&gt;&quot;;<br />    foreach($categories as $category){<br />    print &quot;&lt;li&gt;&lt;a href=&quot;.category_link($category['id']).&quot;&gt;&quot;.$category['title'].&quot;&lt;/a&gt;&lt;/li&gt;&quot;;<br />    }<br />    print &quot;&lt;/ul&gt;&quot;;<br />}
+if(!empty($categories)){<br />    print &quot;&lt;ul&gt;&quot;;<br />    foreach($categories as $category){<br />    print &quot;&lt;li&gt;&lt;a href=&quot;.category_link($category['id']).&quot; target='_blank'&gt;&quot;.$category['title'].&quot;&lt;/a&gt;&lt;/li&gt;&quot;;<br />    }<br />    print &quot;&lt;/ul&gt;&quot;;<br />}
 </code></pre>
 
 

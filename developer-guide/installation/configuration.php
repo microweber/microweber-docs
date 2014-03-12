@@ -1,9 +1,12 @@
+<?php if(!defined('ONE')){
+	$fn = str_ireplace('.php','',basename(__FILE__));
+	header("Location: ".$fn);
 
+} ?>
 <h2>Configuration</h2>
 <p>Your website config file is located in the main folder of your site and its named <code>config.php</code></p>
 <p>From it you can setup the database access details </p>
 <h3>Typical config on file on installed system</h3>
- 
  
 
 <pre class="prettyprint"><code class="language-php">&lt;?php
@@ -37,6 +40,8 @@ $config = array(
 
 
 <h3>Configuration file on non-installed system</h3>
+<div class="alert alert-info">If you don't have config.php file in your Microweber folder, such file will be created on install.</div>
+
 <p>If you have this file and open your site, you should be redirected to the installation screen. All the fields will be populated with the data from the file.
 </p> <pre class="prettyprint"><code class="language-php">&lt;?php
 defined('T') or die();

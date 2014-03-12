@@ -1,4 +1,8 @@
-<h1 data-field="title" rel="content">Installation</h1>
+<?php if(!defined('ONE')){
+	$fn = str_ireplace('.php','',basename(__FILE__));
+	header("Location: ".$fn);
+
+} ?><h1 data-field="title" rel="content">Installation</h1>
 <div data-field="content" rel="content">
   <p id="row_1384095288816">To use Microweber on your server the following server requirements are needed:</p>
   <ul>

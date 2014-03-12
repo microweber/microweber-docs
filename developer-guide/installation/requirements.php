@@ -1,4 +1,8 @@
+<?php if(!defined('ONE')){
+	$fn = str_ireplace('.php','',basename(__FILE__));
+	header("Location: ".$fn);
 
+} ?>
 <h2>Requirements</h2>
 <p>The following configurations are supported by the Microweber CMS. </p>
 <h3>Server-side Requirements</h3>

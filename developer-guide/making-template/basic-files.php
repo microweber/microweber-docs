@@ -1,5 +1,6 @@
 <?php if(!defined('ONE')){
-	header("Location: index");
+	$fn = str_ireplace('.php','',basename(__FILE__));
+	header("Location: ".$fn);
 
 } ?>
 
@@ -8,7 +9,45 @@
 <p>In the most common case we will need header, footer and a place to add our content.</p>
 <img src="<?php print site_url() ?>assets/img/basic-template-files.png" style="max-width:650px;" />
 <p>&nbsp;</p>
-<p>&nbsp;</p>
+<p>The following layout files are required for any template. Also you cam add as many layouts as you wish.</p>
+ 
+<table border="0"  class="table table-hover">
+  <tr>
+    <td>File</td>
+    <td>Desctiption</td>
+  </tr>
+  <tr>
+    <td><code>config.php</code></td>
+    <td>Set the name of your template and other info</td>
+  </tr>
+  <tr>
+    <td><code>header.php</code></td>
+    <td>File to load scripts and CSS files and the opening &lt;body&gt; tag</td>
+  </tr>
+  <tr>
+    <td><code>footer.php</code></td>
+    <td>Put footer information and closing &lt;/body&gt; tag in this file</td>
+  </tr>
+  <tr>
+    <td><code>index.php</code></td>
+    <td>Default layout for pages</td>
+  </tr>
+  <tr>
+    <td><code>inner.php</code></td>
+    <td>Default layout for posts</td>
+  </tr>
+  <tr>
+    <td><code>clean.php</code></td>
+    <td>Layout for empty page</td>
+  </tr>
+</table>
+<h3>Loading static files (css,javascripts,etc..)</h3>
+<p>In the common case every template have a lot of files, those may be images, css files, javascripts and what not.
+  
+  You can put those files in the template folder and load them using the <code>TEMPLATE_URL</code> constant or <code>template_url()</code> function: </p>
+<pre class="prettyprint"><code class="language-php">&lt;link href=&quot;&lt;?php print TEMPLATE_URL; ?&gt;style.css&quot; rel=&quot;stylesheet&quot; &gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;?php print TEMPLATE_URL; ?&gt;scripts.js&quot;&gt;&lt;/script&gt;</code></pre>
+<h3>&nbsp;</h3>
 <h3>Set the name of your template</h3>
 <strong>config.php</strong>
 <p id="row_1390906260184">This file holds the name of your template and its version. <br />
@@ -21,6 +60,10 @@
 <p id="row_1390906260188">The config file defines the name of your template as it will appear in the &quot;Template selection&quot; menu and in the &quot;Settings&quot; area.</p>
 <p id="row_1390906260189">The <em>version </em>parameter is optional and its used if you want to offer updates.</p>
 <p id="row_1390906260190">After making the config.php file you must create the other necessary files.</p>
+
+
+
+
 <h3>Create basic layout files</h3>
 
 <p id="row_1390906260191"><strong>header.php</strong></p>
@@ -57,3 +100,7 @@
 The above code will end up with this result on the <em>Add page </em>screen.<br />
 <br />
 <img id="row_1390906260204"   src="http://microweber.com/userfiles/media/mw_template_basic_layout.png" contenteditable="false" />
+
+
+
+<?php print page_content('developer-guide/making-template/_nav'); ?> 

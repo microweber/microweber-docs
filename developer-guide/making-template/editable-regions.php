@@ -1,4 +1,8 @@
+<?php if(!defined('ONE')){
+	$fn = str_ireplace('.php','',basename(__FILE__));
+	header("Location: ".$fn);
 
+} ?>
 <h2>Editable regions</h2>
 <div id="row_1390926495160">
   <div data-mw-title="Text" data-type="text" id="row_1390926495161">
@@ -6,6 +10,19 @@
     </p>
     <p id="row_1390926495163">You can define as few or as many regions that you like</p>
   </div>
+  <h4 id="row_1390906260217">Editable regions</h4>
+  <div data-mw-title="Text" data-type="text" id="row_1390906260218">
+    <p id="row_1390906260219">Every layout can have a number of editable regions. </p>
+  </div>
+  <div data-mw-title="Text" data-type="text" id="row_1390906260220">
+    <p id="row_1390906260221">They are defined by adding &quot;edit&quot; class and &quot;field&quot; and &quot;rel&quot; attributes to ANY html element. <br />
+      As a developer you can decide how many editable regions you want. They are very flexible and can be re-used across pages. <br />
+      For example, you could do the following, to define a global region on the site:</p>
+  </div>
+  <pre class="prettyprint"><code class="language-php">&lt;div class=&quot;edit&quot; field=&quot;my_editable_field&quot; rel=&quot;global&quot;&gt;<br />  My global region<br />&lt;/div&gt;</code></pre>
+  <p id="row_1390906260223">The content of this region will be dynamic and will be editable on every layout that includes it.<br />
+  </p>
+  
   <h3 id="row_1390926495165">Creating editable field<br />
   </h3>
   <p id="row_1390926495166">You can define editable regions in your template where the user will be able to type text and <em>Drag and Drop</em> modules</p>
@@ -25,9 +42,18 @@
   <h3 id="row_1390926495177">Add editable fields in your template<br />
   </h3>
   <p id="row_1390926495178"><img id="row_1390926495179" src="http://microweber.com/userfiles/media/editable_regions_classes.png" /></p>
-  <h2>Editable region attributes</h2>
-  <iframe width="640" height="480" src="//www.youtube.com/embed/R8RG74S_Z3E" frameborder="0" allowfullscreen></iframe>
+  <h4>Set default content region
+  </h4>
+  <p id="row_1390906260225">The default region that shows in the admin panel is defined by<em> <code>rel=&quot;content&quot;</code>  </em>&amp; <em><code>field=&quot;content&quot;</code> </em>attributes of your html element</p>
+  <p id="row_1390906260226">So, when you want to add a post you need to have the following region in your layout:</p>
+  <pre class="prettyprint"><code class="language-php">&lt;div class=&quot;edit&quot; field=&quot;content&quot; rel=&quot;content&quot;&gt;<br />        &lt;p&gt;My post content&lt;/p&gt;<br />&lt;/div&gt;</code></pre>
+  <p id="row_1390906260228">You will see this on the add post screen.</p>
+  <div id="row_1390906260229">
+    <p id="row_1390906260230"><img src="http://microweber.com/userfiles/media/mw_template_basic_content_region.png" alt="editable content" id="row_1390906260231" contenteditable="false" onmouseenter="this.contentEditable=false;" /></p>
+  </div>
   
+  <h2>Editable regions attributes</h2>
+  <p>Each editable region behaves differently in dependence of the <code>rel</code> and <code>field</code> attributes you add to it</p>
   <h3 id="row_1390926495171"> The &quot;field&quot; attribute</h3>
   <p id="row_1390926495172">The field attribute will help you to split your layout into multiple content-editable regions. </p>
   <ul>
@@ -55,8 +81,10 @@
   
   
   
-  <h3 id="row_1390926495177">Playing with the rel attribute<br />
+  <h3 id="row_1390926495177">Playing with the rel attribute 
   </h3>
+  <h5>Editable region <code>rel </code>attribute</h5>
+  <iframe width="640" height="480" src="//www.youtube.com/embed/R8RG74S_Z3E" frameborder="0" allowfullscreen></iframe>
   <h5 id="row_1390926495180">Sample layout with sidebar where the content is inherited in the inner pages
   </h5>
   <p id="row_1390926495181"><em>note the usage of the <code>rel</code> tag</em></p>
