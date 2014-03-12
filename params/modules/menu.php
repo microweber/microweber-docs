@@ -9,17 +9,12 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-php">ul_class</code></td>
-      <td>you can set the class name of the list</td>
+      <td><code class="language-php">menu-name</code></td>
+      <td>The name of your menu</td>
     </tr>
-     <tr>
-      <td><code class="language-php">content-id</code></td>
-      <td>id of the parent page</td>
-    </tr>
-    
     <tr>
       <td><code class="language-php">template</code></td>
-      <td>set the module template</td>
+      <td>set the module template or <a href="<?php print site_url() ?>developer-guide/making-a-module/module-template">make your own</a>, defaults are <code>default</code>,<code>small</code></td>
     </tr>
   </tbody>
 </table>
