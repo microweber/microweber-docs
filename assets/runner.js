@@ -37,6 +37,7 @@ function runcode(el){
 			
 			$('.code_runner_iframe').remove();
 			$('.code_runner_iframe_form').remove();
+			$('.runner_output').hide();
 			var rand = Math.floor((Math.random()*1000)+1);
 			$('<iframe />');  // Create an iframe element
 			$('<iframe />', {
