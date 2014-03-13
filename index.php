@@ -115,17 +115,12 @@ if(is_ajax()){
         </div>
         <div class=" col-md-9">
           <div id="main-content"><?php print $content; ?>
-          
-          
-          
-          <div  >
-          <hr />
-          <h4>Leave your comment</h4>
-         <div class="fb-comments" data-href="<?php print current_url(); ?>" data-numposts="66"  data-colorscheme="light" data-width="500"></div>
+            <div  >
+              <hr />
+              <h4>Leave your comment</h4>
+              <div class="fb-comments" data-href="<?php print current_url(); ?>" data-numposts="66"  data-colorscheme="light" data-width="500"></div>
+            </div>
           </div>
-          
-          </div>
-          
         </div>
       </div>
     </div>
