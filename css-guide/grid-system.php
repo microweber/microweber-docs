@@ -11,7 +11,7 @@
   <li><strong>.mw-col-container</strong> - Column container - this element is used for adding extra space(margin, padding) inside the column</li>
 </ul>
 <h4>Usage and Example</h4>
-<pre class="prettyprint"><code class="language-php runner proc html">  &lt;div class="<span class="g">mw-row</span>">
+<pre class="prettyprint"><code class="language-php ">  &lt;div class="<span class="g">mw-row</span>">
       &lt;div class="<span class="g">mw-col</span>" style="width: <span class="u">30%</span>">
         &lt;div class="<span class="g">mw-col-container</span>">Item 1&lt;/div>
       &lt;/div>

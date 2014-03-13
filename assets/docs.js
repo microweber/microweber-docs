@@ -39,8 +39,8 @@ $(document).ready(function(){
  
  
   $("#sidenav .nav-title").click(function(){
-    $(this).next("ul").toggle();
-    return false;
+    //$(this).next("ul").toggle();
+    //return false;
   });
 
 

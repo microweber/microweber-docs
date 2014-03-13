@@ -3,9 +3,14 @@
   <li> <a class="nav-title <?php if(strstr(url_path(), 'developer-guide/installation')) print "active" ; ?>" href="<?php print site_url(); ?>developer-guide/installation/installation">Installation</a> <?php print page_content('developer-guide/installation/_nav'); ?> </li>
   
   
-    <li> <a class="nav-title <?php if(strstr(url_path(), 'developer-guide/making-template')) print "active" ; ?>" href="<?php print site_url(); ?>developer-guide/making-template/installation">Making a template</a> <?php print page_content('developer-guide/making-template/_nav'); ?> </li>
-    <li> <a class="nav-title <?php if(strstr(url_path(), 'developer-guide/working-with-modules')) print "active" ; ?>" href="<?php print site_url(); ?>developer-guide/working-with-modules/">Working with modules</a> <?php print page_content('developer-guide/working-with-modules/_nav'); ?> </li>
+    <li> <a class="nav-title <?php if(strstr(url_path(), 'developer-guide/making-template')) print "active" ; ?>" href="<?php print site_url(); ?>developer-guide/making-template/index">Making a template</a> <?php print page_content('developer-guide/making-template/_nav'); ?> </li>
+    <li> <a class="nav-title <?php if(strstr(url_path(), 'developer-guide/working-with-modules')) print "active" ; ?>" href="<?php print site_url(); ?>developer-guide/working-with-modules/index">Working with modules</a> <?php print page_content('developer-guide/working-with-modules/_nav'); ?> </li>
     
     
-      <li> <a class="nav-title <?php if(strstr(url_path(), 'developer-guide/making-a-module')) print "active" ; ?>" href="<?php print site_url(); ?>developer-guide/making-a-module/">Making a module</a> <?php print page_content('developer-guide/making-a-module/_nav'); ?> </li>
+      <li> <a class="nav-title <?php if(strstr(url_path(), 'developer-guide/making-a-module')) print "active" ; ?>" href="<?php print site_url(); ?>developer-guide/making-a-module/index">Making a module</a> <?php print page_content('developer-guide/making-a-module/_nav'); ?> </li>
+      
+      
+      
+      
+      
 </ul>

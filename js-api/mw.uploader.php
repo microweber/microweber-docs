@@ -6,7 +6,7 @@
 <h3>Return Values</h3>
 <p> <code>Object</code> with the uploaded file data or <code>false</code> if the the file is not up.</p>
 <h3>Usage</h3>
-<code class="codettyprint"><code class="language-php">&lt;script type=&quot;text/javascript&quot;&gt;
+ <pre class="prettyprint"><code class="language-php">&lt;script type=&quot;text/javascript&quot;&gt;
   var uploader = mw.files.uploader({
   filetypes:&quot;images,videos&quot;,
   multiple:false
@@ -33,7 +33,6 @@
     
  });
 &lt;/script&gt; 
-&lt;span id=&quot;mw_uploader&quot; class=&quot;mw-ui-btn&quot;&gt;&lt;span class=&quot;ico iupload&quot;&gt;&lt;/span&gt;&lt;span&gt;Upload file&lt;span id=&quot;upload_backup_info&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-</code></code>
+&lt;span id=&quot;mw_uploader&quot; class=&quot;mw-ui-btn&quot;&gt;&lt;span class=&quot;ico iupload&quot;&gt;&lt;/span&gt;&lt;span&gt;Upload file&lt;span id=&quot;upload_backup_info&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;</code></pre>
 <h4>See also</h4>
 <?php print page_content('js-api/_nav/index'); ?>

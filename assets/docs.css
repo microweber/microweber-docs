@@ -89,7 +89,7 @@ body, a {
 #sidenav li a:hover, #sidenav li a:focus {
 	background-color: #E8E8E8;
 }
-#sidenav ul ul {
+#sidenav ul ul ul ul {
 	display: none;
 }
 #sidecell {
