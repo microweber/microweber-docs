@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_SERVER['HTTPS']) and $_SERVER['HTTPS'] == "on"){
-    $redirect = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    $redirect = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     header("Location: $redirect");
 	exit;
 }
@@ -121,11 +121,13 @@ if(is_ajax()){
              
             </div>-->
           </div>
+          <div class="row" style="padding:20px;"><small class="pull-right" style="color:#AEAEAE;">This documentation is a work in progress. <a style="color:#9D9D9D;" href="<?php print $this_file_link; ?>">Help us by improving this file</a>.</small></div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<?php if(isset($_SERVER['REMOTE_ADDR']) and $_SERVER['REMOTE_ADDR'] != '78.90.67.20'):  ?>
  <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -155,5 +157,17 @@ if(is_ajax()){
     w.addEventListener ? w.addEventListener("load", gs, false) : w.attachEvent("onload", gs);
   })(window);
 </script>
+
+
+<!-- TYXO -->
+  <script type="text/javascript">
+  <!--
+  tyd=document;tyd.write('<a href="http://www.tyxo.bg/?146467" title="Tyxo.bg counter"><img width="1" height="1" border="0" alt="Tyxo.bg counter" src="'+location.protocol+'//cnt.tyxo.bg/146467?rnd='+Math.round(Math.random()*2147483647));
+  tyd.write('&sp='+screen.width+'x'+screen.height+'&r='+escape(tyd.referrer)+'"></a>');
+  //-->
+  </script><noscript><a href="http://www.tyxo.bg/?146467" title="Tyxo.bg counter"><img src="http://cnt.tyxo.bg/146467" width="1" height="1" border="0" alt="Tyxo.bg counter" /></a></noscript>
+<!-- / TYXO -->
+
+<?php endif; ?>
 </body>
 </html>

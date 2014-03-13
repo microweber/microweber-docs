@@ -162,6 +162,6 @@
     <p id="row_1390906260269">Now we should be ready with our simple blog post template. All the content the user adds from the admin will be shown in the area with the attributes <code>field="content"</code> and <code>rel="content</code>"</p>
   </div>
 </div>
-<div id="row_1390906260270"> <a href="http://microweber.com/userfiles/media/tuts/my_template_basic3.zip">Download source</a> </div>
+<div id="row_1390906260270"> <a href="https://github.com/microweber/skeleton-template">Download source</a> </div>
 <p>&nbsp;</p>
 <?php print page_content('developer-guide/making-template/_nav'); ?> 
