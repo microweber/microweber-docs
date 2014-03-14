@@ -13,7 +13,7 @@ exit;
     <li>True WYSIWYG (you really get what you see)</li>
     <li>Drag and drop content editing</li>
     <li>Online shop</li>
-    <li>Add reatures to your website with Modules</li>
+    <li>Add features to your website with Modules</li> 
   </ul>
   <h3>For developers</h3>
   <ul>

@@ -127,7 +127,10 @@ if(is_ajax()){
     </div>
   </div>
 </div>
-<?php if(isset($_SERVER['REMOTE_ADDR']) and $_SERVER['REMOTE_ADDR'] != '78.90.67.20'):  ?>
+<?php
+
+ 
+ if(isset($_SERVER['REMOTE_ADDR']) and $_SERVER['REMOTE_ADDR'] != '78.90.67.20' and strstr($_SERVER['REMOTE_ADDR'],'192.168') == false):  ?> 
  <script type="text/javascript">
 
   var _gaq = _gaq || [];

@@ -25,6 +25,11 @@ body, a {
 #header ul.nav.navbar-nav {
 	float: right;
 }
+#header ul.nav.navbar-nav li a.active {
+	background-color:#EEEEEE;
+}
+ 
+ 
 #logo {
 	display: block;
 	text-indent: -9999px;
