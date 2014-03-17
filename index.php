@@ -97,7 +97,7 @@ if(is_ajax()){
 				 
 				  ?>
               <div id="section-title">
-                <h3><?php print $seg_title; ?></h3>
+                <h3><a href="<?php print site_url().$seg; ?>"><?php print $seg_title; ?></a></h3>
               </div>
               <div id="sidenav-menu"> <?php print page_content('sidebar'); ?> </div>
               <div id="select_holder">

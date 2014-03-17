@@ -44,9 +44,9 @@ print $url;
 
  <h3 class="border-bot">mw('url')->slug($title)</h3>
 <p>Returns  url slug as a string</p>
-<pre class="prettyprint"><code class="language-php"> $title = "My long title";
+<pre class="prettyprint"><code class="language-php"> $title = "My test title";
 $slug = mw('url')->slug($title);
 
 print $slug; 
-// It will print "my-long-title" </code></pre>
+// It will print "my-test-title" </code></pre>
  

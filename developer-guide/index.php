@@ -22,10 +22,12 @@
 </ul>
 <h4>More info</h4>
 <ul>
+  <li><a href="changelog">Changelog</a></li>
   <li><a href="http://microweber.com">Official website</a></li>
   <li><a href="https://github.com/microweber/Microweber">Github</a></li>
   <li><a href="https://www.facebook.com/Microweber">Facebook</a> / <a href="https://twitter.com/microweber">Twitter</a></li>
   <li>IRC: #microweber at <a href="http://webchat.freenode.net/?channels=microweber&uio=d4">irc.freenode.net</a></li>
+
 </ul>
 <hr>
 <p>Here you will learn how to work with the Microweber framework which powers up all sites and modules. 

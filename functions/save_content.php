@@ -37,5 +37,20 @@ print ($new_id); // prints the id of the saved content (ex.8) </code></pre>
 <p>You use those fields to store and structure your content</p>
 <?php print page_content('params/content'); ?>
 
+
+
+<pre class="prettyprint"><code class="language-php runner">$params = array(
+'title' =&gt; 'My custom product',
+'content_type' =&gt; 'post',
+'subtype' =&gt; 'product',
+'custom_field_price' =&gt; 100,
+'custom_field_color' =&gt; 'Red',
+'is_active' =&gt; 'y');
+
+$product_id = save_content($params);
+$custom_fields = get_custom_fields($product_id);
+print_r($custom_fields); 
+</code></pre>
+
 <h4>See also</h4>
 <?php print page_content('functions/_nav/content'); ?>
