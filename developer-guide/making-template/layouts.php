@@ -102,8 +102,7 @@
 </p>
 <h2 id="row_1390906260233">Adding CSS styles</h2>
 <code>header.php</code>
-<p id="row_1390906260234">We will use Bootstrap in our example template. Of course you can use any CSS framework or custom CSS.</p>
- 
+<p id="row_1390906260234">We will use Bootstrap in our example template. Of course you can use any CSS framework or custom CSS. Put your CSS files in the template folder. </p>
 <p>Adding bootstrap to <strong>header.php</strong> file and adding the main site navigation menu module:</p>
 <div id="row_1390906260236">
   <pre class="prettyprint"><code class="language-php">&lt;!DOCTYPE HTML&gt;<br />&lt;html prefix=&quot;og: http://ogp.me/ns#&quot;&gt;<br />&lt;head&gt;<br />&lt;title&gt;How to make a template?&lt;/title&gt;<br />&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php print TEMPLATE_URL; ?&gt;style.css&quot; type=&quot;text/css&quot; media=&quot;all&quot;&gt;<br />&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php print TEMPLATE_URL; ?&gt;css/bootstrap.css&quot; type=&quot;text/css&quot; media=&quot;all&quot;&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;div id=&quot;header&quot;&gt;<br />	&lt;div class=&quot;edit&quot; rel=&quot;global&quot; field=&quot;header&quot;&gt;<br />		&lt;div class=&quot;row&quot;&gt;<br />			&lt;div class=&quot;col-md-4&quot;&gt;<br />			&lt;h1&gt;&lt;a href=&quot;&lt;?php print site_url(); ?&gt;&quot;&gt;My template&lt;/a&gt;&lt;/h1&gt;<br />			&lt;/div&gt;<br />			&lt;div class=&quot;col-md-8&quot;&gt;<br />			&lt;module type=&quot;menu&quot; name=&quot;header_menu&quot; id=&quot;main-navigation&quot; template=&quot;pills&quot;  /&gt;<br />			&lt;/div&gt;<br />		&lt;/div&gt;<br />	&lt;/div&gt;<br />&lt;/div</code></pre>

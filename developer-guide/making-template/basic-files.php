@@ -101,6 +101,12 @@ The above code will end up with this result on the <em>Add page </em>screen.<br 
 <br />
 <img id="row_1390906260204"   src="http://microweber.com/userfiles/media/mw_template_basic_layout.png" contenteditable="false" />
 
+<h4>Sample templates</h4>
+<ul>
+  <li><a href="https://github.com/microweber/skeleton-template" target="_blank">Skeleton</a></li>
+  <li><a href="https://github.com/microweber/liteness-template" target="_blank">Liteness</a></li>
+</ul>
 
-
+<br />
+<h4>Read more</h4>
 <?php print page_content('developer-guide/making-template/_nav'); ?> 

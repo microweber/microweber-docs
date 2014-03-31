@@ -46,9 +46,8 @@ body, a {
 #main-content a {
 	color:#4793c5;
 }
-#content .main p {
-}
-#main-content > h2:first-child {
+
+/*#main-content > h2:first-child {
 	padding:70px 70px 70px 220px;
 	margin-bottom: 35px;
 	margin-top: 0;
@@ -56,7 +55,18 @@ body, a {
 	color: white;
 	font-size: 37px;
 	font-family:Consolas, sans-serif;
+}*/
+
+#main-content > h2:first-child {
+  background: url("docstitle.png") no-repeat scroll 22px 64% / 51px auto #4793C5;
+  color: #FFFFFF;
+  font-family: Consolas,sans-serif;
+  font-size: 28px;
+  margin-bottom: 35px;
+  margin-top: 0;
+  padding: 35px 70px 35px 90px;
 }
+
  @media (max-width:991px) {
 #main-content > h2:first-child {
 	padding:20px;

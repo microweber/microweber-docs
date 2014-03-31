@@ -2,6 +2,13 @@
 $(document).ready(function(){
 
  $("#sidenav-menu  li a.active").parents("li").eq(1).addClass("current");
+ 
+ 
+/*var active_li = document.querySelector("#sidenav-menu  li a.active");
+ 
+if(active_li !== null){
+active_li.scrollIntoView()	
+}*/
 
   $('pre code').each(function(i, e) {
 	 

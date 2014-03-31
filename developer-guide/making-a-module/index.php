@@ -44,8 +44,8 @@
 </table>
 <h4>Writing custom module functions</h4>
 <p id="row_1390907957216">Making <strong><code>functions.php</code></strong> file is optional and in it you can add code that loads with Microweber at start. </p>
-<p>When you install your module, this functions.php file is loaded in the system <strong>on every page</strong>. The code that you put there is available in all pages and in all other modules. <br />
-</p>
+<p>When you install your module, this functions.php file is loaded in the system <strong>on every page</strong>. The code that you put there is available in all pages and in all other modules.</p>
+
 <h3>How to create a module</h3>
 <p>All modules are located in the folder <code>userfiles/modules</code>. For example we will make new folder called <code>my_module</code>. </p>
 <p>After this make a <strong>config.php</strong> file at <code>userfiles/modules/my_module/config.php</code></p>
@@ -63,6 +63,7 @@ $config['categories'] = &quot;content&quot;;
 $config['position'] = 100; </code></pre>
 <p>Click on admin-&gt;modules-&gt;reload modules then install your module 
 </p>
-
+<p>Here is a <a href="<?php print site_url(); ?>assets/examples/my_module.zip" class="btn">sample module</a> that you can use as a base. Unzip it in the <code>userfiles/modules</code> folder <br />
+</p>
 
 <?php print page_content('developer-guide/making-a-module/_nav'); ?> 
