@@ -26,11 +26,11 @@
   <h3 id="row_1390926495165">Creating editable field<br />
   </h3>
   <p id="row_1390926495166">You can define editable regions in your template where the user will be able to type text and <em>Drag and Drop</em> modules</p>
-  <ul>
+ <div class="alert alert-warning">  <ul>
     <li><strong>You must add class &quot;edit&quot;</strong></li>
     <li><strong>You must add &quot;field&quot; attribute</strong></li>
     <li><strong>You must add  &quot;rel&quot; attribute</strong></li>
-  </ul>
+  </ul></div>
   <p id="row_1390926495167">Example: <br />
   </p>
   <div id="row_1390926495168">

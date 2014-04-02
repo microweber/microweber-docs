@@ -2,7 +2,21 @@
 $(document).ready(function(){
 
  $("#sidenav-menu  li a.active").parents("li").eq(1).addClass("current");
+
  
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
  
 /*var active_li = document.querySelector("#sidenav-menu  li a.active");
  
@@ -186,6 +200,13 @@ active_li.scrollIntoView()
   })
 
 
+  $(window).load(function(){
+      _sidemenu = document.getElementById('sidenav-menu');
+      _active_side_menu = _sidemenu.querySelector('.active');
+      if(_sidemenu !== null && _active_side_menu !== null){
+          _sidemenu.scrollTop = _active_side_menu.offsetTop - _sidemenu.offsetTop-120;
+      }
+  })
 
 });
 

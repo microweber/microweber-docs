@@ -134,6 +134,14 @@ body, a {
 #sidenav-menu li.current .nav-title + ul {
 	display: block;
 }
+
+
+
+#sidenav-menu a.nav-title {
+	font-weight:bold;
+	color:#333333;
+}
+
 #select_holder {
 	padding: 20px;
 	text-align: center;
@@ -159,6 +167,13 @@ body, a {
 #main-content .subnav li a.active {
 	color:#CCCCCC;
 }
+
+.subnav .glyphicon {
+	 margin-right:5px;
+	 color:#CCC;
+}
+
+
 #section-title h3 {
 	padding: 17px;
 	margin: 0;

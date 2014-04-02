@@ -53,3 +53,5 @@ print menu_tree($menu_filter);
 top:75px;
 }
 </code></pre>
+<p>
+Check out <a href="https://github.com/microweber/microweber/issues/178" target="_blank">this link</a> for other solutions.</p>

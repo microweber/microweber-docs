@@ -66,19 +66,19 @@
   <tbody>
     <tr>
       <td ><code>$content</code></td>
-      <td >Array of the current content item, it can be page or post<br /></td>
+      <td >Array of the current content item, it can be page or post </td>
     </tr>
     <tr>
       <td ><code>$page</code></td>
-      <td >Array with the data for the current page<br /></td>
+      <td >Array with the data for the current page </td>
     </tr>
     <tr>
       <td ><code>$post</code></td>
       <td >Array with the data for the current post</td>
     </tr>
     <tr>
-      <td ><br /></td>
-      <td > </td>
+      <td ><code>$category</code></td>
+      <td >Array with the data for the current category</td>
     </tr>
   </tbody>
 </table>
