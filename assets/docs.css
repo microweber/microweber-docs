@@ -46,7 +46,7 @@ body, a {
 	padding: 20px;
 	font-size:15px;
 }
-#main-content p a,#main-content .subnav a {
+#main-content p a,#main-content .subnav a,#main-content ul a {
 	color:#4793c5;
 }
 
