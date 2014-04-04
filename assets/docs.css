@@ -28,7 +28,10 @@ body, a {
 #header ul.nav.navbar-nav li a.active {
 	background-color:#EEEEEE;
 }
- 
+#content ul,#content ol {
+	 padding-left:14px;
+	 list-style:none;
+} 
  
 #logo {
 	display: block;
@@ -43,7 +46,7 @@ body, a {
 	padding: 20px;
 	font-size:15px;
 }
-#main-content a {
+#main-content p a,#main-content .subnav a {
 	color:#4793c5;
 }
 

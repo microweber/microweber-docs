@@ -31,6 +31,10 @@ if(is_ajax()){
  exit();
 }
 
+function ve(){
+  print 1;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,14 +44,23 @@ if(is_ajax()){
 <title><?php print $title; ?></title>
 <meta name="description" content="<?php print $description; ?>">
 <meta name="author" content="Microweber">
-<script src="<?php print site_url(); ?>assets/js/jquery.js"></script>
-<link href="<?php print site_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php print site_url(); ?>assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-<script src="<?php print site_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
-<link href="<?php print site_url(); ?>assets/js/highlight/styles/github.css" rel="stylesheet">
-<link href="<?php print site_url(); ?>assets/docs.css" rel="stylesheet">
-<link href="<?php print site_url(); ?>assets/labels.css" rel="stylesheet">
-<script src="<?php print site_url(); ?>assets/js/highlight/highlight.pack.js"></script>
+<!--<script src="<?php print site_url(); ?>assets/js/jquery.js?v=<?php ve(); ?>"></script>-->
+
+ <link href="//microweber.com/src/Microweber/includes/default.css" rel="stylesheet">
+ 
+
+  <script src="//microweber.com/apijs"></script>
+
+ 
+ 
+ 
+<link href="<?php print site_url(); ?>assets/bootstrap/css/bootstrap.min.css?v=<?php ve(); ?>" rel="stylesheet">
+<link href="<?php print site_url(); ?>assets/bootstrap/css/bootstrap-theme.min.css?v=<?php ve(); ?>" rel="stylesheet">
+<script src="<?php print site_url(); ?>assets/bootstrap/js/bootstrap.min.js?v=<?php ve(); ?>"></script>
+<link href="<?php print site_url(); ?>assets/js/highlight/styles/github.css?v=<?php ve(); ?>" rel="stylesheet">
+<link href="<?php print site_url(); ?>assets/docs.css?v=<?php ve(); ?>" rel="stylesheet">
+<link href="<?php print site_url(); ?>assets/labels.css?v=<?php ve(); ?>" rel="stylesheet">
+<script src="<?php print site_url(); ?>assets/js/highlight/highlight.pack.js?v=<?php ve(); ?>"></script>
 
 <!--      <link href="<?php print site_url(); ?>assets/ace-editor/api/resources/csses/ace_api.css" rel="stylesheet" type="text/css" />
 
@@ -57,8 +70,13 @@ if(is_ajax()){
 <script>
     SEARCH_URL = "<?php print site_url(); ?>s.php";
 </script>
-<script src="<?php print site_url(); ?>assets/docs.js"></script>
-<script src="<?php print site_url(); ?>assets/runner.js"></script>
+<script src="<?php print site_url(); ?>assets/docs.js?v=<?php ve(); ?>"></script>
+<script src="<?php print site_url(); ?>assets/runner.js?v=<?php ve(); ?>"></script>
+
+
+ 
+
+
 </head>
 <body>
  
