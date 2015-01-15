@@ -25,7 +25,7 @@ Module to show posts from the site
 #### Limit the number of results and sort by date
 
     <?php //shows all content by last edited ?>
-    <module type="posts" limit="2" hide-paging="true" order-by="updated_on desc" />
+    <module type="posts" limit="2" hide-paging="true" order-by="updated_at desc" />
 
 #### Get posts from category
 

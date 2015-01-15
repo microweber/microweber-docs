@@ -22,7 +22,7 @@ if($category_page != false){
 	print $category_page['id'];
 	print $category_page['parent'];
 	print $category_page['position'];
-	print $category_page['created_on']; 
+	print $category_page['created_at']; 
 	// and more... print_r($category_page);
 }
 </code></pre>

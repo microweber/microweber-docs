@@ -44,7 +44,7 @@ $config['tables'] = array(
         'name' => "text",
         'content' => "text",
         'read_more_url' => "text",
-        'created_on' => "datetime",
+        'created_at' => "datetime",
         'position' => "int"
     )
 );

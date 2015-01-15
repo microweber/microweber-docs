@@ -13,7 +13,7 @@ if($order != false){
 	print $order['amount'];
 	print $order['total_items'];
 	print $order['email'];
-	print $order['created_on']; 
+	print $order['created_at']; 
 	// and more... print_r($order);
 }
 </code></pre>

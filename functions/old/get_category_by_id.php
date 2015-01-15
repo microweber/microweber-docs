@@ -24,7 +24,7 @@ if($category_data != false){
 	print $category_data['id'];
 	print $category_data['parent'];
 	print $category_data['position'];
-	print $category_data['created_on']; 
+	print $category_data['created_at']; 
 	// and more... print_r($category_data);
 }
 </code></pre>

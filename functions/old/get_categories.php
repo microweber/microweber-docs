@@ -58,12 +58,12 @@ $modules_categories = get_categories('rel=modules&parent_id=0');
 			<td>get_categories('created_by=1');</td>
 		</tr>
 		<tr>
-			<td>created_on</td>
+			<td>created_at</td>
 			<td>the date of creation</td>
 			<td>strtotime compatible date</td>
 		</tr>
 		<tr>
-			<td>updated_on</td>
+			<td>updated_at</td>
 			<td>the date of last edit</td>
 			<td>strtotime compatible date</td>
 		</tr>

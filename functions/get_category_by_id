@@ -21,7 +21,7 @@ get_category_by_id — returns category data as array or false
     	print $category_data['id'];
     	print $category_data['parent'];
     	print $category_data['position'];
-    	print $category_data['created_on']; 
+    	print $category_data['created_at']; 
     	// and more... print_r($category_data);
     }
 

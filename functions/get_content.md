@@ -27,7 +27,7 @@ foreach ($content as $item) {
     print "The id is " . $item['id']."</br>";
     print "Link: " . $item['url']."</br>";
     print "Description: " . $item['description']."</br>";
-    print "Date created: " . $item['created_on']."</br>";
+    print "Date created: " . $item['created_at']."</br>";
     // print_r($item);
 } 
 ```
@@ -53,7 +53,7 @@ You can pass parameters as string or as array. Those parameters are with the sam
 //get 10 recent posts 
 $params = array(
     'limit' => 10, 
-    'order_by' => 'created_on desc',
+    'order_by' => 'created_at desc',
     'content_type' => 'post', 
     'subtype' => 'post', 
     'is_active' => 'y'
@@ -103,7 +103,7 @@ print "</ul>";
     $pages = get_content('content_type=page&order_by=position desc');
 
     //get last edited posts
-    $last_edited_posts = get_content('content_type=post&order_by=updated_on desc');
+    $last_edited_posts = get_content('content_type=post&order_by=updated_at desc');
 
 ### Filter by any field
 

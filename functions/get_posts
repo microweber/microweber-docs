@@ -28,7 +28,7 @@ By default `get_posts()` works with predefined content type "post", but you can 
         print "The id is " . $item['id']."</br>";
         print "Link: " . $item['url']."</br>";
         print "Description: " . $item['description']."</br>";
-        print "Date created: " . $item['created_on']."</br>";
+        print "Date created: " . $item['created_at']."</br>";
         // print_r($item)."</br>";
     } 
 
@@ -62,7 +62,7 @@ You can pass parameters as string or as array. Those parameters are with the sam
     //basic
     $params = array(
     'limit' => 10, // get 10 posts
-    'order_by' => 'created_on desc',
+    'order_by' => 'created_at desc',
     'is_active' => 'y');
 
     $recent_posts = get_posts($params);
@@ -98,7 +98,7 @@ You can pass parameters as string or as array. Those parameters are with the sam
     $posts = get_posts('order_by=position desc');
 
     //get last edited posts
-    $last_edited_posts = get_posts('order_by=updated_on desc');
+    $last_edited_posts = get_posts('order_by=updated_at desc');
 
 ### Filter by any field
 
@@ -114,7 +114,7 @@ You can pass parameters as string or as array. Those parameters are with the sam
     $params&nbsp;=&nbsp;array( 
     'limit'&nbsp;=>&nbsp;10, // get 10 posts
     'page'&nbsp;=>&nbsp;0, //offset of limit
-    'order_by'&nbsp;=>&nbsp;'created_on desc', 
+    'order_by'&nbsp;=>&nbsp;'created_at desc', 
     'include'&nbsp;=>&nbsp;'1,10,11' ,
     'exclude'&nbsp;=>&nbsp;'23', 
     'parent'&nbsp;=>&nbsp;7, 

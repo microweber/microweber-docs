@@ -29,8 +29,8 @@ You use those fields to store and structure your content
 | content        |   The html content saved in the database    |
 | position       |   The order position    |
 | created_by     |   The id of the user that created the content     | 
-| created_on     |   The date of creation, supported values are any *strtotime* compatible date      | 
-| updated_on     |    The date of last update, supported values are any *strtotime* compatible date       | 
+| created_at     |   The date of creation, supported values are any *strtotime* compatible date      | 
+| updated_at     |    The date of last update, supported values are any *strtotime* compatible date       | 
 | is_active      |  flag for published or unpublished, default is `y` or `n`    |
 | is_deleted     | flag for deleted content, values are `n` or `y`      |
 | is_home        |  flag for homepage, values are `n` or `y`     |

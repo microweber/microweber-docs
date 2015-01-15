@@ -25,7 +25,7 @@ By default <code>get_content()</code> works with predefined content types such a
 <pre class="prettyprint"><code class="language-php runner">&lt;?php
 $content = get_content();
 
-foreach ($content as $item) {<br />    print &quot;Title: &quot; . $item['title'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;The id is &quot; . $item['id'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;Link: &quot; . $item['url'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;Description: &quot; . $item['description'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;Date created: &quot; . $item['created_on'].&quot;&lt;/br&gt;&quot;;<br />    // print_r($item).&quot;&lt;/br&gt;&quot;;<br />} 
+foreach ($content as $item) {<br />    print &quot;Title: &quot; . $item['title'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;The id is &quot; . $item['id'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;Link: &quot; . $item['url'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;Description: &quot; . $item['description'].&quot;&lt;/br&gt;&quot;;<br />    print &quot;Date created: &quot; . $item['created_at'].&quot;&lt;/br&gt;&quot;;<br />    // print_r($item).&quot;&lt;/br&gt;&quot;;<br />} 
 </code></pre>
  
  
@@ -69,7 +69,7 @@ print_r($content);
 //basic
 $params = array(
 'limit' =&gt; 10, // get 10 posts
-'order_by' =&gt; 'created_on desc',
+'order_by' =&gt; 'created_at desc',
 'content_type' =&gt; 'post', //or page
 'subtype' =&gt; 'post', //or product, you can use this field to store your custom content
 'is_active' =&gt; 'y');
@@ -126,7 +126,7 @@ $posts = get_content('content_type=post&amp;limit=5&amp;page=2');
 $pages = get_content('content_type=page&amp;order_by=position desc');
 
 //get last edited posts
-$last_edited_posts = get_content('content_type=post&amp;order_by=updated_on desc');
+$last_edited_posts = get_content('content_type=post&amp;order_by=updated_at desc');
 
 </code></pre>
 <h3 id="filter-the-results-by-any-field">Filter by any field</h3>
@@ -148,7 +148,7 @@ $params = array(
 'limit' =&gt; 10, // get 10 posts
 'page' =&gt; 0, 
 'category' =&gt; 0, 
-'order_by' =&gt; 'created_on desc', 
+'order_by' =&gt; 'created_at desc', 
 'include' =&gt; '1,10,11' ,
 'exclude' =&gt; '23', 
 'parent' =&gt; 7,  
