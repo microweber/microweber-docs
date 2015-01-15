@@ -1,8 +1,4 @@
-Microweber documentation
-===
-
-
-This is the repository for the Microweber documentation
+Microweber documentation for version 0.95
+ 
 
  
-See it online at: [http://microweber.com/docs/](http:///microweber.com/docs/ "")
