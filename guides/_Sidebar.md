@@ -1,10 +1,10 @@
 ### Development
-* [Submit to Store](a.md "a")
+* [Submit to Store](a.md)
 #### Modules
-* [Modules 101](a.md "a")
-* [Basic Front-End](a.md "a")
+* [Modules 101](modules_101.md)
+* [Basic Front-End](a.md)
 * [Basic Admin](simple_admin.md "simple admin")
-* [Basic CRUD](a.md "a")
-* [Assets](a.md "a")
+* [Data](data.md)
+* [Assets](a.md)
 #### Templates
-* [Templates 101](a.md "a")
+* [Templates 101](a.md)

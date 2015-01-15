@@ -34,6 +34,9 @@
 <li><a
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'home/')) print "active"; ?>"
             href="<?php print site_url(); ?>guides/README.md"><span class="mw-icon-mw" style="font-size: 30px;"></span></a></li>
+            
+            
+          
 
     <?php /*<li><a
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'developer-guide/')) print "active"; ?>"
@@ -54,6 +57,10 @@
     <li><a
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big dd_class_ref <?php if (strstr(url_path(), 'modules/')) print "active"; ?>"
             href="<?php print site_url(); ?>modules/README.md" data-ref="class">Modules</a></li>
+            
+              <li><a
+            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'developer-guide/')) print "active"; ?>"
+            href="<?php print site_url(); ?>developer-guide/README.md">OLD</a></li>
 
             <li><span
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big" style="padding: 0;">
