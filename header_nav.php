@@ -32,31 +32,28 @@
 
 <ul class="mw-ui-btn-nav mw-ui-btn-nav-fluid">
 <li><a
-            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'developer-guide/')) print "active"; ?>"
-            href="<?php print site_url(); ?>developer-guide/README.md"><span class="mw-icon-mw" style="font-size: 30px;"></span></a></li>
+            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'home/')) print "active"; ?>"
+            href="<?php print site_url(); ?>guides/README.md"><span class="mw-icon-mw" style="font-size: 30px;"></span></a></li>
 
     <?php /*<li><a
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'developer-guide/')) print "active"; ?>"
             href="<?php print site_url(); ?>developer-guide/README.md">Developers guide</a></li>*/ ?>
+            
+            <li><a
+            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big dd_class_ref <?php if (strstr(url_path(), 'guides/')) print "active"; ?>"
+            href="<?php print site_url(); ?>guides/README.md" data-ref="class">Guides</a></li>
+    
+            
+            
     <li><a
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big dd_functions_ref <?php if (strstr(url_path(), 'functions/')) print "active"; ?>"
             href="<?php print site_url(); ?>functions/README.md"><span data-ref="functions">Functions</span></a></li>
 
-    <li><a
-            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big dd_class_ref <?php if (strstr(url_path(), 'classes/')) print "active"; ?>"
-            href="<?php print site_url(); ?>classes/README.md" data-ref="class">Classes</a></li>
+ 
 
     <li><a
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big dd_class_ref <?php if (strstr(url_path(), 'modules/')) print "active"; ?>"
             href="<?php print site_url(); ?>modules/README.md" data-ref="class">Modules</a></li>
-
-    <li><a
-            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big dd_class_ref <?php if (strstr(url_path(), 'js-api/')) print "active"; ?>"
-            href="<?php print site_url(); ?>js-api/README.md" data-ref="class">JS Api</a></li>
-
-    <li><a
-            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big dd_class_ref <?php if (strstr(url_path(), 'css-guide/')) print "active"; ?>"
-            href="<?php print site_url(); ?>css-guide/README.md" data-ref="class">CSS</a></li>
 
             <li><span
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big" style="padding: 0;">

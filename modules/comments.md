@@ -4,7 +4,7 @@ Comments element with form to post a comment
 
     <module type="comments" /> 
 
-<!--?php print page_content('params/modules/comments'); ?--> 
+ 
 
 ## Examples
 

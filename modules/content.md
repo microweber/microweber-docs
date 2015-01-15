@@ -25,7 +25,7 @@ Module to show content, like pages, posts and products
 #### Limit the number of results and sort by date
 
     <?php //shows all content by last edited ?>
-    <module type="content" limit="5" hide-paging="true" order-by="updated_on desc" />
+    <module type="content" limit="5" hide-paging="true" order-by="updated_at desc" />
 
 #### Get posts from category
 
