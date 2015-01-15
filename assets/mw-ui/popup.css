@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a, input, textarea, select{
+  outline: none;
+}
+html, body{
+  height: 100%;
+}
+body{
+  overflow-y: scroll;
+}

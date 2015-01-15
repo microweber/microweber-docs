@@ -1,0 +1,19 @@
+## template_dir
+
+template_dir — returns the full directory of the current template
+
+### Summary
+
+    template_dir();
+
+### Usage
+
+    //get the template directory
+    $template_dir = template_dir();
+    var_dump($template_dir);
+
+    //prints /home/user/public_html/userfiles/templates/my_template/
+
+#### See also
+
+<!--?php print page_content('functions/_nav/template'); ?-->

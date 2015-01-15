@@ -1,0 +1,26 @@
+## checkout_url
+
+checkout_url — returns the url for the checkout page
+
+### Summary
+
+    checkout_url();
+
+### Usage
+
+    $checkout_url = checkout_url();
+    print $checkout_url;
+
+The user can change the default checkout page from the settings page in the admin panel.
+
+You can also change the checkout page value by setting a session variable
+
+#### Changing the checkout url on the fly
+
+    session_set('checkout_url', 'shop/checkout');
+    $checkout_url = checkout_url();
+    print $checkout_url;
+
+#### See also
+
+<!--?php print page_content('functions/_nav/shop'); ?-->

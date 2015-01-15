@@ -1,0 +1,21 @@
+## checkout
+
+checkout - completes the order of the user and empties shopping cart
+
+    $checkout_params = array(
+                'first_name' => 'John',
+                'last_name' => 'Doe',
+                'country' => 'United States',
+                // 'debug' => 1,
+                'email' => 'email@example.com');
+
+    // completing the checkout process
+    $checkout = checkout($checkout_params);
+
+### Parameters and fields
+
+<!--?php print page_content('params/cart_orders'); ?--> 
+
+#### See also
+
+<!--?php print page_content('functions/_nav/shop'); ?--> 

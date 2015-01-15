@@ -1,0 +1,24 @@
+<!--?php if(!defined('ONE')){
+	header("Location: index");
+
+} ?-->
+
+## Microweber functions
+
+Microweber comes with a lot of functions to help you get and save things in your website. In most cases those functions are simple wrappers to the more complex OOP core.
+
+You can use them while you develop your site. The functions are defined into the system on load and they are globally available in the core, the site templates and modules.
+
+### Writing custom functions
+
+There the few ways to write custom functions.
+
+1.  To add functions with a module, create `functions.php` file inside your module folder
+2.  To add function when certain site template is active, create `functions.php` file inside the site template folder
+3.  To make custom functions available only on your application create a file at `/src/Microweber/functions/my_functions.php`
+
+### Explore the  functions bellow
+
+You can call them inside your templates and modules.
+
+<!--?php print page_content('functions/_nav/index'); ?-->

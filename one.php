@@ -1,9 +1,17 @@
 <?php
-if(!defined('ONE')){
-	define('ONE',true);
+require('vendor/autoload.php');
+if (!defined('ONE')) {
+    define('ONE', true);
 }
+$page_content = false;
+$locate_file_content = url_path();
 
+$page = page_content();
 
+if ($page == false) {
+    header("HTTP/1.0 404 Not Found");
+    exit("404 not found");
+}
 
 /*
   ___  _   _ _____
@@ -19,20 +27,17 @@ Used to serve the static files for the Microweber documentation
 
 www.microweber.com
 
+
+author: peter@microweber.com
+
 */
 
 
-function page_content($filename = false, $selector = false, $filter = false)
+function page_content($filename = false, $filter = false)
 {
 
-
-    if ($selector != false) {
-        require_once("phpquery.php");
-    }
-
-
     static $cache = array();
-    $key = crc32($filename . strval($selector));
+    $key = crc32($filename);
     if (isset($cache[$key])) {
         return $cache[$key];
     }
@@ -48,28 +53,36 @@ function page_content($filename = false, $selector = false, $filter = false)
         $filename = locate_page_file($filename);
     }
 
-
     $item = str_replace('..', '', $filename);
+    $ext = get_file_extension($item);
     if (is_file($item)) {
-        ob_start();
-        include ($item);
-        $content = ob_get_clean();
-        if ($selector != false) {
-            $doc = phpQuery::newDocument($content);
-            $content = pq($selector);
+        $ext = strtolower($ext);
+
+        switch ($ext) {
+            case 'php';
+                ob_start();
+                include ($item);
+                $content = ob_get_clean();
+                break;
+            case 'md':
+                $content = file_get_contents($item);
+                $Parsedown = new Parsedown();
+                $content = $Parsedown->text($content);
+                break;
+            default:
+                $content = file_get_contents($item);
+                break;
         }
+
+
         $cont = (string)$content;
         if ($filter == 'clean') {
             $cont = strip_tags($cont);
             $cont = str_replace('-', ' ', $cont);
             $cont = str_replace("—", ' ', $cont);
-
             $cont = str_replace("\n", ' ', $cont);
-
             $cont = str_replace("  ", ' ', $cont);
             $cont = str_replace(" ();", ' ', $cont);
-
-
             $cont = trim($cont);
         }
 
@@ -80,26 +93,133 @@ function page_content($filename = false, $selector = false, $filter = false)
     }
 }
 
+function page_title($filename = false)
+{
+    $content = page_content($filename);
+
+    if ($content) {
+        $dom = new \DOMDocument;
+        @$dom->loadHTML('<?xml encoding="UTF-8"><html><body>' . $content . '</body></html>');
+        $title_found = false;
+
+        foreach ($dom->getElementsByTagName('h1') as $node) {
+            $title_found = $node->nodeValue;
+            break;
+        }
+        if ($title_found == false) {
+            foreach ($dom->getElementsByTagName('h2') as $node) {
+                $title_found = $node->nodeValue;
+                break;
+            }
+        }
+        if ($title_found == false) {
+            foreach ($dom->getElementsByTagName('h3') as $node) {
+                $title_found = $node->nodeValue;
+                break;
+            }
+        }
+        return $title_found;
+    }
+}
+
+function page_nav($path = false)
+{
+    if ($path == false) {
+        $locate_file_content = url_path();
+        if ($locate_file_content == '') {
+            $locate_file_content = 'README';
+        }
+    } else {
+        $locate_file_content = $path;
+    }
+
+    $basename = basename($locate_file_content);
+
+
+    $locate_file_content = str_replace('..', '', $locate_file_content);
+    $folder = __DIR__ . DIRECTORY_SEPARATOR . $locate_file_content;
+
+    if (is_file($folder)) {
+        $ext = get_file_extension($folder);
+        $folder = dirname($folder) . DIRECTORY_SEPARATOR;
+    }
+    $cont = false;
+    $folder = normalize_path($folder, true);
+
+    if (!is_dir($folder)) {
+        $folder = dirname($folder) . DIRECTORY_SEPARATOR;
+    }
+
+    if (is_dir($folder)) {
+        $nav = $folder . '_Sidebar.md';
+        if (is_file($nav)) {
+            $cont = page_content($nav);
+        }
+
+        $nav = $folder . '_nav.md';
+        if (is_file($nav)) {
+            $cont = page_content($nav);
+        }
+        $nav = $folder . '_nav.php';
+        if (is_file($nav)) {
+            $cont = page_content($nav);
+        }
+    }
+//    if ($cont == false) {
+//        $folder = dirname($folder) . DIRECTORY_SEPARATOR;
+//        print $folder;
+//        $nav = $folder . '_Sidebar.md';
+//        if (is_file($nav)) {
+//            $cont = page_content($nav);
+//        }
+//    }
+
+
+    if ($cont != false) {
+        $s = '<a href="' . $basename;
+        $r = '<a class="active" href="' . $basename;
+        $cont = str_replace($s, $r, $cont);
+
+
+        return $cont;
+
+    }
+
+}
+
 
 function locate_page_file($path = false)
 {
 
     if ($path == false) {
         $locate_file_content = url_path();
+
         if ($locate_file_content == '') {
-            $locate_file_content = 'home';
+            $locate_file_content = 'README';
         }
     } else {
         $locate_file_content = $path;
     }
+
+    $locate_file_content = html_entity_decode($locate_file_content);
 
 
     $allowed_ext = array('.php', '.html', '.htm', '.md');
     $here = dirname(__FILE__) . DIRECTORY_SEPARATOR;
     $possible_file = normalize_path($here . $locate_file_content, false);
     $possible_file = str_replace('..', '', $possible_file);
+    $possible_file2 = $possible_file . '/README.md';
+    $possible_file2 = normalize_path($possible_file2, false);
+    $possible_file3 = $possible_file . '/index.html';
+    $possible_file3 = normalize_path($possible_file3, false);
+
+
     if (is_file($possible_file)) {
         return $possible_file;
+    } else if (is_file($possible_file2)) {
+        return $possible_file2;
+    } else if (is_file($possible_file3)) {
+        return $possible_file3;
     }
     foreach ($allowed_ext as $ext) {
         $find_possible_file = $possible_file . $ext;
@@ -299,6 +419,13 @@ function normalize_path($path, $slash_it = true)
         $path = reduce_double_slashes($path);
     }
     return $path;
+}
+
+
+function get_file_extension($LoSFileName)
+{
+    $LoSFileExtensions = substr($LoSFileName, strrpos($LoSFileName, '.') + 1);
+    return $LoSFileExtensions;
 }
 
 
