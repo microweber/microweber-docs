@@ -1,8 +1,4 @@
-### Sales + Store
-* [Store 101](#)
-* [Submitting to Store](#)
-* [Analyzing Sales](#)
-* [Profit Withdrawal](#)
+* [Getting Started](start.md)
 ### Development
 #### Modules
 * [Modules 101](modules_101.md)
@@ -12,3 +8,9 @@
 #### Templates
 * [Templates 101](templates_101.md)
 * [Creating Templates](templates_creating.md)
+* [Template Examples](templates_example.md)
+### Sales + Store
+* [Store 101](#)
+* [Submitting to Store](#)
+* [Analyzing Sales](#)
+* [Profit Withdrawal](#)
