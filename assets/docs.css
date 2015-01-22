@@ -21,7 +21,7 @@
 	font-size: 14px;
 	position: relative;
 	z-index: 2;
-	overflow: hidden;
+
 	margin: 0px;
 }
 .content {
@@ -140,6 +140,46 @@ code, kbd, pre, samp {
 
 .content img {
     max-width: 100%;
+}
+
+#autocomplete{
+  position: absolute;
+  top: 100%;
+  right: 30px;
+  padding: 10px;
+  background: white;
+  z-index: 9;
+  border: 1px solid #eee;
+  max-height: 300px;
+  width: 200px;
+  overflow: hidden;
+  box-shadow: 0 0 6px -4px #000;
+}
+
+#autocomplete a:hover,
+#autocomplete .hover a{
+  color: white;
+  background-color: rgba(51, 131, 187, 1);
+}
+
+#autocomplete a{
+  color: rgba(65, 57, 57, 1);
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+#autocomplete small{
+  display: none;
+}
+
+#autocomplete li{
+  float: none;
+  list-style: none
 }
 
 

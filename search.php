@@ -1,5 +1,5 @@
 <?php
-require('one.php');
+
 $searchDir = './';
 $searchDir = __DIR__ . DIRECTORY_SEPARATOR;
 $searchExtList = array('.md');
@@ -65,7 +65,7 @@ function everythingFrom($baseDir, $extList, $searchStr)
                 $found = false;
                 if (substr($name, (strlen($ext) * -1)) == $ext) {
                     $tmp = file_get_contents($name);
-                  //  $tmp = file_get_contents($name);
+                    //  $tmp = file_get_contents($name);
                     $fname = str_replace($searchDir, '', $name);
                     $fname = str_replace($ext, '', $fname);
                     $fname = str_replace('\\', '/', $fname);
@@ -93,29 +93,58 @@ function everythingFrom($baseDir, $extList, $searchStr)
             }
         }
     }
-    $res = $files;
-    return $res;
+
 
     if (isset($files)) {
         $files = array_merge($files, $files2);
         $res = array();
         if (!empty($files)) {
             foreach ($files as $file) {
-                if (stripos($file, '_nav') == false) {
+
+                $process = true;
+                if (stripos($file, '_Sidebar') != false) {
+                    $process = false;
+                } elseif (stripos($file, '_nav') != false) {
+                    $process = false;
+                }
+
+
+                if ($process) {
                     $file_info = array();
                     $fname = str_replace($searchDir, '', $file);
                     $fname = str_ireplace('.php', '', $fname);
+                    $fname = str_ireplace('.md', '', $fname);
                     $fname = str_replace('\\', '/', $fname);
                     $fname = str_replace('//', '/', $fname);
                     $label = explode('/', $fname);
                     $title = basename($fname);
                     $description = false;
-//                    $title = page_content($file, 'h1', 'clean');
-//                    if ($title == false) {
-//                        $title = page_content($file, 'h2', 'clean');
-//                    }
-//                    $description = page_content($file, '*', 'clean');
-                    $description = str_replace($title, ' ', $description);
+
+
+                    $stream = new SplFileObject($file);
+                    $grepped = new RegexIterator($stream, '*' . $searchStr . '*');
+                    //$grepped = new RegexIterator($stream, '~\$line~');
+                    if (!empty($grepped)) {
+                        foreach ($grepped as $line) {
+                            if (!strstr($line, $title)) {
+                                $description = str_replace('#', '', $description);
+                                $description = trim($description);
+                                $description = str_replace("\r", '', $description);
+                                $description = str_replace("\n", '', $description);
+                                $description = trim($description);
+                                $description = str_replace("\\", '', $description);
+                                $description = str_replace("/", '', $description);
+                                $description = trim($description);
+                                if ($description == false) {
+                                    $description = $line;
+                                } else {
+                                    $description = $description . '... ' . $line;
+                                }
+                            }
+                        }
+                    }
+
+                    //   $description = str_replace($title, ' ', $description);
                     $description = strip_tags($description);
 
                     $description = str_replace("'", '', $description);
@@ -127,7 +156,7 @@ function everythingFrom($baseDir, $extList, $searchStr)
                     $fname = ltrim($fname, '/');
                     $file_info['url'] = site_url($fname);
                     $file_info['title'] = $title;
-                  //  $file_info['description'] = trim(addslashes($description));
+                    $file_info['description'] = trim(addslashes($description));
                     $file_info['path'] = $fname;
                     if (isset($label[1])) {
                         $label = $label[1];
@@ -139,6 +168,21 @@ function everythingFrom($baseDir, $extList, $searchStr)
                 }
             }
         }
+        $sorted = array();
+        $sorted2 = array();
+        $sorted3 = array();
+        if (!empty($res)) {
+            foreach ($res as $k => $v) {
+                if (isset($v['title']) and stristr($v['title'], $searchStr)) {
+                    $sorted[] = $v;
+                } elseif (isset($v['url']) and stristr($v['url'], $searchStr)) {
+                    $sorted2[] = $v;
+                } else {
+                    $sorted3[] = $v;
+                }
+            }
+        }
+        $res = array_merge($sorted, $sorted2, $sorted3);
         return $res;
     }
 }
@@ -146,38 +190,14 @@ function everythingFrom($baseDir, $extList, $searchStr)
 
 ?>
 <?php if (isset($res) and is_array($res) and !empty($res)): ?>
+    <?php $res = array_slice($res,0,6); ?>
     <ul class="search-results-list">
         <?php foreach ($res as $item): ?>
             <?php if ($item['title'] != false): ?>
-                <li><a href="<?php print $item['url'] ?>"
-                       title="<?php print $item['description'] ?>"><?php print $item['title'] ?>
-
-
-
+                <li><a href="<?php print $item['url'] ?>" title="<?php print addslashes($item['description']) ?>"><?php print $item['title'] ?>
                         <?php
-
-                        $label_class = 'label-default';
-                        if ($item['label'] == 'functions') {
-                            $label_class = 'label-success';
-                        } elseif ($item['label'] == 'classes') {
-                            $label_class = 'label-info';
-                        } elseif ($item['label'] == 'developer-guide') {
-                            $label_class = 'label-primary';
-                        } elseif ($item['label'] == 'css-guide') {
-                            $label_class = 'label-warning';
-                        } elseif ($item['label'] == 'js-api') {
-                            $label_class = 'label-danger';
-                        }
                         $label_class = 'label-' . $item['label'];
-
-
                         ?>
-
-
-
-                        <small
-                            class="label label-default <?php print $label_class; ?>"><?php print $item['label'] ?></small>
-
 
                     </a></li>
             <?php endif; ?>
