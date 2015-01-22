@@ -97,13 +97,7 @@
     left: 2px;
     font-family: Microweber;
 }
-.sidebar{
-  overflow: hidden;
-}
-.sidebar:hover{
-  overflow-x:hidden;
-  overflow-y:auto;
-}
+
 
 .content > h2:first-child{
   padding-bottom: 30px;
@@ -137,20 +131,19 @@
 <script src="<?php print site_url(); ?>assets/jquery.min.js"></script>
 <script >
 
+
+
 $(document).ready(function(){
 
    $(".content table").addClass("mw-ui-table");
     $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
 
+
+
     $(window).bind('load resize', function(e){
-      $(".sidebar").height($(this).height() - $(".page-container").offset().top - 40);
-       if(e.type=='load'){
-      _sidemenu =  $(".sidebar")[0];
-      _active_side_menu = _sidemenu.querySelector('.active');
-      if(_sidemenu !== null && _active_side_menu !== null){
-          _sidemenu.scrollTop = _active_side_menu.offsetTop - _sidemenu.offsetTop - 36;
-      }
-  }
+
+      $(".page-container").css('minHeight', $(this).height() - $(".page-container").offset().top );
+
     })
 });
 
