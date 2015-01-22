@@ -63,9 +63,9 @@
             href="<?php print site_url(); ?>developer-guide/README.md">OLD</a></li>
 
             <li><span
-            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big" style="padding: 0;">
-            <input type="text" class="mw-ui-invisible-field mw-ui-field-big" style="margin-top: 0;height: 46px;font-size: 16px;" placeholder="Search" />
-            <span class="mw-icon-app-search-strong" onclick="$(this).prev().focus();">
+            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big" id="searchbtn" style="padding: 0;">
+            <input type="text" class="mw-ui-invisible-field mw-ui-field-big" id="searchfield" style="margin-top: 0;height: 46px;font-size: 16px;" placeholder="Search" />
+            <span class="mw-icon-app-search-strong">
 
 
 

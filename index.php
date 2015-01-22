@@ -1,5 +1,10 @@
-<?php require('one.php'); ?>
-<!DOCTYPE html>
+<?php require('one.php'); ?><?php
+
+if(is_ajax()){
+  print page_content(); exit;
+}
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -102,8 +107,26 @@
 .content > h2:first-child{
   padding-bottom: 30px;
   margin-bottom: 30px;
-
   border-bottom: 1px solid #eee;
+}
+
+<?php $time = 600; ?>
+
+.content{
+  -webkit-transition: all <?php print ($time/1000); ?>s;
+  -moz-transition: all <?php print ($time/1000); ?>s;
+  -ms-transition: all <?php print ($time/1000); ?>s;
+  -o-transition: all <?php print ($time/1000); ?>s;
+  transition: all <?php print ($time/1000); ?>s;
+  position: relative;
+}
+.content.loading{
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+  opacity: 0;
 }
 
     </style>
@@ -132,19 +155,77 @@
 <script >
 
 
+_high = function(){
+    $(".content table").addClass("mw-ui-table");
+    $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+}
+_going = false;
+_go = function(){
+    if(_going === true) { return false; }
+    _going = true;
+    $(".content").addClass('loading');
+    time1 = new Date().getTime();
+    $.post(window.location.href, function(data){
+      time2 = new Date().getTime();
+       $(".sidebar a").removeClass('active');
+       var harr = window.location.href.split('/');
+       $(".sidebar a[href='"+harr[harr.length-1]+"']").addClass('active');
+       $("html,body").animate({scrollTop:0});
+       var final = <?php print $time; ?> - (time2 - time1) ;
+
+       if(final < 0){
+         $(".content").html(data);
+         $(".content").removeClass('loading');
+         _high();
+       }
+       else{
+        setTimeout(function(){
+          $(".content").html(data);
+          $(".content").removeClass('loading');
+          _high();
+        }, final);
+       }
+
+    }).always(function(){
+      _going = false;
+    });
+}
 
 $(document).ready(function(){
+  _high();
 
-   $(".content table").addClass("mw-ui-table");
-    $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+ $(window).on("popstate", function() {
+    _go();
+ });
+
+if(!!history.pushState){
+  $(".sidebar a").bind("click", function(){
+    if(!$(this).hasClass('active')){
+        history.pushState({}, '', this.href);
+        _go();
+    }
+      return false;
+  });
+}
 
 
 
-    $(window).bind('load resize', function(e){
+  $(window).bind('load resize', function(e){
 
-      $(".page-container").css('minHeight', $(this).height() - $(".page-container").offset().top );
+    $(".page-container").css('minHeight', $(this).height() - $(".page-container").offset().top );
 
-    })
+  })
+  $("#searchbtn").bind("mousedown", function(e){
+     if(e.target.nodeName != 'INPUT' && document.getElementById('searchfield') === document.activeElement){
+        e.preventDefault();
+     }
+  });
+  $("#searchbtn").bind("click", function(e){
+    if(e.target.nodeName != 'INPUT'){
+      $("#searchfield").focus();
+    }
+  })
+
 });
 
 </script>

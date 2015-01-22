@@ -111,11 +111,12 @@ code {
 	background-color: #f9f2f4;
 	border-radius: 4px;
 	color: #c7254e;
-	font-size: 90%;
+
 	padding: 2px 4px;
 }
 code, kbd, pre, samp {
-	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+   /*	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;  */
+   font-size: 17px;
 }
 .page-container table {
 	margin-bottom: 20px;
@@ -141,6 +142,4 @@ code, kbd, pre, samp {
     max-width: 100%;
 }
 
-.content .hljs.language-html,.content .hljs.language-php,.content .hljs.language-xml {
-    font-size: 13px;
-}
+
