@@ -1,0 +1,348 @@
+
+.btn, .form-control{
+  border-radius: 0;
+}
+
+.btn-info, .btn-info:hover, .btn-info:focus{
+  background: #4793C5;
+  border-color: #4793C5;
+  color: white;
+}
+
+.sidebar-dropdown a{
+  display: block;
+  color: #4793C5;
+  background: white;
+}
+
+.sidebar-dropdown > a{
+  padding: 10px 10px 10px 50px;
+  font-weight: bold;
+  background: white url(functions.png) no-repeat 16px 11px;
+}
+
+.sidebar-dropdown.classes-active > a{
+  background: white url(class.png) no-repeat 16px 8px;
+}
+
+.sidebar-dropdown > a .caret{
+  color: inherit;
+  margin-top: 10px;
+}
+
+.sidebar-dropdown .dropdown-menu{
+  border-radius: 0;
+  width: 100%;
+  margin-top: -1px;
+  border:none;
+  box-shadow: none;
+  border-top: 1px solid #589DCA;
+}
+
+a.dd_functions_ref{  background: url(functions.png) no-repeat 15px 5px; }
+a.dd_functions_ref:hover, a.dd_functions_ref:focus{  background-position: 15px -63px; }
+
+a.dd_class_ref{  background: url(class.png) no-repeat 15px 2px; }
+a.dd_class_ref:hover, a.dd_class_ref:focus{  background-position: 15px -61px; }
+
+.sidebar-dropdown .dropdown-menu a{
+  padding: 7px 20px 7px 50px;
+}
+
+
+/***********************************/
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+  background-color: #4793C5;
+}
+
+/***********************************/
+
+
+/*.home {
+  padding: 40px 40px 40px 80px;
+}*/
+
+
+
+.home h1,
+.home h2,
+.home h3{
+  color: #4793C5
+}
+
+.mwlogo{
+  display: inline-block;
+  background: url(logostart.png) no-repeat;
+  background-size: contain;
+  height: 39px;
+  position: relative;
+  width: 159px;
+}
+
+h1 >  .mwlogo{
+  top: 9px;
+  height: 45px;
+  width: 201px;
+
+  height: 40px;
+  top: 14px;
+  width: 210px;
+
+}
+
+
+#page-content-body > .functions-refference{
+    width: 100%;
+    max-width:550px ;
+    margin: auto;
+    text-align: center;
+}
+
+#page-content-body > .functions-refference > ul.subnav {
+  width: 100%;
+  padding: 0;
+  margin:auto;
+
+}
+#page-content-body > .functions-refference > ul.subnav >li{
+  list-style: none;
+  display: block;
+  float: left;
+  width: 45%;;
+  text-align: left;
+  padding-bottom: 60px;
+  padding-left: 30px;
+}
+
+
+#page-content-body > .functions-refference > ul.subnav >li:nth-child(2n+1){
+  float: right;
+}
+
+#page-content-body > .functions-refference > ul.subnav > li ul,
+#page-content-body > .functions-refference > ul.subnav > li ul li{
+  padding: 0 0 0 0;
+  margin: 0;
+  list-style: none
+}
+
+#page-content-body > .functions-refference > ul.subnav > li ul li a{
+  display: block;
+  padding: 5px 5px 5px 12px;
+}
+
+#page-content-body > .functions-refference > ul.subnav > li ul li a:hover{
+  background: rgb(255, 255, 255)
+}
+
+
+.main-title-wrap{
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+.main-title {
+  font-size:42px;
+  padding: 20px 0 20px 120px;
+  position: relative;
+  display: inline-block;
+}
+.main-title > [class*='ticon-']{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -50px;
+}
+
+[class*='ticon-']{
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+.ticon-functions{
+    background-image: url(logo.functions.png);
+}
+
+#mainsearch button{
+  width: 100%;
+}
+
+
+#mainsearch {
+  padding-bottom: 35px;
+}
+
+#mainsearch .form-control{
+  margin-bottom: 30px;
+}
+
+.mw-search{
+  position: relative;
+}
+
+.mw-search-list{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 6px 6px -6px #111;
+  border: 1px solid #ccc;
+  display: none;
+  text-align: left;
+  max-height: 236px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top:-1px;
+  z-index: 99;
+}
+
+.searching .mw-search-list{
+  display: block;
+}
+
+.mw-search-list a{
+  display: block;
+  padding: 10px 16px;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.mw-search-list a:last-child{
+  border-bottom: none
+}
+
+.mw-search-list .noresults{
+  display: block;
+  padding: 10px 16px;
+}
+
+#main_dropdown > a{
+
+}
+
+#page-content-body{
+  padding: 50px;
+}
+
+#sidebar-wrapper-holder .nav-title + .subnav{
+  display: none;
+}
+
+#sidebar-wrapper-holder .nav-title.active + .subnav{
+  display: block;
+}
+
+.sidebar-nav li a.nav-title.active{
+  background: #5C9FCC;
+  color: white;
+  text-shadow: none;
+}
+.sidebar-nav{
+  padding-top: 50px;
+}
+
+.mw-search .glyphicon-search{
+  position: absolute;
+  right: 14px;
+  top: 12px;
+  color:#ccc;
+  pointer-events:none;
+}
+
+#page-content-body > .subnav li {
+  list-style: none;
+}
+
+
+#page-content-body > .subnav li a{
+  font-size: 19px;
+   display: inline-block;
+   padding: 9px 12px;
+   min-width: 250px;
+}
+
+#page-content-body > .subnav li a:hover,
+#page-content-body > .subnav li a:focus{
+  background: white;
+}
+
+
+
+
+
+/* Media queries */
+
+@media  (max-width:900px){
+    #sidebar-wrapper{
+      display: none !important;
+    }
+    #page-content-wrapper{
+      display: block;
+    }
+}
+
+@media  (max-width:600px){
+    .main-title-wrap{
+      padding-bottom: 20px;
+    }
+
+    .main-title{
+      padding: 0;
+      font-size: 32px;
+    }
+
+    .main-title > [class*="ticon-"]{
+      display: none;
+    }
+
+}
+
+/* /Media queries */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

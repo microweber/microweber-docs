@@ -15,11 +15,109 @@
     	<link href="<?php print site_url(); ?>assets/js/highlight/styles/github.css" rel="stylesheet">
 
     <script src="<?php print site_url(); ?>assets/js/highlight/highlight.pack.js"></script>
+    <style>
+
+      .sidebar ul{
+        padding-bottom: 20px;
+      }
+
+      .sidebar li{
+        list-style: none
+      }
+
+     .sidebar li a{
+       color: #696969;
+       font-weight: 400;
+       display: block;
+       padding: 5px 0 5px 17px;
+       position: relative;
+     }
+
+     .sidebar{
+       padding: 20px 20px 20px 20px;
+       margin-right: 30px;
+       background: rgba(239, 237, 237, 0.42);
+     }
+
+     .sidebar h3{
+       color: rgba(71, 71, 71, 0.98);
+      font-size: 22px;
+      font-weight: 400;
+      text-transform: uppercase;
+
+     }
+     .page-container{
+       border: 1px solid #e5e5e5;
+     }
+
+     .page-container a:hover,
+     .page-container a:focus{
+       color: #4494c7;
+     }
+
+     .page-container a.active{
+       color: #4494c7;
+       text-decoration: none;
+       font-weight: bold;
+     }
+     .container{
+       padding-top: 30px;
+     }
+     .hljs{
+       padding: 25px;
+     }
+
+     .container .content{
+
+       font-size: 19px;
+     }
+
+
+
+     .container .content h1 + pre,
+     .container .content h2 + pre,
+     .container .content h3 + pre,
+     .container .content h4 + pre,
+     .container .content h5 + pre,
+     .container .content h1 + p,
+     .container .content h2 + p,
+     .container .content h3 + p,
+     .container .content h4 + p,
+     .container .content h5 + p{
+       margin-bottom: 50px;
+     }
+.sidebar li a.active:before {
+
+
+    content: "Ň";
+    font-size: 14px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    font-family: Microweber;
+}
+.sidebar{
+  overflow: hidden;
+}
+.sidebar:hover{
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+.content > h2:first-child{
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid #eee;
+}
+
+    </style>
 
 </head>
 <body>
 <div class="header"><?php require('header_nav.php'); ?></div>
-<div class="page-container mw-ui-box mw-ui-box-content" style="background-color: white;">
+<div class="page-container" style="background-color: white;">
 
     <div class="mw-ui-row">
         <div class="mw-ui-col" style="width: 300px;">
@@ -40,9 +138,20 @@
 <script >
 
 $(document).ready(function(){
-   $(".sidebar ul").addClass("xxxxmw-ui-navigation mw-ui-box");
+
    $(".content table").addClass("mw-ui-table");
     $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+
+    $(window).bind('load resize', function(e){
+      $(".sidebar").height($(this).height() - $(".page-container").offset().top - 40);
+       if(e.type=='load'){
+      _sidemenu =  $(".sidebar")[0];
+      _active_side_menu = _sidemenu.querySelector('.active');
+      if(_sidemenu !== null && _active_side_menu !== null){
+          _sidemenu.scrollTop = _active_side_menu.offsetTop - _sidemenu.offsetTop - 36;
+      }
+  }
+    })
 });
 
 </script>

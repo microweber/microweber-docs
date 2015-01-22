@@ -2,6 +2,8 @@
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 18px;
 	background-color: #efecec;
+    line-height: 1.6;
+    color: #413939;
 }
 *, *:before, *:after {
 	-moz-box-sizing: border-box;
@@ -23,7 +25,6 @@
 	margin: 0px;
 }
 .content {
-	line-height: 27px;
 	max-width: 740px;
 }
 .header, .page-container {
