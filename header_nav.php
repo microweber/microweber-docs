@@ -58,6 +58,11 @@
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big dd_class_ref <?php if (strstr(url_path(), 'modules/')) print "active"; ?>"
             href="<?php print site_url(); ?>modules/README.md" data-ref="class">Modules</a></li>
             
+            
+              <li><a
+            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'js-css/')) print "active"; ?>"
+            href="<?php print site_url(); ?>js-css/README.md">JS/CSS</a></li>
+            
               <li><a
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'developer-guide/')) print "active"; ?>"
             href="<?php print site_url(); ?>developer-guide/README.md">OLD</a></li>
