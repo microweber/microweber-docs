@@ -21,3 +21,19 @@ editor_value = my_editor.value
 alert(editor_value);
 </script>
 ```
+
+
+### Usage with options
+```
+<script>
+$(document).ready(function () {
+
+    mw.editor({
+        element: '#content-text-editor',
+        height: 'auto',
+        hideControls: ['fontfamily']
+    });
+ 
+});
+</script>
+```

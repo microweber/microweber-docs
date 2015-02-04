@@ -1,7 +1,8 @@
 # mw.front.get_layout
 
-This event is executed when the CMS tries to get the layout to render a page in the frontend.
+This event is executed when Microweber gets the layout to render a page in the frontend.
 
+The `$params` array contains the info for the current content
 
 ```php
  

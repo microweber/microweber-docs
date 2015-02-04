@@ -7,5 +7,10 @@
 * [mw.reload_module](mw.reload_module.md)
 * [mw.colorPicker](mw.colorPicker.md)
 
+
+### Forms
+* [mw.form.post](mw.form.post.md "mw.form.post")
+
+
  
 
