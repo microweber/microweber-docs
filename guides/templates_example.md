@@ -19,6 +19,8 @@ First, create a layout file in the template folder, e.g. `layouts/blog.php`. Thi
   content_type: dynamic
   name: Blog
 */
+?>
+<?php
 include template_dir().'header.php'; ?>
 <div class="container">
     <div class="blog-content edit" field="content" rel="content">
@@ -49,7 +51,8 @@ Editable regions and a `comments` module would seem appropriate for such layout.
   description: Post layout
 
 */
-include template_dir().'header.php'; ?>
+?>
+<?php include template_dir().'header.php'; ?>
 <div class="container">
     <h1 class="post-title edit" field="title" rel="content">My post title</h1>
     <div class="blog-post edit" field="content" rel="content">
@@ -83,7 +86,8 @@ name: Shop
 is_shop: y
 position: 3
 */
-include template_dir().'header.php'; ?>
+?>
+<?php include template_dir().'header.php'; ?>
 <div class="container">
     <div class="edit" field="content" rel="content">
         <p>My shop page</p>
@@ -112,6 +116,8 @@ are now rendered by the layout.
   content_type: static
   name: Product
 */
+?>
+<?php
 include template_dir().'header.php'; ?>
 <div class="container">
   <div class="edit"  field="content" rel="content">
@@ -136,7 +142,8 @@ content_type: static
 name: Contact Form
 position: 7
 */
-include template_dir(). "header.php"; ?>
+?>
+<?php include template_dir(). "header.php"; ?>
 <div class="container">
   <div class="edit" field="content" rel="content">
     <h3>Find us on the map</h3>

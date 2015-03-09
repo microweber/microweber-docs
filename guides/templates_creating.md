@@ -20,11 +20,33 @@ Microweber templates live within their own folders under `userfiles/templates/`.
          clean.php
 </pre>
 
+###Basic files and their purpose
+
+|Filename  | Description|
+| ------------- | ------------- |
+| config.php  | holds the information for  your template, like name, version  |
+| index.php  | homepage default layout  |
+| header.php  | site header  |
+| footer.php  | site footer  |
+| clean.php  | default layout for page  |
+| inner.php  | default layout for post  |
+
+
+
+
+
 ## <a name="configuration"></a> Configuration
-Defining the `$config` array makes the template appear in the admin panel.
+
+Here is example config file you must create in your template folder
+
+     userfiles/templates/my_template/config.php
+
+
+
+Defining the `$config` array in this file makes the template appear in the admin panel.
 
 *Example* `config.php`
-```
+```php
 <?php
 $config = array(
   'name' => 'My Template',
@@ -125,7 +147,7 @@ Create different layouts to allow users to change the layout, design or impressi
 Layouts are php scripts located in the template's folder or subfolders, e.g. `/userfiles/templates/my_template/layouts/`. The `index.php` file is used as a homepage layout.
 
 Microweber recognizes layout files by scanning the template folder for scripts annotated with the following comment syntax in the beginning:
-```
+```php
 <?php
 /*
   type: layout
@@ -172,7 +194,8 @@ Editable regions can be defined by adding the `edit` class to any html element.
   name: Home
   description: Landing page
 */
-include template_dir().'header.php'; ?>
+?>
+<?php include template_dir().'header.php'; ?>
 <div class="container">
     <div class="edit" field="content" rel="content">
         <h2>Welcome to my homepage!</h2>
@@ -185,3 +208,47 @@ include template_dir().'header.php'; ?>
 </div>
 <?php include template_dir().'footer.php';
 ```
+
+
+
+
+
+
+
+
+## Microweber template layouts recommended filenames standard
+
+For the site content to be shown across different templates, we have a list of recommended filenames that you can use while creating your template. 
+
+For easier management if files, you can put most of the page layouts in a subfolder of your template called `layouts`, for example `/userfiles/templates/my_template/layouts/blog.php`
+
+
+
+|Filenames  | Description|
+| ------------- | ------------- |
+| `index.php`, `index_1.php`, `index_2.php`, ...  | Layouts for the home page  |
+| `header.php`  | site header  |
+| `footer.php`  | site footer  |
+| `editor.php` |  layout the wyswyg editor in the admin  |
+| `clean.php` |  layout for page  |
+| `inner.php`  |  layout for post  |
+| `login.php`  |  layout user login  |
+| `register.php`  |  layout user register  |
+| `profile.php`  |  layout for user profile management  |
+| `layouts/gallery.php`  | for gallery page |
+| `layouts/contact.php` | for contact page |
+| `layouts/about.php` | for about page |
+| `layouts/blog.php`, `layouts/blog_1.php`, `layouts/blog_2.php`, ...  | for blog  |
+| `layouts/blog_inner.php`, `layouts/blog_1_inner.php`, `layouts/blog_2_inner.php`, ...  | for blog post  |
+| `layouts/shop.php`, `layouts/shop_1.php`, `layouts/shop_2.php`, ...  | for shop  |
+| `layouts/shop_inner.php`, `layouts/shop_1_inner.php`, `layouts/shop_2_inner.php`, ...  | for shop product inner page |
+| `layouts/portfolio.php`, `layouts/portfolio_1.php`, `layouts/portfolio_2.php`, ...  | for portfolio  |
+| `layouts/portfolio_inner.php`, `layouts/portfolio_1_inner.php`, `layouts/portfolio_2_inner.php`, ...  | for portfolio inner page |
+
+
+All those layouts are optional, you dont have to create them for all templates
+
+
+
+
+ 

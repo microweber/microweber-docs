@@ -11,7 +11,7 @@
   * [Advanced Queries](#advanced)
 
 ## <a name="simple"></a> Simple Data Access
-The functions `get_option` and `set_option` are used to retrieve or store data.
+The functions `get_option` and `save_option` are used to retrieve or store data.
 Each entry is identified by a name and a group it belongs to, which are passed as arguments (in that order).
 
 If you want to access instance-specific data you could pass `$params['id']` (the ID of the instance) as a group.
@@ -77,7 +77,7 @@ $rows = db_get(array('table' => 'my_table'));
 ```
 
 Set the `single` key to `true` in the argument array for the function to return a single row.
-Any non-reserved key name is treated as a `WHERE` condition for given column name. Reference the [`db_get` function docs](../functions/get.md) for more details.
+Any non-reserved key name is treated as a `WHERE` condition for given column name. Reference the [`db_get` function docs](../functions/db_get.md) for more details.
 
 *Example*
 ```
@@ -92,16 +92,16 @@ $row = db_get(array(
 If the `db_save` function receives an array containing an `id` key it performs an update operation on the corresponding row.
 
 *Example*
-```
-// Gets the first row with price >= (Greather Than or Equal to) 1000
+```php
+// Gets the first row with id = 3
 $row = db_get(array(
-	'table' => 'my_table',
-	'price' => '[gte]1000',
+	'table' => 'content',
+	'id' => '3',
 	'single' => true
 	));
-$row[0]['name'] = 'My Awesome Painting';
-echo 'Updating row with ID ', $row[0]['id'];
-db_save('my_table', $row);
+$row['title'] = 'My Awesome Painting';
+echo 'Updating row with ID ', $row['id'];
+db_save('content', $row);
 ```
 
 #### <a name="crud-delete"></a> Delete
@@ -113,4 +113,4 @@ delete_by_id('my_table', 1);
 ```
 
 ## <a name="advanced"></a> Advanced Queries
-Reference the [`db_get`](../functions/get.md) and [`db_save`](../functions/save.md) documentation pages for a list of all available parameters.
+Reference the [`db_get`](../functions/db_get.md) and [`db_save`](../functions/db_save.md) documentation pages for a list of all available parameters.

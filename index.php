@@ -129,7 +129,7 @@ if(is_ajax()){
   opacity: 0;
 }
 .hljs-comment{
-  display: none;
+
 }
 #autocomplete{
   display: none;
@@ -207,7 +207,8 @@ $(document).ready(function(){
   _high();
 
  $(window).on("popstate", function() {
-    _go();
+
+   // _go();
  });
 
 if(!!history.pushState){

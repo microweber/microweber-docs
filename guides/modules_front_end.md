@@ -11,7 +11,7 @@ Provided there is a file named `logo.png` in your module folder you can easily d
 
 *Example* `index.php`
 ```
-<img src="<?php echo $config['url_to_module']; ?>/logo.png" />
+<img src="<?php echo $config['url_to_module']; ?>logo.png" />
 ```
 
 ### Showing Stored Data

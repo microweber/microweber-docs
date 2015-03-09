@@ -38,12 +38,12 @@ You can pass parameters as string or as array. Those parameters are with the sam
 
 ##### Parameters as string
 ```php
-    $content = get_content("is_active=y");
+    $content = get_content("is_active=1");
     print_r($content);
 ```
 ##### Parameters as array
 ```php
-    $params =  array("is_active"=>"y");
+    $params =  array("is_active"=>1);
     $content = get_content($params);
     print_r($content);
 ```
@@ -56,7 +56,7 @@ $params = array(
     'order_by' => 'created_at desc',
     'content_type' => 'post', 
     'subtype' => 'post', 
-    'is_active' => 'y'
+    'is_active' => 1
 );
 
 $recent_posts = get_content($params);

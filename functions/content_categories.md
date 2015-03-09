@@ -16,9 +16,9 @@ $categories = content_categories($content_id);
 
 if(!empty($categories)){
     foreach($categories as $category){
-    print $category['id'];
-    print $category['title'];
-    // and more... print_r($category);
+        print $category['id'];
+        print $category['title'];
+        // and more... print_r($category);
     }
 } 
 ```

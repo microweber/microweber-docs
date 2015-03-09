@@ -25,7 +25,7 @@
 * [content_categories](content_categories.md "content_categories")
 * [category_link](category_link.md "category_link")
 * [get_page_for_category](get_page_for_category.md "get_page_for_category")
-* [category_tree.md](category_tree.md "category_tree.md")
+* [category_tree](category_tree.md "category_tree")
 
 ### Media
 * [save_picture](save_picture.md "save_picture")
@@ -54,5 +54,10 @@
 * [save_custom_field](save_custom_field.md "save_custom_field")
 
 ### Database
-* [save](save.md "save")
-* [get](get.md "get")
+* [db_save](db_save.md "save")
+* [db_get](db_get.md "get")
+
+
+### API
+* [api_expose](api_expose.md "api_expose")
+* [api_expose_admin](api_expose_admin.md "api_expose_admin")

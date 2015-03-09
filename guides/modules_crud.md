@@ -140,7 +140,7 @@ function save_testimonial($data)
         return;
     }
     $table = "testimonials";
-    return save($table, $data);
+    return db_save($table, $data);
 }
 
 function get_testimonials($params=array())
@@ -149,7 +149,7 @@ function get_testimonials($params=array())
         $params = parse_params($params);
     }
     $params['table'] = "testimonials";
-    return get($params);
+    return db_get($params);
 }
 
 api_expose('delete_testimonial');
@@ -168,7 +168,7 @@ function delete_testimonial($params)
 
 Note the [api_expose](../functions/api_expose.md "") usage before the "save_testimonial" function, this allows us to call this function from http://example.com/api/save_testimonial .
 
-As you can see those functions are just a references to the [get](../functions/db_get.md "get"), [save](../functions/db_save.md "save") and [delete_by_id](../functions/delete_by_id.md "delete_by_id").
+As you can see those functions are just a references to the [db_get](../functions/db_get.md "db_get"), [db_save](../functions/db_save.md "db_save") and [delete_by_id](../functions/delete_by_id.md "delete_by_id").
 
 
 #### admin.php 
@@ -291,62 +291,13 @@ Open `userfiles/modules/testimonials/index.php` and add this code.
 
 <script>
     $(document).ready(function () {
-        testimonials_rotator.init("#rotator_<?php print $params['id'] ?>");
+       // testimonials_rotator.init("#rotator_<?php print $params['id'] ?>");
     });
 </script>
 ```
 
 When you drop the module in the live edit or type `<module type="testimonials" />`, the `index.php` file serves as the "front-end" of the module. 
 
-#### testimonials.js
-
-Finally we are going to add out JavaScript to rotate the elements with fade effect. 
-
-
-```js
-testimonials_rotator =
-{
-    init: function (selector) {
-        //initial fade-in time (in milliseconds)
-        var initialFadeIn = 1000;
-
-        //interval between items (in milliseconds)
-        var itemInterval = 5000;
-
-        //cross-fade time (in milliseconds)
-        var fadeTime = 2500;
-
-        //count number of items
-        var numberOfItems = $('.rotating-item',selector).length;
-
-        //set current item
-        var currentItem = 0;
-
-        //show first item
-        $('.rotating-item',selector).eq(currentItem).fadeIn(initialFadeIn);
-
-        //loop through the items
-        var infiniteLoop = setInterval(function () {
-            $('.rotating-item',selector).eq(currentItem).fadeOut(fadeTime);
-
-            if (currentItem == numberOfItems - 1) {
-                currentItem = 0;
-            } else {
-                currentItem++;
-            }
-            $('.rotating-item',selector).eq(currentItem).fadeIn(fadeTime);
-
-        }, itemInterval);
-    }
-};
-
-
-```
-
-
-
-
- 
 
  
 

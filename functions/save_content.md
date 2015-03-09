@@ -31,10 +31,10 @@ You use those fields to store and structure your content
 | created_by     |   The id of the user that created the content     | 
 | created_at     |   The date of creation, supported values are any *strtotime* compatible date      | 
 | updated_at     |    The date of last update, supported values are any *strtotime* compatible date       | 
-| is_active      |  flag for published or unpublished, default is `y` or `n`    |
-| is_deleted     | flag for deleted content, values are `n` or `y`      |
-| is_home        |  flag for homepage, values are `n` or `y`     |
-| is_shop        |  flag for shop page, values are `n` or `y`   |
+| is_active      |  flag for published or unpublished, default is `1` or `0`    |
+| is_deleted     | flag for deleted content, values are `0` or `1`      |
+| is_home        |  flag for homepage, values are `0` or `1`     |
+| is_shop        |  flag for shop page, values are `0` or `1`   |
 
 [See all database fields](../developer-guide/sql-schema/content.md#content_table "")
  
