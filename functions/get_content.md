@@ -34,7 +34,30 @@ foreach ($content as $item) {
 
 ### Parameters
 
-You can pass parameters as string or as array. Those parameters are with the same names as the fields in the content database table.  [See all parameters](../developer-guide/sql-schema/content.md "")
+You can pass parameters as string or as array. Those parameters are with the same names as the fields in the content database table.   
+
+| key            | value        |
+| -------------  |:-------------|
+| id             |  the id of the content | 
+| parent         |  the parent content id    | 
+| content_type   |   Type of the content. Supported values are `page`,`post`,`product` or anything custom |
+| subtype        |  Subtype of the content   | 
+| url            |  the link to the content   |
+| title          |  The html content saved in the database     |
+| description    |   Description used for the content list    |
+| content        |   The html content saved in the database    |
+| position       |   The order position    |
+| created_by     |   The id of the user that created the content     | 
+| created_at     |   The date of creation, supported values are any *strtotime* compatible date      | 
+| updated_at     |    The date of last update, supported values are any *strtotime* compatible date       | 
+| is_active      |  flag for published or unpublished, default is `1` or `n`    |
+| is_deleted     | flag for deleted content, values are `0` or `1`      |
+| is_home        |  flag for homepage, values are `0` or `1`     |
+| is_shop        |  flag for shop page, values are `0` or `1`   |
+| require_login        |  flag to display the content only for logged users, values are `0` or `1`   |
+| category        |  id for category   |
+
+
 
 ##### Parameters as string
 ```php

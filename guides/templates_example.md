@@ -20,8 +20,7 @@ First, create a layout file in the template folder, e.g. `layouts/blog.php`. Thi
   name: Blog
 */
 ?>
-<?php
-include template_dir().'header.php'; ?>
+<?php include template_dir().'header.php'; ?>
 <div class="container">
     <div class="blog-content edit" field="content" rel="content">
         <h2>Recent Posts:</h2>
@@ -117,8 +116,7 @@ are now rendered by the layout.
   name: Product
 */
 ?>
-<?php
-include template_dir().'header.php'; ?>
+<?php include template_dir().'header.php'; ?>
 <div class="container">
   <div class="edit"  field="content" rel="content">
       <module type="pictures" rel="content" />
@@ -133,7 +131,7 @@ include template_dir().'header.php'; ?>
 
 ## <a name="contact"></a> Example Contact Form Layout
 
-*Example* `layouts/contact_us.php`
+*Example* `layouts/contacts.php`
 ```
 <?php
 /*

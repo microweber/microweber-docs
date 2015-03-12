@@ -155,65 +155,7 @@ Here is how it looks like:
 	<p>Edit your content</p>
 </div>
 ```
-
-
-Simply add class "*edit*" and "*field*" and "*rel*" attributes to ANY html element.
-As a developer you can decide how many editable regions you want. They are very flexible and can be re-used across pages.
-
-<div class="mw-ui-box  mw-ui-box-info ">
-<div class="mw-ui-box-header">
-<span class="mw-icon-info"></span><span>Creating editable field</span>
-</div>
-<div class="mw-ui-box-content">
-<ul>
-<li>Add class "edit"</li>
-<li>Add "field" attribute</li>
-<li>Add "rel" attribute</li>
-</ul>
-</div>
-</div>
-
-
-
-
  
-#### Editable region attributes
-
-Each editable region behaves differently in dependence of the rel and field attributes you add to it
-
-**`field` attribute**
- 
-The `field` attribute will help you to define multiple content-editable regions in your layout.
-
-Add attribute `field="some_name"` and set the name of your field in your template.
-The main content region that the user sees during the "Add content" process must have `field="content"`
-
-
-**`rel` attribute**
-
-The `rel` attribute is responsible for the "scope" of your content-editable field.  
-
-You can define custom scope and reuse the content of the editable regions across the whole website.
-
-Add attribute rel and set the scope of your field.
-* `rel="content"` - changes for every page or post
-* `rel="global"` - changes for the whole site
-* `rel="page"` - changes for every page and sub-page
-* `rel="post"` - changes for every post
-* `rel="inherit"` - changes for every main page, but not is sub-pages and posts
-* `rel="your_custom_rel"` you can define your own scope
-
-##### other attributes
-
-There is optional attribute "rel-id", which allows you to display editable regions that belong to another content
-
- 
-#### Default content region
-
-The default region that shows in the Admin panel is defined by `rel="content"` and  `field="content"` attributes of your html element
-
-![editable_regions_classes.png](img/editable_regions_classes.png "")
-
 
 
 

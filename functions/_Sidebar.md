@@ -18,8 +18,13 @@
 ### Content
 * [save_content](save_content.md "save_content")
 * [get_content](get_content.md "get_content")
+* [get_pages](get_pages.md "get_pages")
+* [get_posts](get_posts.md "get_posts")
 * [content_link](content_link.md "content_link")
 * [get_content_by_id](get_content_by_id.md "get_content_by_id")
+* [delete_content](delete_content.md "delete_content")
+
+
 
 ### Categories
 * [content_categories](content_categories.md "content_categories")
@@ -30,6 +35,7 @@
 ### Media
 * [save_picture](save_picture.md "save_picture")
 * [get_picture](get_picture.md "get_picture")
+* [get_pictures](get_pictures.md "get_pictures")
 
 ### Session
 * [session_set](session_set.md "session_set")

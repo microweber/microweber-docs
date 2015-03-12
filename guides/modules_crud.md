@@ -40,17 +40,17 @@ $config['version'] = 0.1;
 
 $config['tables'] = array(
     "testimonials" => array(
-        'id' => "int",
+        'id' => "integer",
         'name' => "text",
         'content' => "text",
         'read_more_url' => "text",
-        'created_at' => "datetime",
-        'position' => "int"
+        'created_at' => "dateTime",
+        'position' => "integer"
     )
 );
 ```
 
-On install of the module Microweber will make those tables in the database for you. If you open the database you will see the following SQL table created. If you need control of the database fields type, read more [here](sql-schema/guide.md "").  
+On install of the module Microweber will make those tables in the database for you. If you open the database you will see the following SQL table created. If you need control of the database fields type, read more [here](http://laravel.com/docs/5.0/schema "").  
 
 
 ![db_table](img/db_table_testimonials.png "")

@@ -9,6 +9,10 @@ First, make sure your server meets [the requirements](start.md). They're few but
 
 > **Note:** After install Microweber will create or modify an .htaccess file in its base folder. It will also create several such files for each script directory denying access to the code.
 
+[Download the latest version from here](https://microweber.com/download.php)
+
+
+
 #### 1. Unzip and upload the files via FTP provided by your hosting company.
 #### 2. Open your website in a browser (i.e. http://example.com/).
 You should see the following screen that allows you to initially setup your Microweber installation.
@@ -34,4 +38,9 @@ Click the `Install` button and give it about a minute to set up your website.
 Once the installation's completed the page will offer you to view your newly created website or go straight to the admin panel.
 
 
-###[You can also install Microweber via command line. Check here.](installation_cli.md "")
+### You can also install Microweber via command line.
+
+There is alternative installation method that can be used for automated installs.
+
+[Check here for command line installation.](installation_cli.md "")
+

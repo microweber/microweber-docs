@@ -89,7 +89,7 @@ if(is_ajax()){
      .container .content h3 + p,
      .container .content h4 + p,
      .container .content h5 + p{
-       margin-bottom: 50px;
+       msssargin-bottom: 50px;
      }
 .sidebar li a.active:before {
 

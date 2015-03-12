@@ -8,7 +8,8 @@ Returns array of content pictures
 
 ### Usage
 
-Get the picture of a post
+Get the pictures of a post
+```php
 
     $content_id = 1;
     $pictures = get_pictures($content_id);
@@ -17,10 +18,7 @@ Get the picture of a post
     	foreach($pictures as $picture){
     	print "<img src=".$picture['filename']." />";
     	print "<div>".$picture['title']."</div>";
-    	var_dump($picture);
        }
     }
-
-#### See also
-
-<!--?php print page_content('functions/_nav/media'); ?-->
+    
+```

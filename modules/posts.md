@@ -2,48 +2,55 @@
 
 Module to show posts from the site
 
-    <module type="posts" /> 
-<!--?php print page_content('params/modules/content'); ?--> 
+<module type="posts" /> 
+
 
 ## Examples
 
 #### Get a list of posts
-
-    <?php //shows posts from the whole site ?>
-    <module type="posts" />
+```
+<?php //shows posts from the whole site ?>
+<module type="posts" />
+```
 
 #### Show only posts from parent page
-
-    <?php //shows blog ?>
-    <module type="posts" parent="2" />
+```
+<?php //shows blog ?>
+<module type="posts" parent="2" />
+```
 
 #### Get list of posts and apply module template
-
-    <?php //shows posts ?>
-    <module type="posts" template="sidebar" />
+```
+<?php //shows posts with template?>
+<module type="posts" template="sidebar" />
+```
 
 #### Limit the number of results and sort by date
-
-    <?php //shows all content by last edited ?>
-    <module type="posts" limit="2" hide-paging="true" order-by="updated_at desc" />
+```
+<?php //shows posts ordered by last edited ?>
+<module type="posts" limit="2" hide-paging="true" order-by="updated_at desc" />
+```
 
 #### Get posts from category
-
-    <?php //shows all posts from a category ?>
-    <module type="posts" category="22" />
+```
+<?php //shows all posts from a category ?>
+<module type="posts" category="22" />
+```
 
 #### Get posts and limit the results
-
-    <?php print "Results page 1"; ?>
-    <module type="posts" limit="2" current-page="1" />
-
-    <?php print "Results page 2"; ?>
-    <module type="posts" limit="2" current-page="2" />
-
+```
+<?php // "Results page 1"; ?>
+<module type="posts" limit="2" current-page="1" />
+```
+```
+<?php // "Results page 2"; ?>
+<module type="posts" limit="2" current-page="2" />
+```
 #### Show only certain fields
-
-    <?php //shows only some fields ?>
-    <module type="posts" show="title,thumbnail" />
+```
+<?php //shows only some fields ?>
+<module type="posts" show="title,thumbnail" />
+```
 
 ### How to style the posts module
 
@@ -68,25 +75,25 @@ All skins that you put in this folder will work only in all site templates
 #### Sample skin
 
 `my_skin.php`
-    <?php
+<?php
 
-    /*
+/*
 
-    type: layout
+type: layout
 
-    name: My posts template
+name: My posts template
 
-    description: My sample posts template
+description: My sample posts template
 
-    */
-    ?>
+*/
+?>
 
-    <?php if (!empty($data)): ?>
-            <?php foreach ($data as $item): ?>
-            	<a href="<?php print $item['link'] ?>"><?php print $item['title'] ?></a>
-            	<?php print $item['description'] ?>
-    		<?php endforeach; ?>
-    <?php endif; ?>
-    <?php if (isset($pages_count) and $pages_count > 1 and isset($paging_param)): ?>
-        <?php print paging("num={$pages_count}&paging_param={$paging_param}&current_page={$current_page}") ?>
-    <?php endif; ?>
+<?php if (!empty($data)): ?>
+<?php foreach ($data as $item): ?>
+	<a href="<?php print $item['link'] ?>"><?php print $item['title'] ?></a>
+	<?php print $item['description'] ?>
+		<?php endforeach; ?>
+<?php endif; ?>
+<?php if (isset($pages_count) and $pages_count > 1 and isset($paging_param)): ?>
+<?php print paging("num={$pages_count}&paging_param={$paging_param}&current_page={$current_page}") ?>
+<?php endif; ?>

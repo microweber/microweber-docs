@@ -3,7 +3,30 @@
 Renders menu tree
 
     <module type="menu" /> 
-<!--?php print page_content('params/modules/menu'); ?--> 
+
+
+<h3>Module parameters</h3>
+<p>This module works out of the box without any parameters. All the parameters bellow are optional.</p>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th width="113">parameter</th>
+      <th width="412">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-php">menu-name</code></td>
+      <td>The name of your menu, ex header_menu, footer_menu</td>
+    </tr>
+    <tr>
+      <td><code class="language-php">template</code></td>
+      <td>set the module template </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 ## Examples
 
@@ -55,11 +78,11 @@ All skins that you put in this folder will work only in all site templates
     ?>
     </div>
 
-This module uses the [menu_tree](<!--?php print site_url(); ?-->functions/menu_tree) function to render the output in the skin. Check the function parameters [here](<!--?php print site_url(); ?-->functions/menu_tree).
+This module uses the [menu_tree](../functions/menu_tree.md) function to render the output in the skin.  
 
 ### Sticky top menu
 
-If your site uses sticky header menu like [this template](http://startbootstrap.com/all-templates), you may have problems with the menu going behind the toolbar.
+If your site uses sticky header menu, you may have problems with the menu going behind the toolbar.
 
 There is a solution to this. Add this css code to your template
 

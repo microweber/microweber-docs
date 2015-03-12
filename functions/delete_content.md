@@ -31,6 +31,3 @@ This function will mark content item as deleted and can put in in the trash.
     $to_delete = array('id' => $item['id'], 'forever' => true);
     $delete = delete_content($to_delete);
 
-#### See also
-
-<!--?php print page_content('functions/_nav/content'); ?-->

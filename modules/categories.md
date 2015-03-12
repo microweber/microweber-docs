@@ -2,13 +2,38 @@
 
 Renders category tree as list
 
-    <module type="categories" /> 
-<!--?php print page_content('params/modules/categories'); ?--> 
+`<module type="categories" />`
 
-## Examples
+<h3>Module parameters</h3>
+<p>This module works out of the box without any parameters. All the parameters bellow are optional.</p>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th width="113">parameter</th>
+      <th width="412">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-php">ul_class</code></td>
+      <td>you can set the class name of the list</td>
+    </tr>
+     <tr>
+      <td><code class="language-php">content-id</code></td>
+      <td>id of the parent page</td>
+    </tr>
+    
+    <tr>
+      <td><code class="language-php">template</code></td>
+      <td>set the module template</td>
+    </tr>
+  </tbody>
+</table>
+
 
 #### Print category tree
-
-    <?php //show category list ?>
-    <module type="categories" />
+```
+<?php //show category list ?>
+<module type="categories" />
+```
     
