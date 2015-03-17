@@ -113,7 +113,7 @@ function everythingFrom($baseDir, $extList, $searchStr)
                     $file_info = array();
                     $fname = str_replace($searchDir, '', $file);
                     $fname = str_ireplace('.php', '', $fname);
-                    $fname = str_ireplace('.md', '', $fname);
+                   // $fname = str_ireplace('.md', '', $fname);
                     $fname = str_replace('\\', '/', $fname);
                     $fname = str_replace('//', '/', $fname);
                     $label = explode('/', $fname);

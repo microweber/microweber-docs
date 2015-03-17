@@ -135,11 +135,22 @@ if(is_ajax()){
   display: none;
 }
 
+
+.not-ready {
+ text-align:center;
+ font-size:14px;
+}
+
     </style>
 
 </head>
 <body>
 <div class="header"><?php require('header_nav.php'); ?></div>
+
+
+
+
+
 <div class="page-container" style="background-color: white;">
 
     <div class="mw-ui-row">
@@ -157,6 +168,7 @@ if(is_ajax()){
 
 
 </div>
+<div class="not-ready">The documentation is under development. Help us by editing this page.</div>
 
 <script src="<?php print site_url(); ?>assets/jquery.min.js"></script>
 
@@ -213,11 +225,12 @@ $(document).ready(function(){
 
 if(!!history.pushState){
   $(".sidebar a").bind("click", function(){
-    if(!$(this).hasClass('active')){
+    if(!$(this).hasClass('active') && !$(this).attr('no-anim')){
         history.pushState({}, '', this.href);
         _go();
+		return false;
     }
-      return false;
+      
   });
 }
 

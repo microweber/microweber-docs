@@ -13,6 +13,8 @@ category_tree — prints nested tree of categories and sub-categories
 
 ### Example with all parameters
 
+```php
+
     // display with all parameters
     $params = array(); 
     $params['parent'] = 0; // parent category id 
@@ -29,6 +31,8 @@ category_tree — prints nested tree of categories and sub-categories
     $params['li_class'] = 'sub-category';
     category_tree($params);
     // prints ULs with LIs
+
+```
 
 ### Parameters 
 
