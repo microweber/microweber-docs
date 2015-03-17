@@ -12,6 +12,4 @@ delete_order — deletes an order from the online shop
 
     $delete_order = delete_order($order_id);
 
-#### See also
-
-<!--?php print page_content('functions/_nav/shop'); ?-->
+ 

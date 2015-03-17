@@ -17,6 +17,4 @@ Get the picture of a post
 
     print "<img src='".$thumbnail."' />";
 
-#### See also
-
-<!--?php print page_content('functions/_nav/media'); ?-->
+ 

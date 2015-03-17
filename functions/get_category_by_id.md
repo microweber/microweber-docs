@@ -25,6 +25,4 @@ get_category_by_id — returns category data as array or false
     	// and more... print_r($category_data);
     }
 
-#### See also
-
-<!--?php print page_content('functions/_nav/categories'); ?-->
+ 

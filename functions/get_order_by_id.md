@@ -21,10 +21,4 @@ get_order_by_id — get single order placed in the online shop
     	// and more... print_r($order);
     }
 
-### Field names
-
-<!--?php print page_content('params/cart_orders'); ?-->
-
-#### See also
-
-<!--?php print page_content('functions/_nav/shop'); ?-->
+ 

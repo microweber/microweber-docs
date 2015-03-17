@@ -2,7 +2,4 @@ Microweber documentation
 ===
 
 
-This is the repository for the Microweber documentation
-
- 
-See it online at: [http://microweber.com/docs/]
+Microweber is a drag and drop CMS with online shop

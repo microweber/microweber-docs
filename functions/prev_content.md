@@ -32,6 +32,4 @@ This function will get the previous page or post. If the post is in a category i
     print content_link($prev['id']);
     }
 
-#### See also
-
-<!--?php print page_content('functions/_nav/content'); ?-->
+ 

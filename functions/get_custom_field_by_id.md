@@ -8,9 +8,7 @@ get_custom_field_by_id — returns single custom field as array or false
 
 ### Usage
 
-    //get a category  
+    //get a custom field  
     $custom_field = get_custom_field_by_id(2);
 
-#### See also
-
-<!--?php print page_content('functions/_nav/custom_fields'); ?-->
+ 

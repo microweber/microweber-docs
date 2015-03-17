@@ -16,6 +16,4 @@ delete_category — deletes a category
 
     $delete = delete_category($category_id);
 
-#### See also
-
-<!--?php print page_content('functions/_nav/categories'); ?-->
+ 

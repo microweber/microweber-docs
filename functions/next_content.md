@@ -32,6 +32,4 @@ This function will get the next page or post. If the post is in a category it wi
     print content_link($next['id']);
     }
 
-#### See also
-
-<!--?php print page_content('functions/_nav/content'); ?-->
+ 
