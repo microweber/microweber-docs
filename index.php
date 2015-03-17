@@ -168,7 +168,7 @@ if(is_ajax()){
 
 
 </div>
-<div class="not-ready">The documentation is under development. Help us by editing this page.</div>
+<div class="not-ready">The documentation is under development. <a style="" href="https://github.com/microweber/microweber-docs/edit/master/<?php print url_path(); ?>">Help us by editing this page</a>.</div>
 
 <script src="<?php print site_url(); ?>assets/jquery.min.js"></script>
 
