@@ -1,7 +1,13 @@
-
 ### Installation via Command Line
 
-You can install Microweber directly from the command line interface. This may be useful in shell scripts that automate the site creation process. Here's an example of what the command looks like:
+If you haveven't downloaded the zip file get it from here [https://github.com/microweber/dist/raw/master/microweber-latest.zip](https://github.com/microweber/dist/raw/master/microweber-latest.zip "") 
+
+You can also download Microweber via Composer
+
+You can install Microweber directly from the command line interface. This may be useful in shell scripts that automate the site creation process. 
+
+
+Here's an example of what the command looks like:
 
 ```bash
 php artisan microweber:install admin@site.com admin pass 127.0.0.1 site_db root secret -p site_

@@ -34,7 +34,7 @@ You can pass parameters as `string` or as `array`. They can be field names in th
 | `page_count`            | returns the number of result pages				 |  db_get('table=content&limit=10&page_count=true') |
 | `$fieldname`            | you can filter data by passing your fields as params	|  db_get('table=some_table&my_field=value') |
 | `keyword`            | if set it will search for keyword		| db_get('table=content&limit=10&keyword=my title') |
-| `nocache`            |  if set to true will skip cahing the db result		| db_get('table=content&nocache=true') |
+| `nocache`            |  if set to true will skip caching the db result		| db_get('table=content&nocache=true') |
 
 
 

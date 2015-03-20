@@ -5,7 +5,7 @@ api_expose_admin — open an api endpoint for admin user
 
     api_expose_admin($api_path, $callback);
 
-### Same as
+### Read more
 
 * [api_expose](api_expose.md "api_expose")
 

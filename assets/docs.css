@@ -59,7 +59,8 @@
 	text-decoration: none;
 	background-color: #216A98;
 }
-.page-container a {
+
+.content a:not([class]), .page-container .sidebar li a{
 	color: #3383bb;
 	text-decoration: none;
 }
@@ -116,7 +117,7 @@ code {
 }
 code, kbd, pre, samp {
    /*	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;  */
-   font-size: 17px;
+   font-size: 16px;
 }
 .page-container table {
 	margin-bottom: 20px;

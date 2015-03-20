@@ -11,7 +11,7 @@ if(is_ajax()){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php print page_title(); ?></title>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,400italic,700italic' rel='stylesheet'
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,400italic,700italic' rel='stylesheet'
           type='text/css'>
     <link href="<?php print site_url(); ?>assets/mw-ui/default.css" rel="stylesheet">
     <link href="<?php print site_url(); ?>assets/mw-ui/ui.css" rel="stylesheet">
@@ -171,8 +171,13 @@ if(is_ajax()){
 <div class="not-ready">The documentation is under development. <a style="" href="https://github.com/microweber/microweber-docs/edit/master/<?php print url_path(); ?>">Help us by editing this page</a>.</div>
 
 <script src="<?php print site_url(); ?>assets/jquery.min.js"></script>
+<script src="<?php print site_url(); ?>assets/js/anchorific.min.js"></script>
 
-<script >
+ 
+
+
+
+<script>
 
 
 
@@ -183,6 +188,7 @@ if(is_ajax()){
 _high = function(){
     $(".content table").addClass("mw-ui-table");
     $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+
 }
 _going = false;
 _go = function(){

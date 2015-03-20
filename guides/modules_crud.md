@@ -161,7 +161,7 @@ function delete_testimonial($params)
     if (isset($params['id'])) {
         $table = "testimonials";
         $id = $params['id'];
-        return delete_by_id($table, $id);
+        return db_delete($table, $id);
     }
 }
 ```
@@ -281,7 +281,7 @@ Open `userfiles/modules/testimonials/index.php` and add this code.
 <?php if ($data): ?>
     <div id="rotator_<?php print $params['id'] ?>" class="testimonials-wrapper">
         <?php foreach ($data as $item): ?>
-            <div class="rotating-item" style="display:none">
+            <div class="rotating-item">
                 <h3 class="testimonial-name"><?php print $item['name'] ?></h3>
                 <div class="testimonial-content"><?php print $item['content'] ?></div>
             </div>
@@ -289,11 +289,6 @@ Open `userfiles/modules/testimonials/index.php` and add this code.
     </div>
 <?php endif; ?>
 
-<script>
-    $(document).ready(function () {
-       // testimonials_rotator.init("#rotator_<?php print $params['id'] ?>");
-    });
-</script>
 ```
 
 When you drop the module in the live edit or type `<module type="testimonials" />`, the `index.php` file serves as the "front-end" of the module. 

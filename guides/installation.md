@@ -38,9 +38,30 @@ Click the `Install` button and give it about a minute to set up your website.
 Once the installation's completed the page will offer you to view your newly created website or go straight to the admin panel.
 
 
-### You can also install Microweber via command line.
+### Alternative installation methods
 
 There is alternative installation method that can be used for automated installs.
 
-[Check here for command line installation.](installation_cli.md "")
+[Install Microweber via command line](installation_cli.md "")
+
+
+<a id="multi-site"></a>
+### Multi site 
+
+You can use a single Microweber instance to manage multiple domains with separate installs. 
+
+In order to have a second site on the same installation you need to set your DNS A record(s) to point to the same IP as your primary Microweber installation.
+
+To make an install, just create a folder in "config", e.g. "config/second-domain.com", and then make an empty file at `config/second-domain.com/microweber.php`
+
+> **Note:** Please *do not* use www. in the folder name.
+
+
+After that when you visit second-domain.com, you will see the install screen.
+
+
+
+
+
+
 
