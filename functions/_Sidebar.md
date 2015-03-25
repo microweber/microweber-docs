@@ -89,7 +89,7 @@
 ### Database
 * [db_save](db_save.md "save")
 * [db_get](db_get.md "get")
-
+* [db_delete](db_delete.md "db_delete")
 
 ### API
 * [api_expose](api_expose.md "api_expose")

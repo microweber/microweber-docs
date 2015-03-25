@@ -168,7 +168,7 @@ function delete_testimonial($params)
 
 Note the [api_expose](../functions/api_expose.md "") usage before the "save_testimonial" function, this allows us to call this function from http://example.com/api/save_testimonial .
 
-As you can see those functions are just a references to the [db_get](../functions/db_get.md "db_get"), [db_save](../functions/db_save.md "db_save") and [delete_by_id](../functions/delete_by_id.md "delete_by_id").
+As you can see those functions are just a references to the [db_get](../functions/db_get.md "db_get"), [db_save](../functions/db_save.md "db_save") and [db_delete](../functions/db_delete.md "delete_by_id").
 
 
 #### admin.php 
