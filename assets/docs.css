@@ -16,6 +16,13 @@
 .sidebar {
 	padding-right: 50px;
 }
+
+.sidebar ul ul {
+	padding-left:15px;
+}
+
+
+
 .header {
 	font-weight: 100;
 	font-size: 14px;

@@ -93,11 +93,11 @@ print "</ul>";
 ### Get posts or products
 
     //get posts
-    $posts = get_content('content_type=post&subtype=post&limit=3');
+    $posts = get_content('content_type=post&limit=3');
     print_r($posts);
 
     //get products
-    $products = get_content('content_type=post&subtype=product');
+    $products = get_content('content_type=product');
     print_r($products);
 
 ### Get by parent or category

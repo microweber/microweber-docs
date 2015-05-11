@@ -182,3 +182,31 @@ function delete_backer(id){
 
 ```
 
+
+#### index.php
+Create a file at `userfiles/modules/backers_list/index.php`
+
+We will use this file as front-end interface where we can show the list. 
+
+
+```html
+<?php $backers = get_backers("no_limit=true"); ?>
+<?php if($backers): ?>
+<div class="mw-ui-box mw-ui-box-content">
+  <ul>
+    <?php foreach($backers as $backer): ?>
+    <li><?php print $backer['backer_name']; ?> - <?php print currency_format($backer['backer_amount']); ?></li>
+    <?php endforeach; ?>
+  </ul>
+</div>
+<?php endif; ?>
+
+
+```
+
+
+
+
+
+[Source code](https://github.com/microweber-dev/backers_list_module "")
+

@@ -6,6 +6,8 @@
 #### Modules
 * [Modules basics](modules_101.md)
 * [Modules CRUD](modules_crud.md)
+* [Modules Tutorials](#)
+    * [Simple list](modules_tutorial_simple_list.md)
  
 
 #### Templates
