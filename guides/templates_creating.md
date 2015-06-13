@@ -117,7 +117,7 @@ Modules are loaded in place of the custom `<module type="module_name" />` tag.
     <div class="edit" rel="global" field="header">
         <h1>
           <a href="<?php print site_url(); ?>">
-            <?php echo option_get('website_title', 'website'); ?>
+            <?php echo get_option('website_title', 'website'); ?>
           </a>
         </h1>
         <module type="menu" name="header_menu"
