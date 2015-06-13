@@ -7,6 +7,7 @@ $page_content = false;
 $locate_file_content = url_path();
 
 $page = page_content();
+//var_dump($page);exit;
 
 if ($page == false) {
     header("HTTP/1.0 404 Not Found");
@@ -192,6 +193,7 @@ function locate_page_file($path = false)
 {
 
     if ($path == false) {
+ 
         $locate_file_content = url_path();
 
         if ($locate_file_content == '') {
@@ -202,7 +204,6 @@ function locate_page_file($path = false)
     }
 
     $locate_file_content = html_entity_decode($locate_file_content);
-
 
     $allowed_ext = array('.php', '.html', '.htm', '.md');
     $here = dirname(__FILE__) . DIRECTORY_SEPARATOR;
@@ -244,12 +245,12 @@ function site_url($add_string = false)
             $subdir_append = $_SERVER['REDIRECT_URL'];
         }
         $pageURL .= "://";
-        if (isset($_SERVER["SERVER_NAME"]) and isset($_SERVER["SERVER_PORT"]) and $_SERVER["SERVER_PORT"] != "80") {
+        if (isset($_SERVER["HTTP_HOST"])) {
+            $pageURL .= $_SERVER["HTTP_HOST"];
+        } else if (isset($_SERVER["SERVER_NAME"]) and isset($_SERVER["SERVER_PORT"]) and $_SERVER["SERVER_PORT"] != "80") {
             $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"];
         } elseif (isset($_SERVER["SERVER_NAME"])) {
             $pageURL .= $_SERVER["SERVER_NAME"];
-        } else if (isset($_SERVER["HOSTNAME"])) {
-            $pageURL .= $_SERVER["HOSTNAME"];
         }
         $pageURL_host = $pageURL;
         $pageURL .= $subdir_append;
@@ -292,6 +293,8 @@ function site_url($add_string = false)
         $url_segs[] = '';
         $site_url = implode('/', $url_segs);
     }
+
+
     return $site_url . $add_string;
 }
 
@@ -325,10 +328,10 @@ function current_url($skip_ajax = false, $no_get = false)
         if (isset($_SERVER["SERVER_PORT"])) {
             $port = ($_SERVER["SERVER_PORT"] == "80") ? "" : (":" . $_SERVER["SERVER_PORT"]);
         }
-        if (isset($_SERVER["SERVER_PORT"])) {
+        if (isset($_SERVER["HTTP_HOST"])) {
+            $u = $protocol . "://" . $_SERVER['HTTP_HOST'] . $port . $serverrequri;
+        } else if (isset($_SERVER["SERVER_PORT"])) {
             $u = $protocol . "://" . $_SERVER['SERVER_NAME'] . $port . $serverrequri;
-        } elseif (isset($_SERVER["HOSTNAME"])) {
-            $u = $protocol . "://" . $_SERVER['HOSTNAME'] . $port . $serverrequri;
         }
     }
     if ($no_get == true) {
