@@ -317,7 +317,7 @@ code, kbd, pre, samp {
 .sidebar a {
 	color:#333333 !important;
 }
-.sidebar ul h1, .sidebar h3 {
+.sidebar ul h1,.sidebar ul h2, .sidebar h3 {
 	font-family: 'Fira Mono';
 	fodddnt-family: 'Source Code Pro', serif;
 	font-size:20px;
@@ -333,6 +333,12 @@ code, kbd, pre, samp {
 	padding-bottom: 15px;
 	padding-left: 0px;
 }
+.sidebar ul h2 {
+	font-size:14px;
+}
+.sidebar .sub-chapter {
+	font-size:14px;
+}
 .content a, .content a.external {
 	color:#3383bb;
 	text-decoration:none;
@@ -345,4 +351,10 @@ a.anchor {
 	color:#efecec;
 	margin-left:5px;
 	text-decoration:none;
+}
+.content pre {
+	background: rgba(238, 238, 238, 0.35);
+	border-radius: 3px;
+	padding: 10px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
 }

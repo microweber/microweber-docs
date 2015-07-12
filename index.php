@@ -93,7 +93,10 @@ $(document).ready(function(){
   
   
   $(".sidebar ul").find('a.active').parents('ul:first').parent().addClass('chapter-active');
-  
+  $(".sidebar ul > li > ul > li > ul").find('a').parent().addClass('sub-chapter');
+
+  $(".sidebar ul > li > ul > li > ul").find('a.active').parent().addClass('sub-chapter-active');
+
   
   $(".content a").filter(function() {
     return this.hostname && this.hostname !== location.hostname;
