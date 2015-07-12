@@ -2,7 +2,10 @@
 
 Microweber's grid system contains 2 parts: Static & Dynamic; 
 
-Dynamic Grid
+### Dynamic Grid
+
+* The dynamic grid columns can be resized by the user from live edit
+
 
 Dynamic grid is used for live edit development. The "admin" user can change the width of columns directly from the site
  
@@ -16,7 +19,7 @@ The dynamic grid contains 3 classes: .mw-row, .mw-col, .mw-col-container
  
 
 
-### Usage and Example
+#### Usage and Example
 ```html
   <div class="mw-row">
       <div class="mw-col" style="width: 30%">
@@ -30,6 +33,10 @@ The dynamic grid contains 3 classes: .mw-row, .mw-col, .mw-col-container
 ### Responsibility
 
 Columns become one below the other when window size is <768px 
+
+### Static Grid
+
+* The static grid columns cannot be resized by the user from live edit 
 
  
 The static grid is a simple fluid grid system. The with of the columns can only be edited only from the css or html.
