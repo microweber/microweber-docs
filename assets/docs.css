@@ -270,7 +270,7 @@ code, kbd, pre, samp {
 .content h1, .content h2, .content h3, .content h4 {
 	color: rgba(89,89,89,1);
 	display: block;
-	font-family:  Helvetica, sans-serif;
+	font-family:  'Source Code Pro', Helvetica, sans-serif;
 	font-weight: 100;
 	margin-bottom: 0;
 	padding: 15px 25px;
@@ -279,11 +279,11 @@ code, kbd, pre, samp {
 }
 .content h1 {
 	font-size: 1.7em;
-	font-family: 'Fira Mono';
+	xfont-family: 'Fira Mono';
 }
 .content h2 {
 	font-size: 1.5em;
-	font-family: 'Fira Mono';
+	xfont-family: 'Fira Mono';
 }
 .content h3 {
 	font-size: 1.4em;
@@ -332,6 +332,14 @@ code, kbd, pre, samp {
 	padding-right: 30px;
 	padding-bottom: 15px;
 	padding-left: 0px;
+}
+.content a, .content a.external {
+	color:#3383bb;
+	text-decoration:none;
+}
+.content a.external:hover {
+	background: url(css/external.png) center right no-repeat;
+	padding-right: 13px;
 }
 a.anchor {
 	color:#efecec;

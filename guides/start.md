@@ -15,7 +15,7 @@
 ### Recommended Software
 * Apache >= 2.4
 * MySQL >= 5.0
-* [Composer](http://getcomposer.com/)
+* [Composer](https://getcomposer.org/)
 
 ### Supported browsers
 * Google Chrome

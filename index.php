@@ -14,9 +14,9 @@ $time = 100;
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?php print page_title(); ?></title>
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,400italic,700italic' rel='stylesheet' type='text/css'>
-
-<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Fira+Mono:400,700' rel='stylesheet' type='text/css'>        <link href="<?php print site_url(); ?>assets/mw-ui/default.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Fira+Mono:400,700' rel='stylesheet' type='text/css'>
+        <link href="<?php print site_url(); ?>assets/mw-ui/default.css" rel="stylesheet">
         <link href="<?php print site_url(); ?>assets/mw-ui/ui.css" rel="stylesheet">
         <link href="<?php print site_url(); ?>assets/docs.css" rel="stylesheet">
         <link href="<?php print site_url(); ?>assets/js/highlight/styles/github.css" rel="stylesheet">
@@ -30,7 +30,7 @@ $time = 100;
           <div class="mw-ui-row">
             <div class="mw-ui-col sidebar-col" style="width: 280px;">
               <div class="sidebar">
-              <div class="sidebar-content"><?php print page_nav(); ?></div>
+                <div class="sidebar-content"><?php print page_nav(); ?></div>
               </div>
             </div>
             <div class="mw-ui-col">
@@ -95,7 +95,9 @@ $(document).ready(function(){
   $(".sidebar ul").find('a.active').parents('ul:first').parent().addClass('chapter-active');
   
   
-  
+  $(".content a").filter(function() {
+    return this.hostname && this.hostname !== location.hostname;
+}).addClass('external').attr('target',"_blank");
   
   
   
