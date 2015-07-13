@@ -1,6 +1,5 @@
 # Getting Started
 
-## Requirements
 
 ### Server Requirements
 * PHP >= 5.4

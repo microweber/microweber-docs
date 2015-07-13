@@ -93,17 +93,21 @@ $(document).ready(function(){
   
   
   $(".sidebar ul").find('a.active').parents('ul:first').parent().addClass('chapter-active');
-  $(".sidebar ul > li > ul > li > ul").find('a').parent().addClass('sub-chapter');
-
+  $(".sidebar ul > li > ul > li > ul").find('a').parent().addClass('sub-chapter-item');
+  $(".sidebar ul > li > ul > li > ul").find('li').parent().addClass('sub-chapter');
+  $(".sidebar ul > li > ul > li > ul").find('li').parent('ul').prev().addClass('sub-chapter-title');
+ 
   $(".sidebar ul > li > ul > li > ul").find('a.active').parent().addClass('sub-chapter-active');
+  $(".sidebar ul > li > ul").find('li > ul a.active').parent().parent().parent().parent().parent().addClass('parent-chapter-active');
 
-  
+ 
   $(".content a").filter(function() {
+	  
     return this.hostname && this.hostname !== location.hostname;
 }).addClass('external').attr('target',"_blank");
   
   
-  
+  $('.content h1:first-child').after('<div class="anchorific"></div>')
   
   
   $('.content').anchorific({
@@ -112,7 +116,7 @@ $(document).ready(function(){
     anchorClass: 'anchor', // class of anchor links
     anchorText: '#', // prepended or appended to anchor headings
     top: '.top', // back to top button or link class
-    spy: true, // scroll spy
+    //spy: true, // scroll spy
     position: 'append', // position of anchor text
     spyOffset: 0 // specify heading offset for spy scrolling
 });

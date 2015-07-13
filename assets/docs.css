@@ -221,16 +221,36 @@ code, kbd, pre, samp {
 	msssargin-bottom: 50px;
 }
 .sidebar li a.active:before {
-	content: "Ň";
+	
 	font-size: 14px;
 	letter-spacing: 2px;
 	font-family: Microweber;
-	margin-right:10px;/*position: absolute;
+	margin-right:10px;
+	
+	
+	/*
+	
+	content: "Ň";
+	position: absolute;
 	top: 9px;
 	left: 2px;*/
 }
+
+
+.sidebar li .sub-chapter-active a.active:before{
+	content: "";
+	margin-right:0px;
+}
+.sidebar li .sub-chapter-active a.active{
+	 font-weight:700;
+}
+.content > h1:first-child {
+	padding-bottom: 17px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #eee;
+}
 .content > h2:first-child {
-	padding-bottom: 30px;
+	padding-bottom: 21px;
 	margin-bottom: 30px;
 	border-bottom: 1px solid #eee;
 }
@@ -278,24 +298,24 @@ code, kbd, pre, samp {
 	margin-top: 21px;
 }
 .content h1 {
+	color:#333333;
 	font-size: 1.7em;
-	xfont-family: 'Fira Mono';
-}
+ }
 .content h2 {
-	font-size: 1.5em;
-	xfont-family: 'Fira Mono';
-}
-.content h3 {
-	font-size: 1.4em;
-}
-.content h4 {
 	font-size: 1.3em;
-}
-.content h5 {
+	color:#383838;
+ }
+.content h3 {
 	font-size: 1.2em;
 }
-.content h6 {
+.content h4 {
 	font-size: 1.1em;
+}
+.content h5 {
+	font-size: 1.0em;
+}
+.content h6 {
+	font-size: 1.0em;
 }
 .sidebar-col {
 	border-right: 1px solid rgba(233,233,233,1);
@@ -303,7 +323,7 @@ code, kbd, pre, samp {
 	height:100%;
 	background: rgba(239, 237, 237, 0.42);
 }
-.sidebar .chapter-active {
+.sidebar .chapter-active,.sidebar .parent-chapter-active {
 	background-color:white;
 	border-top-width: 1px;
 	border-right-width: 1px;
@@ -314,6 +334,9 @@ code, kbd, pre, samp {
 	border-top-color: rgba(233,233,233,1);
 	border-bottom-color: rgba(233,233,233,1);
 }
+.sidebar .parent-chapter-active .chapter-active {
+	border:none;
+}
 .sidebar a {
 	color:#333333 !important;
 }
@@ -323,29 +346,39 @@ code, kbd, pre, samp {
 	font-size:20px;
 	line-height: 150%;
 	list-style-type: none;
-	border-bottom:1px dashed #efecec;
+	border-bottom:1px dashed #eee;
 	margin-right:15px;
 	margin-left:15px;
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-top: 35px;
 	padding-right: 30px;
-	padding-bottom: 15px;
+	padding-bottom: 16px;
 	padding-left: 0px;
+	 
 }
 .sidebar ul h2 {
 	font-size:14px;
 }
+.sidebar .sub-chapter-title {
+	padding-top:10px;
+	border:none;
+	padding-bottom:5px;
+	color:#999999;
+}
 .sidebar .sub-chapter {
 	font-size:14px;
+}
+.sidebar .sub-chapter a.active {
+ font-weight:normal;	
 }
 .content a, .content a.external {
 	color:#3383bb;
 	text-decoration:none;
 }
-.content a.external:hover {
-	background: url(css/external.png) center right no-repeat;
-	padding-right: 13px;
+.content a.external {
+	/*background: url(css/external.png) center right no-repeat;
+	padding-right: 13px;*/
 }
 a.anchor {
 	color:#efecec;

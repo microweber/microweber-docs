@@ -1,13 +1,16 @@
 # Modules 101
 
+
+## What is a module?
+
 Microweber modules are PHP scripts that can be placed on the website. They are executed in a sandboxed environment, but can access Microweber, Laravel and any custom dependency's functionality.
 Modules help developers make easy modifications and add functionality to user pages.
 
-## Existing Codebase
+ 
 Microweber comes bundled with a handful of preinstalled modules that you can examine and extend.
 We encourage learning and the principles of creating modules by looking at the existing code.
 
-## Presentation
+
 In most cases, modules are "blocks" that users drag and drop wherever they need them on their website. Galleries, menus, displaying a post, listing posts in given category, contact forms, etc. are examples of such modules.
 
 Modules don't have to depend on the website's content or design and can have their own presentation layer.
@@ -16,7 +19,6 @@ Modules don't have to depend on the website's content or design and can have the
 Each module is contained within its own folder in `userfiles/modules`.
 In order for new modules to be available, you have to open the modules administration page in the back-end and click `Reload Modules`.
 
-### Create the basic files
 
 Every module needs the following files to work
 
@@ -27,7 +29,7 @@ Every module needs the following files to work
 |index.php  | this file loads the module is dropped or opened from the frontend  |
 |admin.php  | when you open the module settings from the admin or from the live edit, this file is loaded  |
 |functions.php  | optional file, it is loaded on system start with the website |
-|module_name.png  | icon for your module (size 32x32), the file name must the the same as the folder name |
+|icon.png  | icon for your module (size 32x32) |
 
 
 
@@ -38,7 +40,7 @@ Every module needs the following files to work
 # Creating a new module
 There are just few steps you need to make in order to create new module
 
-1. Make new folder for your module for example `userfiles/modules/my_new_module`
+1. Make new folder for your module for example `userfiles/modules/my_example_module`
 2. Make `index.php` and `admin.php` files, so your module can be displayed
 2. Create a `config.php` file with the information for your module
 
@@ -57,7 +59,7 @@ $config['position'] = "98";
 $config['version'] = "0.01";
 ```
 
-# Module Front-End
+## Module Front-End
 
 
 The `index.php` file in the module's folder is being rendered anywhere on the site the user has placed the module.
@@ -90,7 +92,7 @@ The module's filesystem location and URL can be found in the `$config` array tha
 The `$config['url_to_module']` key contains the full url to the module folder (ex. `http://<website>.com/userfiles/modules/`)
 
 
-# Module Back-End
+## Module Back-End
 Users can access administration pages for their installed modules from both the front-end (in a modal) or from the back-end.
 Creating an administration page for your module has many advantages. It's handy for a number of cases, such as allowing users to edit global or instance-specific module settings.
 
@@ -110,13 +112,13 @@ Modules can have their own presentation, extending or not depending on the site 
 Module templates only affect module content.
 
 Template files are PHP scripts that produce the output module markup.
-Module templates are usually stored in a `templates` subfolder, e.g. `/userfiles/modules/<module name>/templates/`.
+Module templates are usually stored in a `templates` subfolder, e.g. `/userfiles/modules/my_example_module/templates/`.
 
 There are generally two ways to approach module template development:
 
 Independent of the Website Template - To make a module template available for all site templates, place in a `templates` subfolder in the module's folder.
 
-In a Website Template - Website templates can contain module skins in a `userfiles/templates/my_template/modules/<module name>/templates` subfolder.
+In a Website Template - Website templates can contain module skins in a `userfiles/templates/my_template/modules/my_example_module/templates` subfolder.
 
 Microweber identifies module templates by looking for .php files annotated with the following comment format in the beginning:
 

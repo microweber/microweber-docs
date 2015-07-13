@@ -35,7 +35,7 @@ We have handy Javascript and CSS framework to help style your website or make yo
 
 
 
-### Some feature highlights
+## Some feature highlights
 
 |          Business Owners | Developers
 |                      --- | ---
