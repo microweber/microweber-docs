@@ -1,18 +1,43 @@
-# Data
 
-* [Simple Data Access](#simple)
-* [Custom Tables](#custom)
-  * [Schema Definition](#custom-schema)
-  * [CRUD Table Data](#crud)
-     * [Create](#crud-create)
-     * [Read](#crud-read)
-     * [Update](#crud-update)
-     * [Delete](#crud-delete)
-  * [Advanced Queries](#advanced)
 
-## <a name="simple"></a> Simple Data Access
-The functions `get_option` and `save_option` are used to retrieve or store data.
-Each entry is identified by a name and a group it belongs to, which are passed as arguments (in that order).
+#  Saving and getting module data
+
+
+
+
+## Simple options
+
+The functions [get_option](../functions/get_option.md "") and [save_option](../functions/save_option.md "save_option") are used to retrieve or store data simple key-value data.
+Each entry is identified by a name and a group it belongs to, which are passed as arguments. 
+
+
+
+### Saving options
+
+You can add custom options for every module. For example now we will add dynamic text, which can be changed from the module "settings" part.
+
+In admin.php you can have an input field with the class `mw_option_field`. When you change this field, its value will be saved in the database automatically. 
+
+*Example* `userfiles/modules/example_module/admin.php`
+```html
+<label class="mw-ui-label">Say something
+  <input
+      name="my_text"
+      class="mw_option_field"
+      type="text"
+      value="<?php print get_option('my_text', $params['id']); ?>" />
+</label>
+```
+
+The `name` attribute of the input is used as a key in the `get_option` function, which you can use to retrieve the value from PHP. The value is saved for the current module instance. If you wish to store option for another instance you can set a custom `option-group` attribute on your input field.
+
+### Getting options
+*Example* `userfiles/modules/example_module/index.php`
+```php
+<h1><?php print get_option('my_text', $params['id']); ?></h1>
+```
+ 
+=========================================
 
 If you want to access instance-specific data you could pass `$params['id']` (the ID of the instance) as a group.
 

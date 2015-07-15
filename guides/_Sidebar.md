@@ -7,6 +7,8 @@
  
 * # Modules
     * [Modules basics](modules_101.md)
+    * [Modules data](modules_data.md)
+
     * ## Examples
         * [Laravel Modules](modules_laravel.md)
         * [Modules CRUD](modules_crud.md)

@@ -105,7 +105,7 @@ hr {
 code {
 	background-color: #f9f2f4;
 	border-radius: 4px;
-	color: #c7254e;
+	color: #333333;
 	padding: 2px 4px;
 }
 code, kbd, pre, samp {
@@ -221,28 +221,22 @@ code, kbd, pre, samp {
 	msssargin-bottom: 50px;
 }
 .sidebar li a.active:before {
-	
 	font-size: 14px;
 	letter-spacing: 2px;
 	font-family: Microweber;
-	margin-right:10px;
-	
-	
-	/*
+	margin-right:10px;/*
 	
 	content: "Ň";
 	position: absolute;
 	top: 9px;
 	left: 2px;*/
 }
-
-
-.sidebar li .sub-chapter-active a.active:before{
+.sidebar li .sub-chapter-active a.active:before {
 	content: "";
 	margin-right:0px;
 }
-.sidebar li .sub-chapter-active a.active{
-	 font-weight:700;
+.sidebar li .sub-chapter-active a.active {
+	font-weight:700;
 }
 .content > h1:first-child {
 	padding-bottom: 17px;
@@ -300,11 +294,11 @@ code, kbd, pre, samp {
 .content h1 {
 	color:#333333;
 	font-size: 1.7em;
- }
+}
 .content h2 {
 	font-size: 1.3em;
 	color:#383838;
- }
+}
 .content h3 {
 	font-size: 1.2em;
 }
@@ -323,7 +317,7 @@ code, kbd, pre, samp {
 	height:100%;
 	background: rgba(239, 237, 237, 0.42);
 }
-.sidebar .chapter-active,.sidebar .parent-chapter-active {
+.sidebar .chapter-active, .sidebar .parent-chapter-active {
 	background-color:white;
 	border-top-width: 1px;
 	border-right-width: 1px;
@@ -340,7 +334,7 @@ code, kbd, pre, samp {
 .sidebar a {
 	color:#333333 !important;
 }
-.sidebar ul h1,.sidebar ul h2, .sidebar h3 {
+.sidebar ul h1, .sidebar ul h2, .sidebar h3 {
 	font-family: 'Fira Mono';
 	fodddnt-family: 'Source Code Pro', serif;
 	font-size:20px;
@@ -355,7 +349,6 @@ code, kbd, pre, samp {
 	padding-right: 30px;
 	padding-bottom: 16px;
 	padding-left: 0px;
-	 
 }
 .sidebar ul h2 {
 	font-size:14px;
@@ -370,14 +363,14 @@ code, kbd, pre, samp {
 	font-size:14px;
 }
 .sidebar .sub-chapter a.active {
- font-weight:normal;	
+	font-weight:normal;
 }
 .content a, .content a.external {
 	color:#3383bb;
 	text-decoration:none;
 }
 .content a.external {
-	/*background: url(css/external.png) center right no-repeat;
+/*background: url(css/external.png) center right no-repeat;
 	padding-right: 13px;*/
 }
 a.anchor {
