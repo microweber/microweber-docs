@@ -50,6 +50,8 @@
 * [save_picture](save_picture.md "save_picture")
 * [get_media](get_media.md "get_media")
 * [save_media](save_media.md "save_media")
+* [delete_media](delete_media.md "delete_media")
+
 
 
 ### Session
