@@ -161,6 +161,15 @@ Each module have an "id" which is accessible with `$params['id']` and its unique
 If you create a file named `functions.php` in the module folder, this file will be loaded automatically on every request. You can use it to make your custom functions, autoload classes and do whatever you like.
 
 
+## Checking if the module is in Live edit mode
+*Example* `userfiles/modules/example_module/index.php`
+```php
+<?php if(in_live_edit()): ?>
+<?php print notif("Click here to edit this module"); ?>
+<?php endif; ?>
+```
+
+
 # Things to know
 
 * You can load other modules in your modules

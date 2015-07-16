@@ -128,7 +128,8 @@ code, kbd, pre, samp {
 	margin: 0 0 1.1em;
 }
 .content .hljs {
-	white-space:pre-wrap;
+	overflow-x: auto;
+
 }
 .content img {
 	max-width: 100%;

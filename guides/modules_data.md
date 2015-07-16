@@ -1,96 +1,62 @@
-
-
-#  Saving and getting module data
-
+# Saving and getting module data
 
 
 
-## Simple options
-
-The functions [get_option](../functions/get_option.md "") and [save_option](../functions/save_option.md "save_option") are used to retrieve or store data simple key-value data.
-Each entry is identified by a name and a group it belongs to, which are passed as arguments. 
-
-
-
-### Saving options
-
-You can add custom options for every module. For example now we will add dynamic text, which can be changed from the module "settings" part.
-
-In admin.php you can have an input field with the class `mw_option_field`. When you change this field, its value will be saved in the database automatically. 
-
-*Example* `userfiles/modules/example_module/admin.php`
-```html
-<label class="mw-ui-label">Say something
-  <input
-      name="my_text"
-      class="mw_option_field"
-      type="text"
-      value="<?php print get_option('my_text', $params['id']); ?>" />
-</label>
-```
-
-The `name` attribute of the input is used as a key in the `get_option` function, which you can use to retrieve the value from PHP. The value is saved for the current module instance. If you wish to store option for another instance you can set a custom `option-group` attribute on your input field.
-
-### Getting options
-*Example* `userfiles/modules/example_module/index.php`
-```php
-<h1><?php print get_option('my_text', $params['id']); ?></h1>
-```
- 
-=========================================
-
-If you want to access instance-specific data you could pass `$params['id']` (the ID of the instance) as a group.
-
-Likewise, passing `$config['name']` as a second parameter is a good way to access global data that is synced across all instances and may affect the operation of the module in general.
-
-*Example* `admin.php`
-```
-<?php
-$myText = get_option('my_text', $params['id']);
-$favNum = get_option('fav_num', $config['name']);
-?>
-
-<?php foreach($favNum as $num): ?>
-<input name="fav_num" class="mw_option_field" type=""
-	<?php echo $favNum? 'checked' :''; ?> />
-<textarea name="my_text" class="mw_option_field">
-	<?php echo $myText; ?>
-</textarea>
-```
-
-## <a name="custom"></a> Custom Tables
-
-For more complex data storage you can use custom tables in the website database.
-
-### <a name="custom-schema"></a> Defining Schema
-When installing a module Microweber checks the `config.php` file for keys in the `$config['tables']` array.
+### Defining Schema
+When installing a module Microweber checks the `config.php` file for the `$config['tables']` array.
 Each key represents a table name and its value is an array of column definitions.
 The ID column is automatically created and all columns are nullable by default.
 
-*Example* `config.php`
+*Example* `userfiles/modules/paintings/config.php`
 ```
+$config = array();
+$config['name'] = "My Paintings";
+$config['author'] = "Pablo Picasso";
+$config['ui'] = true; 
+$config['ui_admin'] = true; 
+$config['position'] = "98";
+$config['version'] = "0.01";
 $config['tables'] = array(
-'my_table' => array(
-	'name' => 'string',
-	'price' => array('type' => 'float', 'not_null'),
-	'description' => array('type' => 'text', 'default' => 'Undescribable')
-));
+        'paintings' => array(
+            'id' => 'integer',
+        	'name' => 'string',
+        	'price' => 'float',
+        	'description' => 'text',
+        	'created_by' => 'integer',
+            'created_at' => 'dateTime',
+        )
+);
 ```
 
-For a complete list of column types, check out [Laravel's Schema Builder docs](http://laravel.com/docs/master/schema#adding-columns).
+## Custom Tables
 
-### <a name="crud"></a> CRUD Table Data
-#### <a name="crud-create"></a> Create
+For more options of the data storage you can read here.
+
+[Read more about making custom tables here](modules_schema.md).
+
+### CRUD Table Data
+
+We can use the following functions to read and write to the database. 
+
+* [`db_get`](../functions/db_get.md)
+* [`db_save`](../functions/db_save.md)
+* [`db_delete`](../functions/db_delete.md)
+
+
+#### Create
 The `db_save` function accepts table name as first argument and row data as a second argument. In order to create rows in a table simply don't specify an ID.
+
+
+
 
 *Example*
 ```
 $data = array(
-	'name' => 'My Painting',
+	'name' => 'Three Musicians',
 	'price' => 2700,
 	'description' => 'My greatest work'
 );
-db_save('my_table', $data);
+db_save('paintings', $data);
 ```
 
 #### <a name="crud-read"></a> Read
@@ -98,7 +64,7 @@ Call the `db_get` function and set the `table` key in the argument array to retr
 
 *Example*
 ```
-$rows = db_get(array('table' => 'my_table'));
+$rows = db_get(array('table' => 'paintings'));
 ```
 
 Set the `single` key to `true` in the argument array for the function to return a single row.
@@ -107,35 +73,39 @@ Any non-reserved key name is treated as a `WHERE` condition for given column nam
 *Example*
 ```
 $row = db_get(array(
-	'table' => 'my_table',
-	'column' => 'matched value',
+	'table' => 'paintings',
+	'name' => 'Three Musicians',
 	'single' => true
 	));
 ```
 
-#### <a name="crud-update"></a> Update
+Alternatively the above query can be written like that `db_get('table=paintings&name=Three Musicians&single=true')`
+
+
+
+#### Update
 If the `db_save` function receives an array containing an `id` key it performs an update operation on the corresponding row.
 
 *Example*
 ```php
-// Gets the first row with id = 3
+// Gets single row with id = 3
 $row = db_get(array(
-	'table' => 'content',
-	'id' => '3',
+	'table' => 'paintings',
+	'id' => 3,
 	'single' => true
 	));
 $row['title'] = 'My Awesome Painting';
 echo 'Updating row with ID ', $row['id'];
-db_save('content', $row);
+db_save('paintings', $row);
 ```
 
-#### <a name="crud-delete"></a> Delete
-The `delete_by_id` function returns `true` after successfully deleting row with a specified ID.
+#### Delete
+The `db_delete` function returns `true` after successfully deleting row with a specified ID.
 
 *Example*
 ```
-delete_by_id('my_table', 1);
+db_delete('paintings', $id = 3);
 ```
 
-## <a name="advanced"></a> Advanced Queries
+## Advanced Queries
 Reference the [`db_get`](../functions/db_get.md) and [`db_save`](../functions/db_save.md) documentation pages for a list of all available parameters.
