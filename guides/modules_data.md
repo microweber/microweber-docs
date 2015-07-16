@@ -2,7 +2,7 @@
 
 
 
-### Defining Schema
+## Defining Schema
 When installing a module Microweber checks the `config.php` file for the `$config['tables']` array.
 Each key represents a table name and its value is an array of column definitions.
 The ID column is automatically created and all columns are nullable by default.
@@ -34,13 +34,27 @@ For more options of the data storage you can read here.
 
 [Read more about making custom tables here](modules_schema.md).
 
-### CRUD Table Data
 
-We can use the following functions to read and write to the database. 
+### Getting and saving data
 
-* [`db_get`](../functions/db_get.md)
-* [`db_save`](../functions/db_save.md)
-* [`db_delete`](../functions/db_delete.md)
+You can use the [db_get](../functions/db_get.md "db_get"), [db_save](../functions/db_save.md "db_save") and [db_delete](../functions/db_delete.md "db_delete") functions to work with data from your those tables.
+
+```
+// Getting
+$data = db_get("table=paintings")
+
+// Saving
+$save = array(
+	'name' => 'Mona Lisa',
+	'description' => 'Paiting by Leonardo da Vinci'
+);
+$id = db_save('paintings', $save);
+
+// Deleting
+db_delete('paintings', $id);
+
+```
+
 
 
 #### Create

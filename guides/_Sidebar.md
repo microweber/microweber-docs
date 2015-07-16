@@ -25,4 +25,4 @@
 
 * # Reference
     * [REST API](rest_api.md)
-  
+    * [SQL schema](sql_schema.md)

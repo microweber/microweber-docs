@@ -80,34 +80,6 @@ Put this in `userfiles/modules/testimonials/index.php` and also create your css 
 </div>
 ```
 
-#### functions.php
-
-We are going to need few functions to get and save data in the database, so we will put them in this file.
-
-
-
-Put this code in `userfiles/modules/testimonials/functions.php` 
-
-
-```php
-<?php
-
-function get_testimonials($params){
-	//...
-}
-
-function save_testimonial($params){
-	//...
-}
-
-function delete_testimonial($params){
-	//...
-}
-```
-
-
-
-
 
 
 ###Loading your module
@@ -129,6 +101,10 @@ Before we make the interface we must make our functions to save and get data.
 We are also going to expose few of our functions to the api, which will allow us to make ajax calls to it.
 
 #### functions.php
+
+We are going to need few functions to get and save data in the database, so we will put them in this file.
+
+
 Open `userfiles/modules/testimonials/functions.php` and add this code. 
 ```php
 <?php

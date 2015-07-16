@@ -48,6 +48,8 @@
 * [get_pictures](get_pictures.md "get_pictures")
 * [thumbnail](thumbnail.md "thumbnail")
 * [save_picture](save_picture.md "save_picture")
+* [get_media](get_media.md "get_media")
+* [save_media](save_media.md "save_media")
 
 
 ### Session

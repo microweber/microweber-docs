@@ -79,6 +79,26 @@ $config['tables'] = array(
 ```
 
 
+### Getting and saving data
+
+You can use the [db_get](../functions/db_get.md "db_get"), [db_save](../functions/db_save.md "db_save") and [db_delete](../functions/db_delete.md "db_delete") functions to work with data from those tables.
+
+```
+// Getting
+$data = db_get("table=todo_lists")
+
+// Saving
+$save = array(
+	'list_name' => 'Get Groceries',
+	'list_description' => 'Things to buy from the shop'
+);
+$id = db_save('todo_lists', $save);
+
+// Deleting
+db_delete('todo_lists', $id);
+
+```
+
 
 ## Available Column Types
 
