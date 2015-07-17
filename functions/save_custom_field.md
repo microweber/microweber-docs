@@ -18,7 +18,6 @@ This function adds custom field to product or content.
                 'field_name' => 'My price',
                 'field_value' => 10,
                 'field_type' => 'price',
-                // 'debug' => 1,
                 'content_id' => $my_product_id);
 
     //adding a custom field "price" to product

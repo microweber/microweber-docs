@@ -24,31 +24,29 @@ Use the [get_content](../functions/get_content.md "get_content"), [save_content]
 | -------------  |:-------------|
 | id             |  the id of the content | 
 | parent         |  the parent content id    | 
-| content_type   |   Type of the content. Supported values are `page` or `post`,anything custom    | 
-| subtype | Subtype of the content. Supported values are `static`,`dynamic`,`post`,`product`, anything custom
 | url            |  the link to the content   |
 | title          |  The html content saved in the database     |
 | description    |   Description used for the content list    |
 | content        |   The html content saved in the database    |
+| content_type   |   Type of the content. Supported values are `page` or `post`,anything custom    | 
+| subtype | Subtype of the content. Supported values are `static`,`dynamic`,`post`,`product`, anything custom
 | position       |   The order position    |
-| created_by     |   The id of the user that created the content     | 
-| created_at     |   The date of creation, supported values are any *strtotime* compatible date      | 
-| updated_at     |    The date of last update, supported values are any *strtotime* compatible date       | 
 | is_active      |  flag for published or unpublished, default is `1` or `0`    |
 | is_deleted     | flag for deleted content, values are `0` or `1`      |
 | is_home        |  flag for homepage, values are `0` or `1`     |
 | is_shop        |  flag for shop page, values are `0` or `1`   |
 | active_site_template        |  indicates the current template    |
 | layout_file        |  indicates the content layout    |
-| content_meta_title        |  Meta title of the content   |
-| content_meta_keywords        |  Meta keywords of the content    |
-| content_meta_title        |  Meta title of the content    |
 | require_login        |  flag if the content requires login to view, values are `0` or `1`      
-| content_meta_title        |  Meta title of the content    |
 | subtype_value        |  field to use for custom content processing    |
 | custom_type        |  field to use for custom content processing    |
 | custom_type_value        |  field to use for custom content processing    |
-
+| content_meta_title        |  Meta title of the content   |
+| content_meta_keywords        |  Meta keywords of the content    |
+| content_meta_title        |  Meta title of the content    |
+| created_by     |   The id of the user that created the content     | 
+| updated_at     |    The date of last update, supported values are any *strtotime* compatible date       |
+| created_at     |   The date of creation, supported values are any *strtotime* compatible date      | 
  
 
 ## Categories table
@@ -61,6 +59,8 @@ Use the [get_categories](../functions/get_categories.md "get_categories"), [save
 | key            | value        |
 | -------------  |:-------------|
 | id             |  the id of the category | 
+| rel_type             |  the type of items in the category, for example `content` relates to the `content` table | 
+| rel_id             |  the related item `id` from the `rel_type` parameter | 
 | created_at     |   The date of creation, supported values are any *strtotime* compatible date      | 
 | updated_at     |    The date of last update, supported values are any *strtotime* compatible date   |
 | created_by     |   The id of the user that created the category     | 
@@ -69,8 +69,6 @@ Use the [get_categories](../functions/get_categories.md "get_categories"), [save
 | title             |  the title of the category | 
 | description             |  the description of the category | 
 | content             |  the html text of the category | 
-| rel_type             |  the type of items in the category, for example `content` relates to the `content` table | 
-| rel_id             |  the related item `id` from the `rel_type` parameter | 
 | position             |  order of the category | 
  
  
@@ -93,6 +91,8 @@ It contains the associated items for each category
 ## Options table
 It contains global and custom settings
 
+Use the [get_option](../functions/get_option.md "get_option") and [save_option](../functions/save_option.md "save_option") to work with the options.
+
 ```$data = db_get("table=options")```
 
 
@@ -109,7 +109,7 @@ It contains global and custom settings
 ## Media table
 It contains media associated with content from another database table
 
-Use the [get_media](../functions/get_media.md "get_media"), [save_media](../functions/save_media.md "save_media") or [delete_media](../functions/delete_media.md "delete_media") functions to work with data from the categories table.
+Use the [get_media](../functions/get_media.md "get_media"), [save_media](../functions/save_media.md "save_media") or [delete_media](../functions/delete_media.md "delete_media") functions to work with data from the media table.
 
 
 ```$data = db_get("table=media")```
@@ -118,13 +118,13 @@ Use the [get_media](../functions/get_media.md "get_media"), [save_media](../func
 | key            | value        |
 | -------------  |:-------------|
 | id             |  the id of the option | 
+| rel_type     |   the related database table, ex. `content`,`users`,`categories`     | 
+| rel_id     |    the related ID of the related database table  |
 | created_at     |   The date of creation, supported values are any *strtotime* compatible date      | 
 | updated_at     |    The date of last update, supported values are any *strtotime*
 | created_by     |   The id of the user that created the category     | 
 | edited_by     |   The id of the user that changed the category     | 
 | session_id     |   The session_id of the last edit    | 
-| rel_type     |   the related database table, ex. content,users,categories     | 
-| rel_id     |    the related ID of the related database table  |
 | media_type     |    type of media ex. picture, video, audio, file, anything custom  |
 | position             |  order of the category | 
 | title             |  the title of the media | 
@@ -135,6 +135,35 @@ Use the [get_media](../functions/get_media.md "get_media"), [save_media](../func
 
 
 
+## Custom fields table
+It contains custom associated with items from another database table
+
+Use the [get_custom_fields](../functions/get_custom_fields.md "get_custom_fields"), [save_custom_field](../functions/save_custom_field.md "save_custom_field") or [delete_media](../functions/delete_custom_field.md "delete_custom_field") functions to work with data from the custom fields table.
+
+
+```$data = db_get("table=custom_fields")```
+
+
+| key            | value        |
+| -------------  |:-------------|
+| id             |  the id of the field | 
+| rel_type     |   the related database table, ex. `content`,`users`,`categories`     | 
+| rel_id     |    the related ID of the related database table  |
+| created_at     |   The date of creation, supported values are any *strtotime* compatible date      | 
+| updated_at     |    The date of last update, supported values are any *strtotime*
+| created_by     |   The id of the user that created the category     | 
+| edited_by     |   The id of the user that changed the category     | 
+| name             |  the name of the field | 
+| name_key             |  lowercase value of the `name` field | 
+| position             |  order of the field | 
+| type             |  type of the field | 
+
+
+ 
+
+
+
+ 
 
 
 

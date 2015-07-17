@@ -88,8 +88,14 @@
 * [save_custom_field](save_custom_field.md "save_custom_field")
 * [get_custom_fields](get_custom_fields.md "get_custom_fields")
 * [get_custom_field_by_id](get_custom_field_by_id.md "get_custom_field_by_id")
+* [delete_custom_field](delete_custom_field.md "delete_custom_field")
 
  
+
+
+
+
+
 ### Database
 * [db_save](db_save.md "save")
 * [db_get](db_get.md "get")
