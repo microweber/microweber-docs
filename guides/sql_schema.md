@@ -136,9 +136,9 @@ Use the [get_media](../functions/get_media.md "get_media"), [save_media](../func
 
 
 ## Custom fields table
-It contains custom associated with items from another database table
+It contains custom fields associated with items from another database table
 
-Use the [get_custom_fields](../functions/get_custom_fields.md "get_custom_fields"), [save_custom_field](../functions/save_custom_field.md "save_custom_field") or [delete_media](../functions/delete_custom_field.md "delete_custom_field") functions to work with data from the custom fields table.
+Use the [get_custom_fields](../functions/get_custom_fields.md "get_custom_fields"), [save_custom_field](../functions/save_custom_field.md "save_custom_field") or [delete_custom_field](../functions/delete_custom_field.md "delete_custom_field") functions to work with data from the custom fields table.
 
 
 ```$data = db_get("table=custom_fields")```
@@ -154,7 +154,7 @@ Use the [get_custom_fields](../functions/get_custom_fields.md "get_custom_fields
 | created_by     |   The id of the user that created the category     | 
 | edited_by     |   The id of the user that changed the category     | 
 | name             |  the name of the field | 
-| name_key             |  lowercase value of the `name` field | 
+| name_key             |  lowercase  value of the `name` field, also spaces are replaced with `-`| 
 | position             |  order of the field | 
 | type             |  type of the field | 
 
@@ -162,7 +162,34 @@ Use the [get_custom_fields](../functions/get_custom_fields.md "get_custom_fields
  
 
 
+## Cart table
+It contains items added to the cart
 
+
+Use the [update_cart](../functions/update_cart.md "update_cart"), [get_cart](../functions/get_cart.md "get_cart"), [empty_cart](../functions/empty_cart.md "empty_cart") or [cart_sum](../functions/cart_sum.md "cart_sum") functions to work with items in the shopping cart.
+
+ 
+
+
+| key            | value        |
+| -------------  |:-------------|
+| id             |  the id of the record | 
+| rel_type     |   the related database table, ex. `content`     | 
+| rel_id     |    the related ID of the related database table  |
+| created_at     |   The date of creation, supported values are any *strtotime* compatible date      | 
+| updated_at     |    The date of last update, supported values are any *strtotime*
+| created_by     |   The id of the user that created the category     | 
+| session_id     |   The session id  of theu ser that added this item to the cart    | 
+| title             |  the title of the item added | 
+| qty             |  quantity of the item in the cart | 
+| price             |  price for single item | 
+| currency             |  3 letter currency code, ex: usd, gpb, eur | 
+| other_info             |  a text field for custom info | 
+| custom_fields_data             |  field, which holds a custom fields data associated with the cart item | 
+| order_completed        |  flag that indicated if this cart's order is made , values are `0` or `1`   |
+| order_id        |  id with the associated order from the `cart_orders` table   |
+
+ 
  
 
 
