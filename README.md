@@ -1,11 +1,28 @@
 Microweber documentation
 ===
 
+# Microweber Documentation
+
+### Cloning + running the docs
+
+nginx configuration:
+
+```
+server {
+        listen 80;
+        server_name localhost;
+        root /path-to/microweber-docs;
+        include hhvm.conf;
+        location / {
+                try_files $uri /index.php$is_args$args;
+        }
+        location ~ \.md$ {
+                try_files index.php /index.php$is_args$args;
+        }
+}
+```
 
 ### What is Microweber CMS?
- 
-
-
 
 #### Microweber is an open source drag and drop CMS
 

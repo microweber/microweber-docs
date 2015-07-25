@@ -118,6 +118,7 @@ function everythingFrom($baseDir, $extList, $searchStr)
                     $fname = str_replace('//', '/', $fname);
                     $label = explode('/', $fname);
                     $title = basename($fname);
+                    $lineNumber = 0;
                     $description = false;
 
 
@@ -125,8 +126,9 @@ function everythingFrom($baseDir, $extList, $searchStr)
                     $grepped = new RegexIterator($stream, '*' . $searchStr . '*');
                     //$grepped = new RegexIterator($stream, '~\$line~');
                     if (!empty($grepped)) {
-                        foreach ($grepped as $line) {
+                        foreach ($grepped as $l => $line) {
                             if (!strstr($line, $title)) {
+                                $lineNumber = $l;
                                 $description = str_replace('#', '', $description);
                                 $description = trim($description);
                                 $description = str_replace("\r", '', $description);
@@ -154,7 +156,7 @@ function everythingFrom($baseDir, $extList, $searchStr)
                     //  $description = substr($description, 0, 550);
                     $fname = str_replace('//', '/', $fname);
                     $fname = ltrim($fname, '/');
-                    $file_info['url'] = site_url($fname);
+                    $file_info['url'] = '/'.$fname;
                     $file_info['title'] = $title;
                     $file_info['description'] = trim(addslashes($description));
                     $file_info['path'] = $fname;

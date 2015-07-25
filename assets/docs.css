@@ -44,11 +44,23 @@
 .header .mw-ui-field:focus+span {
 	display: none;
 }
+
+.header ::-webkit-input-placeholder { color: #fff; }
+.header :-moz-placeholder { color: #fff; }
+.header ::-moz-placeholder { color: #fff; }
+.header :-ms-input-placeholder { color: #fff; }
+
 .header a {
 	text-decoration: none;
 	border-left: 1px solid rgba(0, 0, 0, 0.08);
 	border-right: 1px solid rgba(255, 255, 255, 0.17);
-	font-size: 19px;
+	font-size: 24px;
+}
+.header li > * {
+	height: 52px;
+}
+.header li > span {
+	padding-top: 4px !important;
 }
 .header a.active {
 	text-decoration: none;
@@ -137,13 +149,12 @@ code, kbd, pre, samp {
 #autocomplete {
 	position: absolute;
 	top: 100%;
-	right: 30px;
-	padding: 10px;
-	background: white;
+	right: 4px;
+	background: #fff;
 	z-index: 9;
-	border: 1px solid #eee;
+	border: 2px solid #eee;
 	max-height: 300px;
-	width: 200px;
+	width: 216px;
 	overflow: hidden;
 	box-shadow: 0 0 6px -4px #000;
 }
@@ -333,7 +344,7 @@ code, kbd, pre, samp {
 	border:none;
 }
 .sidebar a {
-	color:#333333 !important;
+	color: #555 !important;
 }
 .sidebar ul h1, .sidebar ul h2, .sidebar h3 {
 	font-family: 'Fira Mono';
