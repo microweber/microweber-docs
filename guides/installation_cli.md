@@ -45,3 +45,10 @@ microweber:install [-p|--prefix[="..."]] [-t|--template[="..."]] [-d|--default-c
 |--help (-h)   | Display this help message.
 |--quiet (-q)  | Do not output any message.
 |--env         | The environment the command should run under.
+
+
+
+#### Update command
+
+`php artisan microwber:update`
+

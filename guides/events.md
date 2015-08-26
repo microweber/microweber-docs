@@ -19,15 +19,56 @@ Where `$event` is the name of the event and `$data` is any value you want to pas
 Below you can find events that are fired throughout Microweber that may prove useful during development.
 
 
-## Website
+## Controller events
+
 
 ### mw.front
 
 Called in the beginning of the front-end lifecycle. A common place for bootstrap logic.
 
+
+Example:
+```php
+event_bind('mw.front', function(){
+   // load javascript or css on all frontend pages
+    $url = module_url('comments');
+    mw()->template->head($url . 'script.js');
+    mw()->template->head($url . 'style.css');
+});
+``` 
+
 ### mw.live_edit
 
 Called in the beginning of the front-end lifecycle if the user is in live edit.
+
+Example:
+```php
+event_bind('mw.front', function(){
+    $url = module_url('some_module');
+    mw()->template->head($url . 'script.js');
+});
+``` 
+
+
+### mw.admin
+
+Called in the beginning of the back-end lifecycle when the user is requesting an admin page.
+
+
+Example:
+```php
+event_bind('mw.admin', function(){
+    $url = module_url('some_module');
+    mw()->template->admin_head($url . 'admin.js');
+});
+``` 
+
+
+
+
+## Other events
+
+
 
 ### mw.controller.index
 
@@ -51,11 +92,6 @@ Callback parameters:
 
 Called when a robot meta URL is hit (for example robots.txt or an RSS feed is read).
 
-## Admin
-
-### mw.admin
-
-Called in the beginning of the back-end lifecycle when the user is requesting an admin page.
 
 ### mw.admin.header
 
