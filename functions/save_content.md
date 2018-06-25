@@ -20,21 +20,25 @@ You use those fields to store and structure your content
 
 | key            | value        |
 | -------------  |:-------------|
-| id             |  the id of the content | 
-| parent         |  the parent page id    | 
-| content_type   |   Type of the content. Supported values are `page` or `post`,anything custom subtype Subtype of the content. Supported values are `static`,`dynamic`,`post`,`product`, anything custom   | 
-| url            |  the link to the content   |
-| title          |  The html content saved in the database     |
-| description    |   Description used for the content list    |
-| content        |   The html content saved in the database    |
-| position       |   The order position    |
-| created_by     |   The id of the user that created the content     | 
-| created_at     |   The date of creation, supported values are any *strtotime* compatible date      | 
-| updated_at     |    The date of last update, supported values are any *strtotime* compatible date       | 
-| is_active      |  flag for published or unpublished, default is `1` or `0`    |
-| is_deleted     | flag for deleted content, values are `0` or `1`      |
-| is_home        |  flag for homepage, values are `0` or `1`     |
-| is_shop        |  flag for shop page, values are `0` or `1`   |
+| id             | Content ID | 
+| parent         | ID of parent page | 
+| content_type   | Type of the content. Supported values are `page`, `post` or any custom value |
+| subtype        | Subtype of the content. Supported values are `static`, `dynamic`, `post`, `product` or any custom value | 
+| url            | The URL to the content |
+| title          | Title of the content |
+| description    | Description used for content listing |
+| content        | The HTML content saved in the database |
+| position       | The order position. Smaller numbers mean the content is given more priority |
+| category       | ID or list of IDs of categories that should be associated with the content. You can also pass strings instead of IDs which will be treated as category names that will be found or created. |
+| created_by     | ID of the user who created the content | 
+| created_at     | The date of creation, supported values are any [strtotime](http://php.net/manual/en/function.strtotime.php) compatible date | 
+| updated_at     | The date of last update, supported values are any [strtotime](http://php.net/manual/en/function.strtotime.php) compatible date |
+| images         | Array of image URLs to be associated with the content. |
+| download_remote_images | Flag to allow downloading images from remote URLs. Defaults to `0`, which only creates a link. | 
+| is_active      | Published/unpublished flag, default is `1`. |
+| is_deleted     | Flag for deleted content, values are `0` or `1` |
+| is_home        | Flag for homepage, values are `0` or `1` |
+| is_shop        | Flag for shop page, values are `0` or `1` |
 
 [See all database fields](../developer-guide/sql-schema/content.md#content_table "")
  

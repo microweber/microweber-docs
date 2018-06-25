@@ -237,7 +237,7 @@ code, kbd, pre, samp {
 	letter-spacing: 2px;
 	font-family: Microweber;
 	margin-right:10px;/*
-	
+
 	content: "Ň";
 	position: absolute;
 	top: 9px;
@@ -346,7 +346,8 @@ code, kbd, pre, samp {
 .sidebar a {
 	color: #555 !important;
 }
-.sidebar ul h1, .sidebar ul h2, .sidebar h3 {
+
+.sidebar ul h1, .sidebar ul h2, .sidebar ul h3, .sidebar h2, .sidebar h3 {
 	font-family: 'Fira Mono';
 	fodddnt-family: 'Source Code Pro', serif;
 	font-size:20px;
@@ -362,6 +363,10 @@ code, kbd, pre, samp {
 	padding-bottom: 16px;
 	padding-left: 0px;
 }
+.sidebar h2 {
+font-size:25px !important;
+}
+
 .sidebar ul h2 {
 	font-size:14px;
 }

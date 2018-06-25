@@ -75,6 +75,8 @@ All skins that you put in this folder will work only in all site templates
 #### Sample skin
 
 `my_skin.php`
+
+```php
 <?php
 
 /*
@@ -89,11 +91,12 @@ description: My sample posts template
 ?>
 
 <?php if (!empty($data)): ?>
-<?php foreach ($data as $item): ?>
+    <?php foreach ($data as $item): ?>
 	<a href="<?php print $item['link'] ?>"><?php print $item['title'] ?></a>
 	<?php print $item['description'] ?>
-		<?php endforeach; ?>
+	<?php endforeach; ?>
 <?php endif; ?>
 <?php if (isset($pages_count) and $pages_count > 1 and isset($paging_param)): ?>
 <?php print paging("num={$pages_count}&paging_param={$paging_param}&current_page={$current_page}") ?>
 <?php endif; ?>
+```
