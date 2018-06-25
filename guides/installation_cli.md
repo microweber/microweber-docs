@@ -1,6 +1,6 @@
 ### Installation via Command Line
 
-If you haveven't downloaded the zip file get it from here [https://github.com/microweber/dist/raw/master/microweber-latest.zip](https://github.com/microweber/dist/raw/master/microweber-latest.zip "") 
+If you haveven't downloaded the zip file get it from here [https://microweber.com/download.php](https://microweber.com/download.php "") 
 
 You can also download Microweber via Composer
 
@@ -12,6 +12,8 @@ Here's an example of what the command looks like:
 ```bash
 php artisan microweber:install admin@site.com admin pass 127.0.0.1 site_db root secret -p site_
 ```
+
+
 
 This would initialize the Microweber database on localhost in database "site_db" using user "root" with password "secret" for the connections. In case the database user doesn't have a password you can skip setting that argument (and also be ashamed of your attitude to security). All tables will be prefixed by "site_". After the schema initialization an admin user will be created with credentials "admin"/"pass" and email "admin@site.com".
 All arguments until the database password are required and need to be present in that exact order.
@@ -38,6 +40,7 @@ microweber:install [-p|--prefix[="..."]] [-t|--template[="..."]] [-d|--default-c
 |--prefix (-p)          | Database tables prefix
 |--template (-t)        | Set default template name
 |--default-content (-d) | Install default content
+ 
 
 #### Laravel Options:
 |      Option  | Description
@@ -47,6 +50,15 @@ microweber:install [-p|--prefix[="..."]] [-t|--template[="..."]] [-d|--default-c
 |--env         | The environment the command should run under.
 
 
+
+#### Examples 
+
+`php artisan microweber:install admin@site.com admin pass 127.0.0.1 site_db root secret mysql -p site_ -t liteness -d 1`
+
+
+`php artisan microweber:install admin@admin.com admin password db microweber microweber microweber pgsql -p site_ -t liteness -d 1`
+
+`php artisan microweber:install admin@site.com admin password storage/database1.sqlite microweber microweber nopass sqlite -p site_  -t liteness -d 1`
 
 #### Update command
 
