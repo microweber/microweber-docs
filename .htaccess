@@ -5,7 +5,7 @@ RewriteCond %{HTTPS} =on
 RewriteRule ^(.*)$ http://%{HTTP_HOST}/docs/$1 [R=301,L]
  
 #goes to the index.php file
-RewriteCond %{REQUEST_URI} !\.(gif|jpg|jpeg|png|js|css|ttf|woff)$
+RewriteCond %{REQUEST_URI} !\.(gif|jpg|jpeg|png|js|css|ttf|woff|php|ico)$
 
 #RewriteRule ^(.*)$ /index.php
 RewriteRule ^(.*)$ index.php [NC,L]
