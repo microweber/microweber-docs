@@ -45,3 +45,15 @@ $(document).ready(function(){
 </span>
 </span>
 ```
+
+
+# Using file browser
+
+```
+mw.fileWindow({
+        types:'images',
+        change:function(url){
+                   
+        }
+});
+```
