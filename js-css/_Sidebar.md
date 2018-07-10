@@ -6,7 +6,7 @@
 * [mw.colorPicker](mw.colorPicker.md)
 * [mw.tabs](mw.tabs.md)
 * [mw.tools](mw.tools.md)
-
+* [mw.wysiwyg](mw.wysiwyg.md)
 
 ### Modules
 * [mw.load_module](mw.load_module.md "mw.load_module")
