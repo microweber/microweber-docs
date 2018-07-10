@@ -40,7 +40,7 @@ microweber:install [-p|--prefix[="..."]] [-t|--template[="..."]] [-d|--default-c
 |--prefix (-p)          | Database tables prefix
 |--template (-t)        | Set default template name
 |--default-content (-d) | Install default content
- 
+|-c                     | make config only, user should complete the install from browser
 
 #### Laravel Options:
 |      Option  | Description
