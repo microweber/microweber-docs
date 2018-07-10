@@ -19,5 +19,15 @@ mw.reload_module('.my_module_class'); //reload by class
 ```
 
 
+## mw.reload_module_parent
+ `mw.reload_module_parent` - reloads a module in the parent window (useful in the settings popup when you want to reload the edited module)
+### Summary
 
  
+```js
+
+mw.reload_module_parent('comments'); //reload by module type
+mw.reload_module_parent('#my_module_id'); //reload by id
+mw.reload_module_parent('.my_module_class'); //reload by class
+
+```
