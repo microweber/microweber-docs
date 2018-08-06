@@ -408,7 +408,7 @@ to include this files wherever you want them to appear! Simple as that!
  
 Here, we include the header and the footer and between them we put some content.
 
-Few notes about this: 
+A few notes about this: 
 
 ```php
 
@@ -506,7 +506,7 @@ file information
 
 ```
 
-Like all the pages we saw before, this is a simple and standart page for Microweber. As the name suggests it's for the SHOP part of the site and it's purpose is to view the main content. REMEMEBER that this is for the main part. If you want to create a view for a single product for example, we can do it like this
+Like all the pages we saw before, this is a simple and standard page for Microweber. As the name suggests it's for the SHOP part of the site and it's purpose is to view the main content. REMEMBER that this is for the main part. If you want to create a view for a single product for example, we can do it like this
 
 ```html
 <?php include template_dir(). "header.php"; ?>
@@ -554,7 +554,7 @@ Like all the pages we saw before, this is a simple and standart page for Microwe
 
 ```
 
-Note: In order to create a single-view product that is connected to the main part it has to be called something like "theNameOfThePage_inner.php". The "_inner" part is helping Microweber to transfer all the data that it needs and display the right information withing the field you told him to.
+Note: In order to create a single-view product that is connected to the main part it has to be called something like "theNameOfThePage_inner.php". The "_inner" part is helping Microweber to transfer all the data that it needs and display the right information within the field you told it to.
 
 If you want to add a page inside a page, you can do it like that
 
@@ -638,9 +638,9 @@ There are a lot of ways of creating a layout. You can put a plain HTML code insi
 
 #Module skins
 
-You don't like the current skin? Well in Microweber nothing is permenent. Here is how to change module's skin.
+You don't like the current skin? Well in Microweber nothing is permanent. Here is how to change a module's skin.
 
-In your template's folder create a folder called "modules". Now, for every module, that you want to edit, you create a separate folder. Let's say we want to create new skin for the menu module. We create a folder called "menu" inside our "modules" folder and then we create another folder called "templates" inside "menu". Inside, we add a new php file- let's call it navbar.php. The choose of the name is up to you. Inside we put
+In your template's folder create a folder called "modules". Now, for every module, that you want to edit, you create a separate folder. Let's say we want to create new skin for the menu module. We create a folder called "menu" inside our "modules" folder and then we create another folder called "templates" inside "menu". Inside, we add a new php file- let's call it navbar.php. The choice of name is up to you. Inside we put
 
 ```html
 <?php
@@ -699,4 +699,4 @@ And this is it. If you want to hard-code the template, in the module declaration
 
 Or you can choose it from the Live Edit mode by clicking on the name you put in the commented section above. And that's it!
 
-For referances you can go in \userfiles\modules and check out all the modules you have access to with all there skins inside. If you want to create new skins for them, you repeat the same steps for the new module.
+For references you can go in \userfiles\modules and check out all the modules you have access to with all there skins inside. If you want to create new skins for them, you repeat the same steps for the new module.
