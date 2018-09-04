@@ -101,7 +101,7 @@ description: My sample posts template
 <?php endif; ?>
 ```
 #### Possible parameters
-`
+
 * template - Name of the template.
 	Templates provided from Microweber:
 	- default - loads when no template is specified
@@ -121,12 +121,11 @@ description: My sample posts template
 	- y/n - Default: n
 
 * data-show:
-	 Possible values:
-    	 - thumbnail,
-	 - title,
-    	 - read_more,
-         - description,
-	 - created_at
+	Possible values:
+	- thumbnail,
+	- title,
+	- read_more,
+	- description,
+	- created_at
 
 * strict_categories
-`
