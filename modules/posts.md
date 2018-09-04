@@ -100,3 +100,33 @@ description: My sample posts template
 <?php print paging("num={$pages_count}&paging_param={$paging_param}&current_page={$current_page}") ?>
 <?php endif; ?>
 ```
+#### Possible parameters
+`
+* template - Name of the template.
+	Templates provided from Microweber:
+	- default - loads when no template is specified
+            
+* limit - number of posts to show per page. Default is the value specified in the Admin -> Settings (10) .
+
+* description-length
+	- number: Number of symbols you want to show from description. Default: 400
+
+* title-length
+	- number: Number of symbols you want to show from title. Default: 120
+
+* current_page - usage is for paging
+	- number: The number of the page where the posts will appear. Default: 1
+
+* hide-paging
+	- y/n - Default: n
+
+* data-show:
+	 Possible values:
+    	 - thumbnail,
+	 - title,
+    	 - read_more,
+         - description,
+	 - created_at
+
+* strict_categories
+`
