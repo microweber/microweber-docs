@@ -51,7 +51,7 @@ microweber:install [-p|--prefix[="..."]] [-t|--template[="..."]] [-d|--default-c
 
 
 
-#### Examples 
+#### Install Examples 
 
 `php artisan microweber:install admin@site.com admin pass 127.0.0.1 site_db root secret mysql -p site_ -t liteness -d 1`
 
@@ -59,6 +59,12 @@ microweber:install [-p|--prefix[="..."]] [-t|--template[="..."]] [-d|--default-c
 `php artisan microweber:install admin@admin.com admin password db microweber microweber microweber pgsql -p site_ -t liteness -d 1`
 
 `php artisan microweber:install admin@site.com admin password storage/database1.sqlite microweber microweber nopass sqlite -p site_  -t liteness -d 1`
+
+
+#### Config only, and let user to complete the install from browser
+
+`php artisan microweber:install admin@site.com admin password storage/database1.sqlite microweber microweber nopass sqlite -p site_ -t dream -d 1 -c 1 --env=my.domain.com`
+
 
 #### Update command
 
