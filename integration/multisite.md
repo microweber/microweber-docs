@@ -8,6 +8,22 @@ Each site can have its own configuration, meaning you can virtually separate mos
 To enable this aspect of Microweber you only have to [setup multisite](../guides/installation.md#multi-site-setup).
 Then each domain that resolves to your Microweber installation will be handled separately.
 
+
+
+# Create new site
+
+In order to make multi domain setup you must make a folder for each domain in the `config` directory with a file named `microweber.php` in it
+
+for example for domain.com you must make empty file at `config/domain.com/microweber.php`
+for domain2.com you must make empty file at `config/domain2.com/microweber.php`
+
+After that when you visit domain.com you should see the install screen and the installation will be made for this domain only
+
+
+
+
+
+# DNS Records
 One way to link your domains is to just add an A record to your DNS for the same IP, for example:
 
 DomainA.com
