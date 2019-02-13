@@ -9,7 +9,7 @@ This inline style will show you handles for changing the background image of sel
 
 Don't forget that the tag must be in editable area!
 
-![screenshot_3.png](guides/img/how-to-create-mw-template/screenshot_3.png "")
+![screenshot_3.png](img/how-to-create-mw-template/screenshot_3.png "")
 
 ## 2. Load modal with content
 
@@ -73,6 +73,6 @@ Example for safe-mode and safe-element:
 
 The **cloneable** class will show you tools over the element which allows you to duplicate, remove or move the elements.
 
-![screenshot_2.png](guides/img/how-to-create-mw-template/screenshot_2.png "")
+![screenshot_2.png](img/how-to-create-mw-template/screenshot_2.png "")
 
 

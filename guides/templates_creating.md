@@ -104,7 +104,7 @@ You can load modules inside your template with the tag.
 ```
 ## Module layouts
 The Layouts module serves to build a page with a drag & drop function from the right sidebar. Through it, you can easily and quickly build your page.
-![screenshot_1.png](guides/img/how-to-create-mw-template/screenshot_1.png "")
+![screenshot_1.png](img/how-to-create-mw-template/screenshot_1.png "")
 
 ### Creating module layouts
 The creating of module layouts is easy. You have to create folder **layouts/templates** in your template folder, which must contain **skin-1.php** and **skin-1.png** where **1** is the increment number of layout. If you want to create more second or third layout, their names must be skin-2.php and skin-3.php with screenshots skin-2.png and skin-3.png
@@ -244,11 +244,11 @@ Example for safe-mode and safe-element:
 
 The **cloneable** class will show you tools over the element which allows you to duplicate, remove or move the elements.
 
-![screenshot_2.png](guides/img/how-to-create-mw-template/screenshot_2.png "")
+![screenshot_2.png](img/how-to-create-mw-template/screenshot_2.png "")
 
 You can also use **style="background-image: url('http://image.url.path');"**. This inline style will show you handles for changing the background image of selected element.
 
-![screenshot_3.png](guides/img/how-to-create-mw-template/screenshot_3.png "")
+![screenshot_3.png](img/how-to-create-mw-template/screenshot_3.png "")
 
 ## Template layouts
 Each template is made of "layouts"
@@ -263,7 +263,7 @@ Every template can have multiple layouts. Besides a simple page, you can make di
 
 Example of layouts usage is to allow the user to have different looking pages for their blog, shop or contact us
 
-![screenshot_4.png](./guides/img/how-to-create-mw-template/screenshot_4.png "")
+![screenshot_4.png](./img/how-to-create-mw-template/screenshot_4.png "")
 
 ### Making layouts
 The layouts are located in your template folder or its sub-folders.

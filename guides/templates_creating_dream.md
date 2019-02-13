@@ -1,6 +1,6 @@
 # Example of Dream template structure
 ## 1. Header
-![menu.jpg](guides/img/dream_template/menu.jpg "")
+![menu.jpg](img/dream_template/menu.jpg "")
 The first example about how exactly dream (default) template was made is the Header.
 
 This part of the website is located in header.php file.
@@ -84,7 +84,7 @@ You can also use module "search".  For example:
 [Learn more about module "shop"  ](# "")
 
 ## 2. Layout with modules
-![header.jpg](guides/img/dream_template/header.jpg "")
+![header.jpg](img/dream_template/header.jpg "")
 
 The content of the file for the layout above is on address: [see file](https://github.com/microweber/microweber/blob/1.0.11/userfiles/templates/dream/modules/layouts/templates/skin-1.php "")
 
@@ -121,7 +121,7 @@ Example for how to use Module "btn" is:
 ```
 
 ## 3. Another layout
-![icon_layouts.jpg](guides/img/dream_template/icon_layouts.jpg "")
+![icon_layouts.jpg](img/dream_template/icon_layouts.jpg "")
 
 Link to content of this layout is [here](https://github.com/microweber/microweber/blob/1.0.11/userfiles/templates/dream/modules/layouts/templates/skin-4.php "")
 
@@ -169,7 +169,7 @@ Number 2 is block with cloneable columns.
 As you see of each column you have "cloneable" class. This class will show you the handles for changeing the order of elements, duplicate elements and remove elements.
 
 ## 4. Layout with Post module
-![post_list.jpg](guides/img/dream_template/post_list.jpg "")
+![post_list.jpg](img/dream_template/post_list.jpg "")
 
 In this layout we are using the Module "post" for showing Blog posts.
 
@@ -180,7 +180,7 @@ In this layout we are using the Module "post" for showing Blog posts.
 [#](Learn more about module "posts"   "")
 
 ## 5. Footer
-![footer.jpg](guides/img/dream_template/footer.jpg "")
+![footer.jpg](img/dream_template/footer.jpg "")
 
 The file is located in [github](https://github.com/microweber/microweber/blob/1.0.11/userfiles/templates/dream/footer.php "").
 
@@ -201,7 +201,7 @@ Example for the module is:
 
 ## 6. Blog Sidebar
 
-![sidebar.jpg](guides/img/dream_template/sidebar.jpg "")
+![sidebar.jpg](img/dream_template/sidebar.jpg "")
 
 The content of blog_sidebar.php is located on this [link](https://github.com/microweber/microweber/blob/1.0.11/userfiles/templates/dream/layouts/blog_sidebar.php "").
 
@@ -265,7 +265,7 @@ We are loading the module with this code.
 ```
 
 ## 7. Blog Post
-![product_inner.jpg](guides/img/dream_template/product_inner.jpg "")
+![product_inner.jpg](img/dream_template/product_inner.jpg "")
 
 The content of blog_inner.php is located on this [link](https://github.com/microweber/microweber/blob/1.0.11/userfiles/templates/dream/layouts/blog_inner.php "").
 
@@ -299,7 +299,7 @@ where with the attribute "data-content-id" we are relating the comments to this 
 ## 8. Product inner
 You can see the similar product_inner.php (liteness product_inner.php) file on this [link](https://github.com/microweber/microweber/blob/1.0.11/userfiles/templates/dream/layouts/shop_elements/inner_2.php "").
 
-![product_inner_1.jpg](guides/img/dream_template/product_inner_1.jpg "")
+![product_inner_1.jpg](img/dream_template/product_inner_1.jpg "")
 
 **Number 1** - Title
 
@@ -369,7 +369,7 @@ For more information about module "pictures" [here](# "").
 
 ## 9. Layout with Products list and Categories
 
-![product_list.jpg](guides/img/dream_template/product_list.jpg "")
+![product_list.jpg](img/dream_template/product_list.jpg "")
 
 The file content from the example is located [here](https://github.com/microweber/microweber/blob/1.0.11/userfiles/templates/dream/layouts/shop.php "").
 
@@ -389,7 +389,7 @@ More about this module on this [link](# "").
 
 ## 10. Layout with Products list and Categories
 
-![checkout.jpg](guides/img/dream_template/checkout.jpg "")
+![checkout.jpg](img/dream_template/checkout.jpg "")
 
 To see the example click [here](https://github.com/microweber/microweber/blob/1.0.11/userfiles/templates/dream/checkout.php "").
 
@@ -404,7 +404,7 @@ More about this module on this [link](# "").
 
 ## 11. Contact form
 
-![forms.jpg](guides/img/dream_template/forms.jpg "")
+![forms.jpg](img/dream_template/forms.jpg "")
 
 The layout fron the example is located on this [link](https://github.com/microweber/microweber/blob/1.0.11/userfiles/templates/dream/modules/layouts/templates/skin-47.php "") and the module is located on [this](https://github.com/microweber/microweber/blob/1.1.0/userfiles/templates/dream/modules/contact_form/templates/default.php "").
 
