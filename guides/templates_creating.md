@@ -1,66 +1,41 @@
-# Creating Templates
+# Creating Template Guide
+Before start developing you must disable Compile assets option from **Admin panel -> Settings -> Advanced -> Internal settings -> Compile api.js - NO**
 
-Microweber templates live within their own folders under `userfiles/templates/`. The template folder name is restricted to lowercase alphanumeric (`a-z`, `0-9`), underscore (`_`) and dash (`-`). The template in examples on this page is located in `userfiles/templates/my_template`
+**Example path to settings:**
+http://yourwebsite.com/admin/view:settings#option_group=advanced
 
-* [Basic File Structure](#file-structure)
-* [Configuration](#configuration)
-* [Header + Footer](#header-footer)
-* [Rendering Modules](#rendering-modules)
-* [Layouts](#layouts)
+## Begining
+Making a Microweber template is easy. You just have to make a new folder in userfiles/templates/. The template folder name must be in lowercase, and must not contain spaces or special characters, besides unserscore and dash.
 
-## <a name="file-structure"></a> Basic File Structure
-<pre>
+Lets make a folder called **starter** at "*userfiles/templates/starter*"
+
+## Setting up the basic files.
+Make few files in your new folder.
+```
 /userfiles
     /templates
-        /my_template
-         config.php
-         header.php
-         index.php
-         footer.php
-         clean.php
-</pre>
-
-###Basic files and their purpose
-
-|Filename  | Description|
-| ------------- | ------------- |
-| config.php  | holds the information for  your template, like name, version  |
-| index.php  | homepage default layout  |
-| header.php  | site header  |
-| footer.php  | site footer  |
-| clean.php  | default layout for page  |
-| inner.php  | default layout for post  |
-
-
-
-
-
-## <a name="configuration"></a> Configuration
-
-Here is example config file you must create in your template folder
-
-     userfiles/templates/my_template/config.php
-
-
-
-Defining the `$config` array in this file makes the template appear in the admin panel.
-
-*Example* `config.php`
-```php
-<?php
-$config = array(
-  'name' => 'My Template',
-  'author' => 'Author Name',
-  'version' => 1.0,
-  'url' => 'http://author.com/my-template'
-);
+        /starter
+           config.php
+           header.php
+           index.php
+           footer.php
+           clean.php
+           /assets
+           /layouts
+           /modules
+              /layouts/templates/skin-1.php
+              /layouts/templates/skin-1.png
 ```
+In **/assets** folder you can put your Images, CSS and JS files.
 
-## <a name="header-footer"></a> Header + Footer
-Template header and footer can be loaded within the template layout to add common assets, scripts and styles for the website.
+### Set the template name in the config.php file
+Open "*userfiles/templates/starter/config.php*" and put this code
 
+## Making header and footer
+Every template needs header and footer files. They can be loaded within the template layouts to add the common styles and scripts needed for the website.
 
-*Example* `header.php`
+#### header.php
+
 ```
 <!DOCTYPE HTML>
 <html prefix="og: http://ogp.me/ns#">
@@ -83,86 +58,271 @@ Template header and footer can be loaded within the template layout to add commo
         <meta property="og:site_name" content="{og_site_name}">
 
         <!--  Loading CSS and Javascripts  -->
-        <link rel="stylesheet" type="text/css"
-          href="<?php print template_url('css/style.css'); ?>" />
-        <script type="text/javascript"
-          src="<?php print template_url('assets/site.js'); ?>"></script>
-
+        <link rel="stylesheet" type="text/css" href="<?php print template_url(); ?>assets/css/style.css" />
+        <script type="text/javascript" src="<?php print template_url(); ?>assets/js/scripts.js"></script>
     </head>
-    <body>
+<body>
+
+    <!-- YOUR HEADER CONTENT -->
 ```
-*Note:* Registering the `og` prefix in the `<html>` tag imports a metadata namespace from `ogp.me` for SEO optimization and improved link previews on user share in social media.
 
-You can use the `template_url()` function to get the URL to the template folder. The `template_dir()` function returns the full filesystem path to the template.
+You can use the [template_url()](/functions/template_url.md "") function to get the URL to the template folder. Also there is [template_dir()](/functions/template_dir.md "") for the full filesystem path of the template.
 
-The curly bracket syntax (`{content_meta_title}`) is replaced with the appropriate content when the template is rendered.
+The curly brackets text like ```{content_meta_title}``` is replaced with the appropriate content when the site is rendered.
 
-Put any closing tags in `footer.php`, as well as common content like footer menus, copyright info, etc.
-
-*Example* `footer.php`
+#### footer.php
+Put any closing tags in the footer and also common content like menu, copyright info, etc.
 ```
+      <!-- YOUR FOOTER CONTENT -->
+
     </body>
 </html>
 ```
 
-## <a name="rendering-modules"></a> Rendering Modules
-To make the template functional modules need to be rendered.
-You can also put global editable regions, so users can alter the content.
+#### Adding navigation menus, logo, etc.
+Its common that we put a navigation in the site header and also design elements that are used on all pages. Also we can put global editable regions, so the user can change its logo and text in the header.
 
-Modules are loaded in place of the custom `<module type="module_name" />` tag.
+You can load modules inside your template with the tag.
 
-*Example* in `header.php`
 ```
-<div id="header">
-    <div class="edit" rel="global" field="header">
-        <h1>
-          <a href="<?php print site_url(); ?>">
-            <?php echo get_option('website_title', 'website'); ?>
-          </a>
-        </h1>
-        <module type="menu" name="header_menu"
-          id="main-navigation" template="pills"  />
+<!--  ... </head><body> ... continued from header.php  -->
+    <div id="header">
+        <div class="edit" rel="global" field="template_name_header">
+            <h1><a href="<?php print site_url(); ?>">My template</a></h1>
+            <module type="menu" name="header_menu" id="main-navigation" template="navbar"  />
+        </div>
+    </div>
+```
+```
+<!--  ... continued from footer.php  -->
+        <div id="footer" class="edit" rel="global" field="template_name_footer">
+            <div>Copyright &copy; <?php print date('Y');  ?> All rights reserved</div>
+            <module type="menu" name="footer_menu" />
+        </div>
+    </body>
+</html>
+```
+## Module layouts
+The Layouts module serves to build a page with a drag & drop function from the right sidebar. Through it, you can easily and quickly build your page.
+![screenshot_1.png](guides/img/how-to-create-mw-template/screenshot_1.png "")
+
+### Creating module layouts
+The creating of module layouts is easy. You have to create folder **layouts/templates** in your template folder, which must contain **skin-1.php** and **skin-1.png** where **1** is the increment number of layout. If you want to create more second or third layout, their names must be skin-2.php and skin-3.php with screenshots skin-2.png and skin-3.png
+
+The structure of three must be the following:
+
+```
+/userfiles
+    /templates
+        /starter
+           /modules
+              /layouts/templates/skin-1.php
+              /layouts/templates/skin-1.png
+```
+
+The structure of module layout file must be the following:
+
+**skin-1.php**
+
+```
+<?php
+/*
+type: layout
+name: Layout title
+description: Layout description
+position: 1
+*/
+?>
+
+<div class="edit" field="layout-skin-1-<?php print $params['id'] ?>" rel="module">
+    Yout layout content here
+</div>
+```
+
+We recommend you to use the following structure for the first layout of your template because it's contain structure with Clean container which you can use to Drag & Drop elements inside.
+
+```
+<?php /*
+type: layout
+name: Clean Container
+position: 1
+*/
+?>
+
+<div class="edit clean-container nodrop" field="layout-skin-1-<?php print $params['id'] ?>" rel="module">
+    <div class="container allow-drop">
+        <div class="mw-row">
+            <div class="mw-col" style="width:100%">
+                <div class="mw-col-container">
+                    <div class="mw-empty"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 ```
-*Example* in `footer.php`
+
+For each next layout you can use the following structure:
+
+**skin-2.php**
+
 ```
-<div id="footer" class="edit" field="footer" rel="global">
-    <div>Copyright &copy; <?php print date('Y');  ?> All rights reserved</div>
-    <module type="menu" name="footer_menu" />
+<?php /*
+type: layout
+name: Jumbotron
+description: Layout
+position: 2
+*/
+?>
+
+<div class="nodrop safe-mode edit" field="layout-skin-2-<?php print $params['id'] ?>" rel="module">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1> Hello, world! </h1>
+                    <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a
+                        starting
+                        point to create something more unique. </p>
+                    <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 ```
 
-## Layouts <a name="layouts"></a>
+On the top of structure you see **name** label. The value will be shown as Title of the layout in right sidebar. The label **position** serv for ordering of layouts.
 
-Templates have one or more "layouts", or pages.
-The vast majority of sites need complex structure with different types of screens; this can be acheived by adding a variety of page layouts to your template.
+Bellow on the first line from the code you will see ```field="layout-skin-2-<?php print $params['id'] ?>"``` . The number in red must be the increment number of your layout. This is the same number like on the filename of this layout.
 
-Each page layout is rendered separately but you can define common regions, such as `header`, `footer` or `sidebar` to share code between layouts.
+Helper classes
 
-Create different layouts to allow users to change the layout, design or impression depending on the type of pages for their blog, shop or contact form.
+We have some helper classes for different cases.
 
-<img src="img/layout_selector.png" />
+```
+class="nodrop"
+class="allow-drop"
+class="safe-mode"
+class="safe-element"
+class="cloneable"
+```
 
-Layouts are php scripts located in the template's folder or subfolders, e.g. `/userfiles/templates/my_template/layouts/`. The `index.php` file is used as a homepage layout.
+The class **nodrop** disables Drag & Drop in the element.
 
-Microweber recognizes layout files by scanning the template folder for scripts annotated with the following comment syntax in the beginning:
-```php
+If you have wrapper with **nodrop** you can use allow-drop on inner elements to allow Drag & Drop function inside.
+
+Example for **nodrop** and **allow-drop**:
+
+```
+<div class="nodrop">
+    YOU CAN NOT DROP HERE
+    <div class="allow-drop">
+        YOU CAN DROP HERE
+    </div>
+</div>
+```
+
+If you have complex structure of code you can use **safe-mode** to prevent breaking the structure.
+You can use this class only for block elements.
+
+For inline elements which must not be deleted, you can use **safe-element**.
+
+Example for safe-mode and safe-element:
+
+```
+<div class="row wide-grid safe-mode">
+    <div class="col-sm-3 col-xs-6 cloneable">
+        <div class="feature feature-1 text-center">
+            <i class="icon icon--lg icon-Bodybuilding safe-element"></i>
+            <h3>16,000+</h3>
+            <span class="safe-element"><em><?php _lang("Customers strong"); ?></em></span>
+        </div>
+    </div>
+</div>
+```
+
+The **cloneable** class will show you tools over the element which allows you to duplicate, remove or move the elements.
+
+![screenshot_2.png](guides/img/how-to-create-mw-template/screenshot_2.png "")
+
+You can also use **style="background-image: url('http://image.url.path');"**. This inline style will show you handles for changing the background image of selected element.
+
+![screenshot_3.png](guides/img/how-to-create-mw-template/screenshot_3.png "")
+
+## Template layouts
+Each template is made of "layouts"
+
+Think of layouts as "pages" of your template. You can have just one layout... or as many as you like.
+
+The vast majority of sites need more complex structure and that can be accomplished by adding a variety of page layouts to your template folder.
+
+Microweber allows you to have different layouts for different pages in your site. Although each page layout can be different you can define common regions such as a "header", "footer" and a "sidebar" to share among layouts.
+
+Every template can have multiple layouts. Besides a simple page, you can make different page layouts that can be used by the users and chosen at the page creation process.
+
+Example of layouts usage is to allow the user to have different looking pages for their blog, shop or contact us
+
+![screenshot_4.png](./guides/img/how-to-create-mw-template/screenshot_4.png "")
+
+### Making layouts
+The layouts are located in your template folder or its sub-folders.
+
+For example: "*userfiles/templates/starter/layouts/*"
+
+The layout files are simply php files located in any sub-folder of your template. Microweber recognizes a layout file by scanning the template folder for php files which contains the following code in them.
+
+```
 <?php
 /*
   type: layout
-  name: Shop
+  name: My layout
   content_type: static
-  description: Suitable for e-commerce pages
+  description: My sample layout
 */
+?>
 ```
 
-Different layouts can be set for every page when editing it in the website administration.
+Those layouts can show content from the current page or from other pages. They can even have shared editable regions. All you need to do is include your modules and write your code in the layout file.
+
+#### index.php
+"*userfiles/templates/starter/index.php*"
+
+The index.php file is used as a homepage layout. This is your first layout. Layouts can be different for every page and this is defined from the admin, on the create page window.
+
+```
+<?php
+/*
+  type: layout
+  content_type: static
+  name: Home
+  description: Home layout
+*/
+?>
+<?php include template_dir(). "header.php"; ?>
+    <div class="edit" rel="content" field="template_name_content">
+        <div class="container nodrop">
+            <h2>Welcome to my homepage</h2>
+            <p>This is my Microweber template</p>
+            <p>You can edit this text, just click here and start typing</p>
+        </div>
 
 
-The `clean` layout is used by default for new pages and also as a fallback layout if no other can be found.
+        OR
+       
+        <!-- Where skin-1 is name of the layout filename from the sidebar  -->
+        <module type="layouts" template="skin-1" />
+    </div>
+<?php include template_dir(). "footer.php"; ?>
+```
 
-*Example* `clean.php`
+We have created editable field in our layout by adding class edit to html element of our choice.
+
+#### clean.php
+"*userfiles/templates/starter/clean.php*"
+
+This layout is used as default for pages and also as a fallback layout if no other layout can be found.
+
 ```
 <?php
 /*
@@ -170,162 +330,233 @@ type: layout
 content_type: static
 name: Clean
 position: 2
-description: Default
+description: Clean layout
 */
 ?>
 <?php include template_dir(). "header.php"; ?>
-<div id="content"> 
-  <div class="container edit"  field="content" rel="content">
-    <p>This is my text</p>
-  </div>
-</div>
+    <div class="edit" rel="content" field="template_name_content">
+        <div class="container nodrop">
+            <p>This is my text</p>
+        </div>
+
+        OR
+
+        <!-- Where skin-1 is name of the layout filename from the sidebar  -->
+        <module type="layouts" template="skin-1" />
+    </div>
 <?php include template_dir(). "footer.php"; ?>
 ```
 
-## Editable Regions
-Editable regions can be defined by adding the `edit` class to any html element.
+### Creating blog layout
+In a site where we want to have separation of how the pages and the posts look we will need to create different layouts for them.
 
-*Example* `index.php`
+Here, for example, is how we would make a layout for a blog page with a posts module and a sidebar.
+
+Make a new file at "*userfiles/templates/starter/layouts/blog.php*", this file will load when you create new page with the "Blog" layout.
+
+#### blog.php
+
 ```
 <?php
 /*
   type: layout
-  content_type: static
-  name: Home
-  description: Landing page
+  content_type: dynamic
+  name: Blog
+  description: Blog layout
 */
 ?>
-<?php include template_dir().'header.php'; ?>
-<div class="container">
-    <div class="edit" field="content" rel="content">
-        <h2>Welcome to my homepage!</h2>
-        <p>
-          This is my awesome Microweber template.<br />
-          You can edit this text since its container has an "edit" class.
-        </p>
-        <p>Just click here and start typing!</p>
+<?php include template_dir(). "header.php"; ?>
+
+    <div class="edit" rel="content"  field="template_name_content">
+        <div class="container">
+            <div class="blog-content">
+                <h2>Check out my posts</h2>
+                <module type="posts" />
+            </div>
+
+            <div class="blog-sidebar">
+                <?php include template_dir() . "layouts/blog_sidebar.php"; ?>
+            </div>
+        </div>
+    </div>
+
+<?php include template_dir(). "footer.php"; ?>
+```
+
+#### blog_sidebar.php
+
+```
+<div class="edit" rel="inherit" field="template_name_sidebar">
+    <h2>My sidebar</h2>
+    <module type="categories" />
+</div>
+```
+
+### Creating layout for post
+We can have an inner page to show the posts added to our blog. Create a file blog_inner.php at userfiles/templates/starter/layouts/blog_inner.php to show posts added the blog layout pages. You can also make a file called post.php or inner.php in the root of the template folder and use it as a default for posts in all pages.
+
+#### blog_inner.php
+
+```
+<?php include template_dir() . "header.php"; ?>
+
+<div class="edit" rel="content" field="template_name_content">
+    <div class="container" id="blog-container">
+        <div id="blog-content-<?php print CONTENT_ID; ?>">
+            <div class="row">
+                <div class="col-sm-9" id="blog-main-inner">
+                    <h3 class="edit" field="title" rel="content">Page Title</h3>
+                    <module data-type="pictures" data-template="slider" rel="content"/>
+                    <div class="edit" field="content_body" rel="content">
+                        <div class="element">
+                            <p align="justify">This text is set by default and is suitable for edit in real time. By
+                                default the drag and drop core feature will allow you to position it anywhere on  the site. Get creative, Make Web.</p>
+                        </div>
+                    </div>
+
+                    <module data-type="comments" data-template="default" data-content-id="<?php print CONTENT_ID; ?>"/>
+                </div>
+
+                <div class="col-sm-3" id="blog-sidebar">
+                    <?php include template_dir() . "layouts/blog_sidebar.php"; ?>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<?php include template_dir().'footer.php';
+
+<?php include template_dir() . "footer.php"; ?>
 ```
 
+### Creating shop layout
+If we want to have a shop pages in out template we will need to make a shop layout and a layout to display products from the shop.
 
+The shop layout is created by including is_shop property in the definition of the layout file. You can add products only to pages that are defined as shop by using a shop layout.
 
+Make a new file at userfiles/templates/starter/layouts/shop.php, this file will load when you create new page and choose the "Shop" layout.
 
-### How to make editable regions
-You can define editable regions in your template where the user will be able to type text and Drag and Drop modules
-The content of this region will be dynamic and will be editable on every layout that includes it.
+#### shop.php
 
-Here is how it looks like:
+```
+<?php
+/*
+type: layout
+content_type: dynamic
+name: Shop
+is_shop: y
+description: shop layout
+position: 4
+*/
+?>
+<?php include template_dir() . "header.php"; ?>
 
-```html
-<div class="edit"  field="your_region_name" rel="content">      
-	<p>Edit your content</p>
+<div class="edit" rel="content" field="template_name_content">
+    <div class="container nodrop">
+        <div class="row" id="shop-products-conteiner">
+            <div class="col-sm-12">
+                <h1>Shop</h1>
+            </div>
+
+            <div class="col-sm-8">
+                <module type="shop/products" limit="18" description-length="70"/>
+            </div>
+
+            <div class="col-sm-4">
+                <?php include template_dir() . 'layouts' . DS . "shop_sidebar.php"; ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include template_dir() . "footer.php"; ?>
+```
+
+#### shop_sidebar.php
+```
+<div class="edit allow-drop" field="template_name_shop_sidebar" rel="inherit">
+    <h4 class="sidebar-title">Shop Categories</h4>
+    <module type="categories" content_id="<?php print PAGE_ID; ?>"/>
 </div>
 ```
 
+As you may notice we have loaded the "categories"module in sidebar and "shop/products" module in our layout
 
-Simply add class "*edit*" and "*field*" and "*rel*" attributes to ANY html element.
-As a developer you can decide how many editable regions you want. They are very flexible and can be re-used across pages.
+### Creating product layout
+We can want to have a custom layout to show each of our products. Create a file shop_inner.php at "*userfiles/templates/starter/layouts/shop_inner.php*" to show products added the shop pages. You can also make a file called product.php in the root of the template folder and use it as a default for products in all pages that doesn’t have inner layout.
 
-<div class="mw-ui-box  mw-ui-box-info ">
-<div class="mw-ui-box-header">
-<span class="mw-icon-info"></span><span>Creating editable field</span>
+#### shop_inner.php
+
+```
+<?php include template_dir() . "header.php"; ?>
+
+<div class="edit" rel="content" field="template_name_content">
+    <div class="container nodrop">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 class="edit" field="title" rel="post">Product inner page</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mw-col-container">
+                            <module type="pictures" rel="content" template="product_gallery"/>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mw-col-container">
+                            <div class="product-description">
+                                <div class="edit" field="content_body" rel="post">
+                                    <p class="element">This text is set by default and is suitable for edit in real
+                                        time. By default the drag and drop core feature will allow you to position it
+                                        anywhere on the site. Get creative &amp; <strong style="font-weight: 600">Make
+                                            Web</strong>.</p>
+                                </div>
+                                <module type="shop/cart_add"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br/><br/>
+                <h4 class="element sidebar-title">Related Products</h4>
+                <module type="shop/products" related="true" limit="3"/>
+                <p class="element">&nbsp;</p>
+            </div>
+
+            <div class="col-sm-4">
+                <?php include_once "shop_sidebar.php"; ?>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="mw-ui-box-content">
-<ul>
-<li>Add class "edit"</li>
-<li>Add "field" attribute</li>
-<li>Add "rel" attribute</li>
-</ul>
+
+<?php include template_dir() . "footer.php"; ?>
+```
+
+### Creating checkout layout
+You have to create a file checkout.php in root template folder /starter/checkout.php
+The file must contain the following code:
+
+
+#### checkout.php
+```
+<?php include template_dir() . "header.php"; ?>
+
+<div class="edit" rel="content" field="template_name_content">
+    <div class="container nodrop">
+        <h2>Complete your order</h2>
+        <module type="shop/checkout" id="cart_checkout"/>
+    </div>
+    <!-- DONT REMOVE -->
 </div>
-</div>
+
+<?php include template_dir() . "footer.php"; ?>
+```
+
+Here we loaded the module "shop/checkout".
 
 
 
+That's all.
 
- 
-#### Editable region attributes
-
-Each editable region behaves differently in dependence of the rel and field attributes you add to it
-
-**`field` attribute**
- 
-The `field` attribute will help you to define multiple content-editable regions in your layout.
-
-Add attribute `field="some_name"` and set the name of your field in your template.
-The main content region that the user sees during the "Add content" process must have `field="content"`
-
-
-**`rel` attribute**
-
-The `rel` attribute is responsible for the "scope" of your content-editable field.  
-
-You can define custom scope and reuse the content of the editable regions across the whole website.
-
-Add attribute rel and set the scope of your field.
-* `rel="content"` - changes for every page or post
-* `rel="global"` - changes for the whole site
-* `rel="page"` - changes for every page and sub-page
-* `rel="post"` - changes for every post
-* `rel="inherit"` - changes for every main page, but not is sub-pages and posts
-* `rel="your_custom_rel"` you can define your own scope
-
-##### other attributes
-
-There is optional attribute "rel-id", which allows you to display editable regions that belong to another content
-
- 
-#### Default content region
-
-The default region that shows in the Admin panel is defined by `rel="content"` and  `field="content"` attributes of your html element
-
-![editable_regions_classes.png](img/editable_regions_classes.png "")
-
-
-
-
-
-
-
-
-## Microweber template layouts recommended filenames standard
-
-For the site content to be shown across different templates, we have a list of recommended filenames that you can use while creating your template. 
-
-For easier management if files, you can put most of the page layouts in a subfolder of your template called `layouts`, for example `/userfiles/templates/my_template/layouts/blog.php`
-
-
-
-|Filenames  | Description|
-| ------------- | ------------- |
-| `index.php`, `index_1.php`, `index_2.php`, ...  | Layouts for the home page  |
-| `header.php`  | site header  |
-| `footer.php`  | site footer  |
-| `editor.php` |  layout the wyswyg editor in the admin  |
-| `clean.php` |  layout for page  |
-| `inner.php`  |  layout for post  |
-| `login.php`  |  layout user login  |
-| `register.php`  |  layout user register  |
-| `profile.php`  |  layout for user profile management  |
-| `layouts/gallery.php`  | for gallery page |
-| `layouts/contact.php` | for contact page |
-| `layouts/about.php` | for about page |
-| `layouts/blog.php`, `layouts/blog_1.php`, `layouts/blog_2.php`, ...  | for blog  |
-| `layouts/blog_inner.php`, `layouts/blog_1_inner.php`, `layouts/blog_2_inner.php`, ...  | for blog post  |
-| `layouts/shop.php`, `layouts/shop_1.php`, `layouts/shop_2.php`, ...  | for shop  |
-| `layouts/shop_inner.php`, `layouts/shop_1_inner.php`, `layouts/shop_2_inner.php`, ...  | for shop product inner page |
-| `layouts/portfolio.php`, `layouts/portfolio_1.php`, `layouts/portfolio_2.php`, ...  | for portfolio  |
-| `layouts/portfolio_inner.php`, `layouts/portfolio_1_inner.php`, `layouts/portfolio_2_inner.php`, ...  | for portfolio inner page |
-
-
-All those layouts are optional, you dont have to create them for all templates
-
-
-
-
-
-
-
-
- 
+You can download our Starter template from this address: [https://github.com/microweber-templates/starter](https://github.com/microweber-templates/starter "")

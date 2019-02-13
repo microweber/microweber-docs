@@ -2,6 +2,7 @@
     * [Introduction](README.md)
     * [Requirements](start.md)
     * [Installation](installation.md)
+    * [Tips](tips.md)
  
 * # Modules
     * [Modules basics](modules_101.md)
@@ -13,10 +14,11 @@
 
 * # Templates
     * [Templates Basics](templates_101.md)
-    * [Creating Templates](templates_creating.md)
+    * [Creating Templates](templates_creating.md)    
     # Examples
+        * [Creating Dream example](templates_creating_dream.md)
+        * [Creating Bootstrap Template](templates_bootstrap.md)
         * [Example Layouts](templates_example.md)
-        * [Bootstrap Template](templates_bootstrap.md)
 
 * # Reference
     * [Framework](framework.md)
