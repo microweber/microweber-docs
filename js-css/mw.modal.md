@@ -17,5 +17,7 @@ mw.modal({
 });
 ```
  
-
- 
+##Remove modal
+```
+mw.tools.modal.get(this).remove()
+```
