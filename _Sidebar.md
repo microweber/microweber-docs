@@ -10,20 +10,20 @@
 
 ### Modules
 
-* [Modules basics](modules_101.md)
-* [Using database](modules_data.md)
-* [Using options](modules_options.md)
+* [Modules basics](guides/modules_101.md)
+* [Using database](guides/modules_data.md)
+* [Using options](guides/modules_options.md)
 
 ### Templates
 
-* [Templates Basics](templates_101.md)
-* [Creating Templates](templates_creating.md)    
+* [Templates Basics](guides/templates_101.md)
+* [Creating Templates](guides/templates_creating.md)    
 
     ## Examples
 
-    * [Creating Dream example](templates_creating_dream.md)
-    * [Creating Bootstrap Template](templates_bootstrap.md)
-    * [Example Layouts](templates_example.md)
+    * [Creating Dream example](guides/templates_creating_dream.md)
+    * [Creating Bootstrap Template](guides/templates_bootstrap.md)
+    * [Example Layouts](guides/templates_example.md)
 
 
 ### Integration
