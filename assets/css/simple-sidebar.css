@@ -31,7 +31,7 @@ border-bottom: 1px solid #D8D8D8;
   left: 0;
   top: 0;
   width:300px;
-  background: #4793C5;
+  background: #0086db;
   padding:8px 0;
   z-index: 1001;
 }
@@ -55,7 +55,7 @@ border-bottom: 1px solid #D8D8D8;
   position: fixed;
   left: 0;
   top: 0;
-  background: #4793C5;
+  background: #0086db;
 }
 #sidebar-wrapper-holder:hover, body.touchdevice #sidebar-wrapper-holder{
   overflow-y: auto;
@@ -98,7 +98,7 @@ body{
 #sidebar-wrapper {
     display: table-cell;
 	width: 300px;
-	background: #4793C5;
+	background: #0086db;
 
 
 

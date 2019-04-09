@@ -4,14 +4,14 @@
 }
 
 .btn-info, .btn-info:hover, .btn-info:focus{
-  background: #4793C5;
-  border-color: #4793C5;
+  background: #0086db;
+  border-color: #0086db;
   color: white;
 }
 
 .sidebar-dropdown a{
   display: block;
-  color: #4793C5;
+  color: #0086db;
   background: white;
 }
 
@@ -53,7 +53,7 @@ a.dd_class_ref:hover, a.dd_class_ref:focus{  background-position: 15px -61px; }
 /***********************************/
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
-  background-color: #4793C5;
+  background-color: #0086db;
 }
 
 /***********************************/
@@ -68,7 +68,7 @@ a.dd_class_ref:hover, a.dd_class_ref:focus{  background-position: 15px -61px; }
 .home h1,
 .home h2,
 .home h3{
-  color: #4793C5
+  color: #0086db
 }
 
 .mwlogo{
