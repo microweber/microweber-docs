@@ -18,13 +18,9 @@
 
 * [Templates Basics](guides/templates_101.md)
 * [Creating Templates](guides/templates_creating.md)    
-
-    ## Examples
-
     * [Creating Dream example](guides/templates_creating_dream.md)
     * [Creating Bootstrap Template](guides/templates_bootstrap.md)
     * [Example Layouts](guides/templates_example.md)
-
 
 ### Integration
 
