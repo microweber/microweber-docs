@@ -17,7 +17,23 @@ mw.modal({
 });
 ```
  
+ 
+##Use modal
+```
+var modal = mw.modal({content: "test"})
+$(modal.container).html("Some content")
+modal.container.innerHTML = "some container"
+modal.remove()
+modal.hide()
+modal.show()
+``` 
+ 
+ 
 ##Remove modal
 ```
 mw.tools.modal.get(this).remove()
 ```
+
+
+
+
