@@ -1,9 +1,9 @@
 # Microweber Developer Guide
-Microweber is a multi-featured extendable open source content management system based on the robust [Laravel Framework](http://laravel.com/). It enables any web site to become a rich environment for you to express your thoughts and sell products in Internet. 
+Microweber is a multi-featured extendable open source content management system based on the robust [Laravel Framework](http://laravel.com/). It enables any web site to become a rich environment for you to express your thoughts and sell products on the Internet. 
 
-While there are many good technologies that exist and can be used together, you will hardly find a single software that combines them in the right way. 
+While there are many good existing technologies that can be used together, you will hardly find a single piece of software that combines them all in the right way. 
 
-Microweber is build on these existing technologies and gives the developers and the  users a single tool that makes the website creation process easier than before.
+Microweber is build on existing technologies and gives the developers and the  users a single tool that makes the website creation process easier than before.
 
 
 It empowers regular users and programmers to make websites with ease. 
