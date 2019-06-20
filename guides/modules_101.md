@@ -25,8 +25,8 @@ Every module needs the following files to work
  
 |Filename  | Description|
 |--------------|--------------|
-|config.php  | this file the info for your module |
-|index.php  | this file loads the module is dropped or opened from the frontend  |
+|config.php  | this file contains the info for your module |
+|index.php  | this file loads the module after it is dropped or opened from the frontend  |
 |admin.php  | when you open the module settings from the admin or from the live edit, this file is loaded  |
 |functions.php  | optional file, it is loaded on system start with the website |
 |icon.png  | icon for your module (size 32x32) |
