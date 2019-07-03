@@ -67,7 +67,7 @@ To let the user complete the intall from browser and select a template you must 
 
 `php artisan microweber:install admin@site.com admin password storage/database1.sqlite microweber microweber nopass sqlite -p site_ -t dream -d 1 -c 1 --env=my.domain.com`
 
-#### Multti domain scripted installation
+#### Multi domain scripted installation
 To make multi domain install you must create an empty folder within the `config` folder with the name of your domain and put empty file at `config/example.com/microweber.php`
 
 Then on the scriptted install you must pass the domain name as a `--env` parameter. For example: 
