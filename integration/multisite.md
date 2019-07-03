@@ -42,4 +42,4 @@ The second line in the example zone files instructs DNS to also resolve all subd
 
 The configuration subsystem is entirely domain-based so you can switch to multisite at any time after obtaining a copy of the Microweber code.
 
-You might further want to see ways of [scripted installation] as a part of your deployment process.
+You might further want to see ways of [scripted installation](../guides/installation_cli.md) as a part of your deployment process.
