@@ -23,8 +23,6 @@ Download the latest version from here
 
 
 
-
-
 ## Install process
 
  
@@ -58,6 +56,21 @@ Once the installation's completed the page will offer you to view your newly cre
 There is alternative installation method that can be used for automated installs.
 
 [Install Microweber via command line](installation_cli.md "")
+
+
+
+## Writable folders 
+
+You must have those folders writable
+
+- `config` 
+- `storage` 
+- `userfiles` 
+
+
+
+
+
 
 ## After install
 
