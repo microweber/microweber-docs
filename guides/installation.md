@@ -109,11 +109,14 @@ You can use a single Microweber instance to manage multiple domains with separat
 
 In order to have a second site on the same installation you need to set your DNS A record(s) to point to the same IP as your primary Microweber installation.
 
-To make an install, just create a folder in "config", e.g. "config/second-domain.com", and then make an empty file at `config/second-domain.com/microweber.php`
+To make an install, just create a folder in "config", e.g. `config/second-domain.com`, and then make an empty file at `config/second-domain.com/microweber.php`
 
 > **Note:** Please *do not* use www. in the folder name.
 
 
 After that when you visit second-domain.com, you will see the install screen.
 
+
+You can also do the install from command line with 
+`php artisan microweber:install admin@site.com admin password storage/database1.sqlite microweber microweber nopass sqlite -p site_ -t dream -d 1 -c 1 --env=second-domain.com`
 
