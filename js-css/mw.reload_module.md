@@ -31,3 +31,12 @@ mw.reload_module_parent('#my_module_id'); //reload by id
 mw.reload_module_parent('.my_module_class'); //reload by class
 
 ```
+
+
+## mw.on.moduleReload
+
+```js
+mw.on.moduleReload("#my_module", function () {
+alert('Module was reloaded')
+});
+```
