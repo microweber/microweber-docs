@@ -40,8 +40,7 @@ api_expose_admin('another_endpoint_for_admin', function($params){
   var_dump($params);
 });
 
-// example.com/user/what_is_my_session_id
-
+// example.com/user/what_is_my_name
 api_expose_user('user/what_is_my_name', function($params){
     return mw()->user_manager->nice_name();
 });
