@@ -174,3 +174,4 @@ If you create a file named `functions.php` in the module folder, this file will 
 
 * You can load other modules in your modules
 * You can have editable regions in your modules
+* Important: in order you module to show, you need to click realod modules button in admin panel 
