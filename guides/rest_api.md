@@ -8,20 +8,49 @@ You can use the HTTP api to comunicate with the backend. This allows you to buil
 
 You can add new api endpoint with the [api_expose](../functions/api_expose.md "api_expose") and [api_expose_admin](../functions/api_expose_admin.md "") 
 
+| Function |  |  
+|---|---|
+| `api_expose` | makes public api endpoint |  
+| `api_expose_admin` | makes api endpoint available for admin users |  
+| `api_expose_user` | makes api endpoint available for logged in users |  
+
+
 *Example* `userfiles/modules/my_module/functions.php`
 ```php
+
+// example.com/api/do_stuff
 api_expose('do_stuff');
 function do_stuff($params=false){
 var_dump($params);
 }
 
+// example.com/api/do_admin_stuff
 api_expose_admin('do_admin_stuff');
 function do_admin_stuff($params=false){
 var_dump($params);
 }
+
+// example.com/api/another_endpoint
+api_expose('another_endpoint', function($params){
+  var_dump($params);
+});
+
+// example.com/api/another_endpoint_for_admin
+api_expose_admin('another_endpoint_for_admin', function($params){
+  var_dump($params);
+});
+
+// example.com/user/what_is_my_session_id
+
+api_expose_user('user/what_is_my_name', function($params){
+    return mw()->user_manager->nice_name();
+});
 ```
 
 This will open public API endpoint at `example.com/api/do_stuff` and admin API endpoint at `example.com/api/do_admin_stuff`
+
+
+
 
 
 # Getting available API endpoints
