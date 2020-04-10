@@ -110,7 +110,7 @@ The modules are added with `<module type="name_of_your_module" />`
 | `template_url()`  | http://example.com/userfiles/templates/my_template/  |
 | `template_dir()`  | /home/user/public_html/userfiles/templates/my_template/  |
 
-|Constant  | Value |
+| Constant  | Value |
 | `PAGE_ID`  | The id of the current page or 0 if page is not found  |
 | `POST_ID`  | The id of the current post or 0 if you are not in a post  |
 | `CATEGORY_ID`  | The id of the current category or 0 if you are not in a category  |
