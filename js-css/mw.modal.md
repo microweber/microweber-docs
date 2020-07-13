@@ -1,8 +1,12 @@
 ## Summary 
 
- mw.dialog(options: Object); ## Returns 
+ mw.dialog(options: Object); 
+ 
+ ## Returns 
 
- mw.Dialog instance ## Options 
+ mw.Dialog instance 
+ 
+ ## Options 
 
 | Option name                                                        | Type                                                               | Default value                                                      | Description                                                        |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
