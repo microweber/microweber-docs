@@ -155,7 +155,46 @@ Here is how it looks like:
 	<p>Edit your content</p>
 </div>
 ```
+
+#### Disable & enable drop for specific elements
+The classes *nodrop* and *allow-drop* give you more control over which elements can or can not accept new elements.
+The *nodrop* class remove the ability to insert element and *allow-drop* enables it again.
+For example:
+
+```html
+<div class="edit"  field="your_region_name" rel="content">      
+    <div>
+        <p>Edit your content</p>
+    </div>
+    <div class="nodrop">
+        <p>Dropping is disabled here</p>
+    </div>
+    <div class="nodrop">
+        <p>Dropping is disabled here</p>
+        <div class="allow-drop">
+            <p>Dropping is Enabled here</p>
+        </div>
+    </div>
+</div>
+
+```
+
+#### Editing modes
+Microweber provides 2 types of editing logics - regular mode and safe mode.
+Regular mode is the default editing case in which you can add format or delete elements.
+Safe mode is more strict way of editing. It adds various restrictions that prevent user from breaking the deasign of selected section.
+The class *safe-mode * activates safe mode or an element and it's children, and *regular-mode* restres the regular mode. 
+
+```html
+<div class="edit"  field="your_region_name" rel="content">      
  
+    <div class="safe-mode">
+        <p>Protected UI</p>
+        <div class="regular-mode">
+            <p>Regular editing</p>
+        </div>
+    </div>
+</div> 
 
 
 
