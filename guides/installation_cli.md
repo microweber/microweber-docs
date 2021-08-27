@@ -77,5 +77,5 @@ Then on the scriptted install you must pass the domain name as a `--env` paramet
 
 #### Update command
 
-`php artisan microwber:update`
+`php artisan microweber:update`
 
