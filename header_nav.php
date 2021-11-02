@@ -30,10 +30,10 @@
 </ul>*/ ?>
  <div id="autocomplete"></div>
 
-<ul class="mw-ui-btn-nav mw-ui-btn-nav-fluid">
-<li><a
-            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'home/')) print "active"; ?>"
-            href="<?php print site_url(); ?>guides/README.md"><span class="mw-icon-mw" style="font-size: 30px;"></span></a></li>
+<a href="/" id="logo"><span class="mw-icon-mw"></span> Docs</a>
+
+<ul class="mw-ui-btn-nav  "  id="mainnav">
+
             
             
           
@@ -60,14 +60,12 @@
             
             
               <li><a
-            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'js-css/')) print "active"; ?>"
-            href="<?php print site_url(); ?>js-css/README.md">JS/CSS</a></li>
+            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'components/')) print "active"; ?>"
+            href="<?php print site_url(); ?>components">Components</a></li>
             
-           <?php /*   <li><a
-            class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big <?php if (strstr(url_path(), 'developer-guide/')) print "active"; ?>"
-            href="<?php print site_url(); ?>developer-guide/README.md">OLD</a></li> */ ?>
+           <?php /*
 
-            <li><span
+            <li  ><span
             class="mw-ui-btn mw-ui-btn-info mw-ui-btn-big" id="searchbtn" style="padding: 0;">
             <input type="text" class="mw-ui-invisible-field mw-ui-field-big" id="searchfield" style="margin-top: 0;height: 46px;font-size: 16px;" placeholder="Search" />
 
@@ -77,5 +75,5 @@
 
             </span>
 
-            </span></li>
+            </span></li> */ ?>
 </ul>
