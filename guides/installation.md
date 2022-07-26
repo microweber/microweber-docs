@@ -117,6 +117,7 @@ To make an install, just create a folder in "config", e.g. `config/second-domain
 After that when you visit second-domain.com, you will see the install screen.
 
 
-You can also do the install from command line with 
-`php artisan microweber:install admin@site.com admin password storage/database1.sqlite microweber microweber nopass sqlite -p site_ -t dream -d 1 -c 1 --env=second-domain.com`
+You can also do the install from command line with the cli install command like this:
 
+[Command line install](./cli.md "")
+ 
