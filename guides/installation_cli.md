@@ -29,15 +29,15 @@ All arguments until the database password are required and need to be present in
 | db-host  | Database host address
 | db-name  | Database schema name
 | db-user  | Database username
-| db-pass  | Database password (optional)
-
-#### Options:
-| Option                 | Description
-|------------------------| ---
-| --db-prefix (-p)       | Database tables prefix
-| --template (-t)        | Set default template name
-| --default-content (-d) | Install default content
-| -config-only           | make config only, user should complete the install from browser
+| db-driver  | Database driver 
+| db-password  | Database password (optional)
+| db-prefix  | Database table prefix (optional)
+| db-prefix  | Database table prefix (optional)
+| template | Set the template name
+| default-content | Set to install default content
+| config-only | Set to prepare configuration without install
+| language | Set the language of the install
+ 
 
 #### Laravel Options:
 |      Option  | Description
