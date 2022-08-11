@@ -28,7 +28,7 @@ All arguments until the database password are required and need to be present in
 | password | Admin account password
 | db-host  | Database host address
 | db-name  | Database schema name
-| db-user  | Database username
+| db-username  | Database username
 | db-driver  | Database driver 
 | db-password  | Database password (optional)
 | db-prefix  | Database table prefix (optional)
@@ -61,7 +61,7 @@ php artisan microweber:install --email=admin@example.com --username=admin --pass
 ### Mysql
 
 ``` bash
-php artisan microweber:install --email=admin@example.com --username=admin --password=mypassword --db-host=127.0.0.1 --db-name=microweber --db-password=nopass --db-driver=mysql --db-prefix=site_ --template=new-world --default-content=1
+php artisan microweber:install --email=admin@example.com --username=admin --password=mypassword --db-host=127.0.0.1 --db-name=microweber --db-username=dbuser --db-password=dbpass --db-driver=mysql --db-prefix=site_ --template=new-world --default-content=1
 ```
 
 
