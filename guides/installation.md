@@ -63,7 +63,8 @@ There is alternative installation method that can be used for automated installs
 
 You must have those folders writable
 
-- `config` 
+- `bootstrap/cache` 
+- `storage` 
 - `storage` 
 - `userfiles` 
 
@@ -128,9 +129,9 @@ If you wish to serve the installantion from the `public` folder, then you need t
 
 ```
 cd /path/to/public
-ln -s ../userfiles userfiles
+ln -s ../userfiles userfiles 
 ```
 
-[See more]([[./cli.md]()])
+[See more](https://github.com/microweber/microweber/blob/master/public/README.md)
 
  
