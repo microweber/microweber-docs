@@ -157,6 +157,11 @@ function page_nav($path = false)
             $cont = page_content($nav);
         }
 
+        $nav = $folder . 'SUMMARY.md';
+        if (is_file($nav)) {
+            $cont = page_content($nav);
+        }
+
         $nav = $folder . '_nav.md';
         if (is_file($nav)) {
             $cont = page_content($nav);
@@ -316,7 +321,10 @@ function current_url($skip_ajax = false, $no_get = false)
             $serverrequri = $_SERVER['REQUEST_URI'];
         }
 
-        $s = empty($_SERVER["HTTPS"]) ? '' : ($_SERVER["HTTPS"] == "on") ? "s" : "";
+        $s =  '';
+        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+            $s = 's';
+        }
 
         $protocol = 'http';
         $port = 80;
