@@ -18,7 +18,7 @@ $time = 100;
         <link href='http://fonts.googleapis.com/css?family=Fira+Mono:400,700' rel='stylesheet' type='text/css'>
 
 
-        <link href="<?php print site_url(); ?>ui/1.2.9/css/default.css" rel="stylesheet">
+        <link href="<?php print site_url(); ?>ui/1.2.9/default.css" rel="stylesheet">
         <link href="<?php print site_url(); ?>ui/1.2.9/css/ui.css" rel="stylesheet">
         <script src="<?php print site_url(); ?>ui/1.2.9/api/apijs_combined.js"></script>
 
