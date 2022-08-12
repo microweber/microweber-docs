@@ -64,7 +64,7 @@ There is alternative installation method that can be used for automated installs
 You must have those folders writable
 
 - `bootstrap/cache` 
-- `storage` 
+- `config` 
 - `storage` 
 - `userfiles` 
 
