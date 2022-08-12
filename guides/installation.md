@@ -131,7 +131,6 @@ cd /path/to/public
 ln -s ../userfiles userfiles
 ```
 
-[See more]([./cli.md](https://github.com/microweber/microweber/blob/master/public/README.md#symlink-to-the-userfiles-folder
-) "")
+[See more]([[./cli.md]()])
 
  
