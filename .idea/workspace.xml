@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="140bb3e5-597d-4d97-bd09-b7f4a4e461cf" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build-and-upload.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build-and-upload.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guides/installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/guides/installation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guides/installation_cli.md" beforeDir="false" afterPath="$PROJECT_DIR$/guides/installation_cli.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +71,7 @@
       <workItem from="1657179320084" duration="1294000" />
       <workItem from="1658739031734" duration="1212000" />
       <workItem from="1658823326667" duration="2194000" />
+      <workItem from="1660316204293" duration="1013000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1656936044016</created>
