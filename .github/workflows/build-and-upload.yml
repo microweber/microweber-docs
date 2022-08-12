@@ -22,5 +22,6 @@ jobs:
       run: |
         ls -A
         echo insecure >> ~/.curlrc
+        echo microweber-docs-${{ env.GITHUB_REF_SLUG }}.zip ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}/builds/${{ env.GITHUB_REF_SLUG }}/
         curl -T microweber-docs-${{ env.GITHUB_REF_SLUG }}.zip ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}/builds/${{ env.GITHUB_REF_SLUG }}/ --ftp-create-dirs --no-epsv
   
