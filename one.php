@@ -326,13 +326,9 @@ function current_url($skip_ajax = false, $no_get = false)
             $s = 's';
         }
 
-        $protocol = 'http';
+        $protocol = 'http'.$s;
         $port = 80;
-        if (isset($_SERVER["SERVER_PROTOCOL"])) {
 
-
-            $protocol = strleft(strtolower($_SERVER["SERVER_PROTOCOL"]), "/") . $s;
-        }
         if (isset($_SERVER["SERVER_PORT"])) {
             $port = ($_SERVER["SERVER_PORT"] == "80") ? "" : (":" . $_SERVER["SERVER_PORT"]);
         }
