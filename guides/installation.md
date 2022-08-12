@@ -120,4 +120,18 @@ After that when you visit second-domain.com, you will see the install screen.
 You can also do the install from command line with the cli install command like this:
 
 [Command line install](./cli.md "")
+
+
+## `Public` folder setup
+
+If you wish to serve the installantion from the `public` folder, then you need to symlink the `userfiles` folder.
+
+```
+cd /path/to/public
+ln -s ../userfiles userfiles
+```
+
+[See more]([./cli.md](https://github.com/microweber/microweber/blob/master/public/README.md#symlink-to-the-userfiles-folder
+) "")
+
  
