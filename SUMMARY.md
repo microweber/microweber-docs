@@ -1,13 +1,28 @@
-# Summary
 
-* [Chapter](chapter/README.md)
-* [Chapter 2](chapter_2/README.md)
-   * [Test 1](chapter_2/test_1.md)
-* [Modules](chapter_3/README.md)
+### Development
+
+* [Developer Guide](guides/README.md)
 * [Functions](functions/README.md)
-* [API](api/README.md)
-* [JS Api](js_api/README.md)
-   * [Uploader](js_api/uploader.md)
-   * [Editor](js_api/editor.md)
-* [Chapter](chapter/README.md)
+* [Modules](modules/README.md)
+* [CSS and JS](modules/README.md)
 
+### Modules
+
+* [Modules basics](guides/modules_101.md)
+* [Using database](guides/modules_data.md)
+* [Using options](guides/modules_options.md)
+
+### Templates
+
+* [Templates Basics](guides/templates_101.md)
+* [Creating Templates](guides/templates_creating.md)
+  * [Creating Dream example](guides/templates_creating_dream.md)
+  * [Creating Bootstrap Template](guides/templates_bootstrap.md)
+  * [Example Layouts](guides/templates_example.md)
+
+### Integration
+
+* [Multisite](integration/multisite.md)
+* [White Label](integration/whitelabel.md)
+* [Virtual Machines](integration/vm.md)
+* [Scripted Installation](integration/scripted_install.md)
