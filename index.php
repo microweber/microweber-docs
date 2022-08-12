@@ -20,7 +20,6 @@ $time = 100;
 
         <link href="<?php print site_url(); ?>ui/1.2.9/default.css" rel="stylesheet">
         <link href="<?php print site_url(); ?>ui/1.2.9/css/ui.css" rel="stylesheet">
-        <script src="<?php print site_url(); ?>ui/1.2.9/api/apijs_combined.js"></script>
 
 
         <link href="<?php print site_url(); ?>assets/docs.css" rel="stylesheet">
