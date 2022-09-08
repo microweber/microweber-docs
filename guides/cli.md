@@ -2,9 +2,9 @@ Various CLI commands
 
 
 ### Make install 
-```sh
-php artisan microweber:install --email=admin@example.com --username=admin --password=mypassword --db-host=storage/database.sqlite --db-name=microweber --db-password=nopass --db-driver=sqlite --db-prefix=site_ --template=new-world --default-content=1
-```
+
+[Install Microweber via command line](installation_cli.md "")
+
 
 ### Set option
 

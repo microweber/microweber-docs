@@ -7,6 +7,7 @@ We have plans for automating the process a bit but for now you can follow these 
 
 Let's create our first module in no time! We'll call it `myposts` and it will show a simple list of website content.
 
+
 ## 1. Module Declaration
 Create these files in your local copy:
 
@@ -91,3 +92,9 @@ Welcome to the admin, <b><?php echo Auth::user()->email; ?></b>!
 
 Now open your website admin panel and click on Extensions -> Reload modules (next to the module types dropdown). Once the modules have been reloaded you'll see `My Posts` in the list and clicking on it will take you to its admin view.
 You will also be able to drag/drop it on any page of your website from the live-edit mode.
+
+
+## Example module
+
+Check this example module with Livewire integration here [Todo Module on Laravel Livewire
+](https://github.com/microweber-modules/todo-module-livewire "")

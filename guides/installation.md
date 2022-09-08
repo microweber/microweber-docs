@@ -63,6 +63,7 @@ There is alternative installation method that can be used for automated installs
 
 You must have those folders writable
 
+- `bootstrap/cache` 
 - `config` 
 - `storage` 
 - `userfiles` 
@@ -120,4 +121,31 @@ After that when you visit second-domain.com, you will see the install screen.
 You can also do the install from command line with the cli install command like this:
 
 [Command line install](./cli.md "")
- 
+
+
+## `Public` folder setup
+
+If you wish to serve the installantion from the `public` folder, then you need to symlink the `userfiles` folder.
+
+```
+cd /path/to/public
+ln -s ../userfiles userfiles 
+```
+
+[See more](https://github.com/microweber/microweber/blob/master/public/README.md)
+
+
+
+# Other ways to install
+
+You can install Microweber from *Docker* with the following command:
+
+`docker run -p 80:80 microweber/microweber:latest`
+
+Also if you wish to use *Docker Compose* you can use the following command:
+
+```sh
+git clone https://github.com/microweber/microweber.git
+cd microweber
+docker-compose up -d
+```

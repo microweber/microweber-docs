@@ -28,16 +28,16 @@ All arguments until the database password are required and need to be present in
 | password | Admin account password
 | db-host  | Database host address
 | db-name  | Database schema name
-| db-user  | Database username
-| db-pass  | Database password (optional)
-
-#### Options:
-| Option                 | Description
-|------------------------| ---
-| --db-prefix (-p)       | Database tables prefix
-| --template (-t)        | Set default template name
-| --default-content (-d) | Install default content
-| -config-only           | make config only, user should complete the install from browser
+| db-username  | Database username
+| db-driver  | Database driver 
+| db-password  | Database password (optional)
+| db-prefix  | Database table prefix (optional)
+| db-prefix  | Database table prefix (optional)
+| template | Set the template name
+| default-content | Set to install default content
+| config-only | Set to prepare configuration without install
+| language | Set the language of the install
+ 
 
 #### Laravel Options:
 |      Option  | Description
@@ -61,7 +61,7 @@ php artisan microweber:install --email=admin@example.com --username=admin --pass
 ### Mysql
 
 ``` bash
-php artisan microweber:install --email=admin@example.com --username=admin --password=mypassword --db-host=127.0.0.1 --db-name=microweber --db-password=nopass --db-driver=mysql --db-prefix=site_ --template=new-world --default-content=1
+php artisan microweber:install --email=admin@example.com --username=admin --password=mypassword --db-host=127.0.0.1 --db-name=microweber --db-username=dbuser --db-password=dbpass --db-driver=mysql --db-prefix=site_ --template=new-world --default-content=1
 ```
 
 
