@@ -66,6 +66,19 @@ event_bind('mw.admin', function(){
 
 
 
+## Content events
+mw.content.save_edit
+Example:
+```php
+event_bind('mw.content.save_edit', function($content){
+    // do something with $content
+});
+```
+     
+ 
+``` 
+
+
 ## Other events
 
 
