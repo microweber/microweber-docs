@@ -116,3 +116,12 @@ Callback parameters:
 * `query` (string) - The prepared SQL query in lower case
 * `bindings` (array) - The prepared query bindings
 * `result` (&array) - Reference to the results returned from the query
+
+
+## Eloquent events
+
+```
+\Event::listen(['eloquent.saved: ', 'eloquent.created: ', 'eloquent.deleted: *'], function ($context) {
+    app()->database_manager->clearCache();
+});
+```
