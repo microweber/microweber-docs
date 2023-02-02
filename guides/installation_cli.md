@@ -10,7 +10,7 @@ You can install Microweber directly from the command line interface. This may be
 Here's an example of what the command looks like:
 
 ```bash
-php artisan microweber:install --email=admin@example.com --username=admin --password=mypassword --db-host=storage/database.sqlite --db-name=microweber --db-password=nopass --db-driver=sqlite --db-prefix=site_ --template=new-world --default-content=1
+php artisan microweber:install --email=admin@example.com --username=admin --password=mypassword --db-name=storage/database.sqlite --db-password=nopass --db-driver=sqlite --db-prefix=site_ --template=new-world --default-content=1
 ```
 
 
@@ -54,7 +54,7 @@ All arguments until the database password are required and need to be present in
  
 ``` bash
 
-php artisan microweber:install --email=admin@example.com --username=admin --password=mypassword --db-host=storage/database.sqlite --db-name=microweber --db-password=nopass --db-driver=sqlite --db-prefix=site_ --template=new-world --default-content=1
+php artisan microweber:install --email=admin@example.com --username=admin --password=mypassword --db-name=storage/database.sqlite --db-password=nopass --db-driver=sqlite --db-prefix=site_ --template=new-world --default-content=1
 
 ```
 
@@ -72,7 +72,7 @@ php artisan microweber:install --email=admin@example.com --username=admin --pass
 To let the user complete the intall from browser and select a template you must pass the parameter `--config-only=1` to the install script. 
 
 ``` bash
-php artisan microweber:install --config-only=1 --email=admin@example.com --username=admin --password=mypassword --db-host=storage/database.sqlite --db-name=microweber --db-password=nopass --db-driver=sqlite --db-prefix=site_ --template=new-world --default-content=1
+php artisan microweber:install --config-only=1 --email=admin@example.com --username=admin --password=mypassword --db-name=storage/database.sqlite --db-password=nopass --db-driver=sqlite --db-prefix=site_ --template=new-world --default-content=1
 ```
 
 #### Multi domain scripted installation
@@ -82,7 +82,7 @@ Then on the scriptted install you must pass the domain name as a `--env` paramet
 
 
 ``` bash
-php artisan microweber:install --env=example.com  --config-only=1 --email=admin@example.com --username=admin --password=mypassword --db-host=storage/database.sqlite --db-name=microweber --db-password=nopass --db-driver=sqlite --db-prefix=site_ --template=new-world --default-content=1
+php artisan microweber:install --env=example.com  --config-only=1 --email=admin@example.com --username=admin --password=mypassword --db-name=storage/database.sqlite --db-password=nopass --db-driver=sqlite --db-prefix=site_ --template=new-world --default-content=1
 ```
 
 #### Update command
