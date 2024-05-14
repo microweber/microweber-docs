@@ -33,8 +33,26 @@ mw.reload_module_parent('.my_module_class'); //reload by class
 ```
 
 
-## mw.on.moduleReload
 
+
+## mw.reload_modules_everywhere
+ `mw.reload_modules_everywhere` - reloads all modules that match given selector in all windows
+### Summary
+
+
+```js
+
+mw.reload_modules_everywhere('comments'); //reload by module type
+mw.reload_modules_everywhere('#my_module_id'); //reload by id
+mw.reload_modules_everywhere('.my_module_class'); //reload by class
+
+```
+
+
+
+
+## mw.on.moduleReload
+`mw.on.moduleReload` - event listener for module reload
 ```js
 mw.on.moduleReload("#my_module", function () {
 alert('Module was reloaded')
