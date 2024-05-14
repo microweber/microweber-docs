@@ -57,4 +57,16 @@ $params['li_tag'] = 'span';
 $menu = menu_tree($params);
 print $menu;
 ```
+ #### Print menu with custom callback
+```php
+$params = array();
+$params['menu_id'] = 1;
+$params['ul_tag'] = 'div';
+$params['li_tag'] = 'span';
+$params['link'] = function($item) {
+    return '<a href="' . $item['link'] . '">' . $item['title'] . '</a>';
+};
+$menu = menu_tree($params);
+print $menu;
+```
  
